@@ -4,7 +4,7 @@ class About extends MX_Controller
     function index()
     {
         $data['title'] = "About Us | " . $this->comp['company3'];
-        $data['description'] = "Learn more about " . $this->comp['company3'] . ", our <?= $experience ?> Years Legacy, infrastructure, expert team, mission, and vision in the packing and moving industry.";
+        $data['description'] = "Learn more about " . $this->comp['company3'] . ", our " . $this->comp['experience'] . " Years Legacy, infrastructure, expert team, mission, and vision in the packing and moving industry.";
         $data['module'] = "about";
         $data['view_file'] = "about";
         echo Modules::run('template/layout2', $data);

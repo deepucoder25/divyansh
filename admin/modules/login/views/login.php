@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title><?=$this->session->userdata('name');?> Admin Panel <?=date("D d M Y")?></title>
+    <title><?= isset($this->comp['company3']) ? $this->comp['company3'] : 'Divyansh Packers and Movers' ?> | Admin Panel</title>
     
     <link href="<?=base_url()?>assets/admin/css/main.css" rel="stylesheet">
     <link rel="icon" type="image/png" href="<?=base_url()?>assets/images/logo/favicon.png"/>
@@ -315,7 +315,7 @@
 <br><br><br><br>            
     <div class=" col-sm-4 col-sm-offset-4 text-center">
         <h2 align="center">Welcome Administrator</h2>
-        <p class="subtitle">Secure Admin Panel Access</p>
+        <p class="subtitle">Secure <?= isset($this->comp['company3']) ? $this->comp['company3'] : 'Divyansh Packers and Movers' ?> Admin Panel Access</p>
         <br>
         <img src="<?=base_url("assets/images/logo/logo.png")?>" class="img-show" style="width:120px;" alt="logo">
         <br><br><br>

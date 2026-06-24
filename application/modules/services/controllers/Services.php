@@ -9,7 +9,7 @@ class Services extends MX_Controller
 
     function homeShifting()
     {
-        $data['title'] = "Best Home Shifting Services | " . $this->comp['company3'];
+        $data['title'] = "Best Home Shifting & Household Relocation | " . $this->comp['company3'];
         $data['description'] = "Get reliable, safe, and professional home shifting services from " . $this->comp['company3'] . ". Smooth door-to-door household relocation at affordable rates.";
         $data['module'] = "services";
         $data['view_file'] = "home_shifting";
@@ -18,7 +18,7 @@ class Services extends MX_Controller
 
     function office()
     {
-        $data['title'] = "Professional Office Relocation Services | " . $this->comp['company3'];
+        $data['title'] = "Professional Office Shifting & Relocation Services | " . $this->comp['company3'];
         $data['description'] = "Smooth and secure office shifting services by " . $this->comp['company3'] . ". Minimize downtime with our experienced office relocation experts.";
         $data['module'] = "services";
         $data['view_file'] = "office";
@@ -27,7 +27,7 @@ class Services extends MX_Controller
 
     function car()
     {
-        $data['title'] = "Safe Car Transportation Services | " . $this->comp['company3'];
+        $data['title'] = "Safe Car Transportation & Carrier Services | " . $this->comp['company3'];
         $data['description'] = "Secure car carrier and transportation services by " . $this->comp['company3'] . ". On-time and damage-free vehicle delivery across India.";
         $data['module'] = "services";
         $data['view_file'] = "car";
@@ -36,7 +36,7 @@ class Services extends MX_Controller
 
     function bike()
     {
-        $data['title'] = "Reliable Bike Transportation Services | " . $this->comp['company3'];
+        $data['title'] = "Reliable Bike Transportation & Shifting Services | " . $this->comp['company3'];
         $data['description'] = "Hire trusted two-wheeler and bike shifting services from " . $this->comp['company3'] . ". We ensure scratch-free and timely delivery.";
         $data['module'] = "services";
         $data['view_file'] = "bike";
@@ -45,7 +45,7 @@ class Services extends MX_Controller
 
     function storage()
     {
-        $data['title'] = "Secure Warehousing & Storage Services | " . $this->comp['company3'];
+        $data['title'] = "Secure Warehousing & Household Storage Services | " . $this->comp['company3'];
         $data['description'] = "Safe and spacious household & commercial storage services from " . $this->comp['company3'] . ". Clean, fire-safe, and 24/7 monitored warehouses.";
         $data['module'] = "services";
         $data['view_file'] = "storage";
@@ -54,7 +54,7 @@ class Services extends MX_Controller
 
     function international()
     {
-        $data['title'] = "Hassle-Free International Shifting | " . $this->comp['company3'];
+        $data['title'] = "Hassle-Free International Shifting & Relocation | " . $this->comp['company3'];
         $data['description'] = "Reliable overseas relocation and international shifting services by " . $this->comp['company3'] . ". Complete customs clearance and secure transport.";
         $data['module'] = "services";
         $data['view_file'] = "international";
@@ -63,7 +63,7 @@ class Services extends MX_Controller
 
     function corporate()
     {
-        $data['title'] = "Corporate Shifting & Employee Relocation | " . $this->comp['company3'];
+        $data['title'] = "Corporate Shifting & Office Relocation Services | " . $this->comp['company3'];
         $data['description'] = "Premium corporate relocation services by " . $this->comp['company3'] . ". Safe packing and movement of office inventory, computers, and furniture.";
         $data['module'] = "services";
         $data['view_file'] = "corporate";
@@ -72,7 +72,7 @@ class Services extends MX_Controller
 
     function domestic()
     {
-        $data['title'] = "Trusted Domestic Shifting Services | " . $this->comp['company3'];
+        $data['title'] = "Trusted Domestic Shifting & Long Distance Moving | " . $this->comp['company3'];
         $data['description'] = "Interstate and long-distance domestic relocation services by " . $this->comp['company3'] . ". Secure packaging and fast transit across India.";
         $data['module'] = "services";
         $data['view_file'] = "domestic";
@@ -81,7 +81,7 @@ class Services extends MX_Controller
 
     function intercity()
     {
-        $data['title'] = "Intercity Packers and Movers Services | " . $this->comp['company3'];
+        $data['title'] = "Intercity Packers and Movers Shifting Services | " . $this->comp['company3'];
         $data['description'] = "Efficient intercity shifting services from " . $this->comp['company3'] . ". Smooth household relocation between cities with tracking.";
         $data['module'] = "services";
         $data['view_file'] = "intercity";
@@ -90,7 +90,7 @@ class Services extends MX_Controller
 
     function local()
     {
-        $data['title'] = "Fast Local Shifting Services | " . $this->comp['company3'];
+        $data['title'] = "Local Packers and Movers & Shifting Services | " . $this->comp['company3'];
         $data['description'] = "Affordable and quick local home & office shifting services by " . $this->comp['company3'] . ". Experienced local moving team and cargo carriers.";
         $data['module'] = "services";
         $data['view_file'] = "local";

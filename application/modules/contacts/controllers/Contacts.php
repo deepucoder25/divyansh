@@ -121,8 +121,8 @@ class Contacts extends MX_Controller
 
     function trackingpage()
     {
-        $data['title'] = "Track Your Shipment | Get Real-Time Shipping Updates";
-        $data['description'] = "Track shipment with tracking number or LR number. Get real-time updates of your household shifting, cargo, or vehicle transportation. Get instant tracking with accurate status";
+        $data['title'] = "Track Your Shipment | " . $this->comp['company3'];
+        $data['description'] = "Track shipment with tracking number or LR number. Get real-time updates of your household shifting, cargo, or vehicle transportation with " . $this->comp['company3'] . ".";
         $data['module'] = "contacts";
         $data['view_file'] = "tracking";
         echo Modules::run('template/layout2', $data);

@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title><?=$this->session->userdata('name');?> <?=date("D d M Y")?></title>
+    <title><?=$this->session->userdata('name');?> | <?= isset($this->comp['company3']) ? $this->comp['company3'] : 'Divyansh Packers and Movers' ?> (<?=date("D d M Y")?>)</title>
     <link rel="icon" type="image/png" href="<?=base_url()?>assets/images/logo/favicon.png">
     <link href="<?=base_url("assets")?>/admin/css/main.css" rel="stylesheet">
     <style type="text/css">
@@ -27,7 +27,7 @@
             <div class="hoe-left-header">
                 <a href="#">
                     <img id="logo1a" src="<?= base_url() ?>assets/images/logo/logo.png" style="display:inline-block;height: 45px;">
-                    <span></span>
+                    <span><?= isset($this->comp['company3']) ? $this->comp['company3'] : '' ?></span>
                 </a>
             </div>
             <span class="hoe-sidebar-toggle visible-xs"><a id="sidebtn" href=""></a></span>
