@@ -38,6 +38,14 @@
 	 $("#sidebtn").click(function(){
 		 logo_manager();
 	 })
+	 
+	 // Auto-hide sidebar on mobile/tablet when navigation menu items are clicked
+	 $(document).on('click', '#hoe-left-panel .panel-list li a', function() {
+		 if ($("#hoeapp-wrapper").attr("hoe-device-type") === "phone" || $(window).width() < 768) {
+			 $("#hoeapp-wrapper").addClass("hoe-hide-lpanel");
+		 }
+	 });
+
 	 function logo_manager(){
 		 if($("#hoe-header").hasClass('hoe-minimized-lpanel')){
 			 $("#logo2").css('display','none');

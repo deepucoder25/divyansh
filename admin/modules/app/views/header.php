@@ -25,12 +25,11 @@
     <div id="hoeapp-wrapper" class="hoe-hide-lpanel" hoe-device-type="desktop" class="view-animate">
         <header id="hoe-header" hoe-lpanel-effect="default">
             <div class="hoe-left-header">
+                <span class="hoe-sidebar-toggle mobile-toggle"><a id="sidebtn" href=""></a></span>
                 <a href="#">
-                    <img id="logo1a" src="<?= base_url() ?>assets/images/logo/logo.png" style="display:inline-block;height: 45px;">
-                    <span><?= isset($this->comp['company3']) ? $this->comp['company3'] : '' ?></span>
+                    <img id="logo1a" src="<?= base_url() ?>assets/images/logo/logo.png" style="display:inline-block;">
                 </a>
             </div>
-            <span class="hoe-sidebar-toggle visible-xs"><a id="sidebtn" href=""></a></span>
             <div class="hoe-right-header" hoe-position-type="relative">
             <?php if($this->session->userdata('username')):?>
                 <span class="hoe-sidebar-toggle"><a id="sidebtn" href=""></a></span>
