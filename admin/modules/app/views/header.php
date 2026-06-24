@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title><?=$this->session->userdata('name');?> | <?= isset($this->comp['company3']) ? $this->comp['company3'] : 'Divyansh Packers and Movers' ?> (<?=date("D d M Y")?>)</title>
+    <title>Admin Panel | <?= isset($this->comp['company3']) ? $this->comp['company3'] : 'Divyansh Packers and Movers' ?> (<?=date("D d M Y")?>)</title>
     <link rel="icon" type="image/png" href="<?=base_url()?>assets/images/logo/favicon.png">
     <link href="<?=base_url("assets")?>/admin/css/main.css" rel="stylesheet">
     <style type="text/css">
