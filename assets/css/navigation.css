@@ -5,9 +5,9 @@ html, body {
 }
 
 :root {
-    --primary-blue: #002d62;       /* Navy Blue from screenshot */
-    --accent-orange: #ff6a00;      /* Primary orange from screenshot button/active state */
-    --topbar-bg: #00224b;          /* Darker navy blue background for the slim top bar */
+    --primary-blue: #04152d;
+    --accent-orange: #ff6a00;
+    --topbar-bg: #04152d;
     --white: #ffffff;
     --text-dark: #071d3c;
     --text-muted: #6b7a90;
@@ -15,7 +15,6 @@ html, body {
     --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
-/* --- Top Slim Bar --- */
 .top-bar {
     background: var(--topbar-bg);
     color: var(--white);
@@ -93,7 +92,6 @@ html, body {
     transform: translateY(-2px);
 }
 
-/* --- Main Sticky Header --- */
 .main-header {
     position: sticky;
     top: 0;
@@ -103,7 +101,7 @@ html, body {
     display: flex;
     align-items: center;
     transition: var(--transition);
-    padding: 0; /* Dynamic height based on content logo size */
+    padding: 0;
 }
 
 .main-header.scrolled {
@@ -166,7 +164,6 @@ html, body {
     color: var(--accent-orange);
 }
 
-/* Active bottom line indicator */
 .desktop-nav .nav-link.active::after {
     content: "";
     position: absolute;
@@ -178,7 +175,6 @@ html, body {
     border-radius: 3px;
 }
 
-/* --- Dropdown Styles --- */
 .desktop-nav .nav-item {
     position: relative;
 }
@@ -204,7 +200,6 @@ html, body {
     overflow-y: auto;
 }
 
-/* Custom scrollbar for the dropdown menu */
 .desktop-nav .dropdown-menu::-webkit-scrollbar {
     width: 6px;
 }
@@ -639,12 +634,12 @@ body.menu-open {
     }
     
     .top-bar-item span {
-        display: none; /* Hide texts, show icons only on smaller screens for top bar */
+        display: none;
     }
     
     .top-bar-item:nth-child(1) span, 
     .top-bar-item:nth-child(3) span {
-        display: inline; /* Keep location and email on tablet */
+        display: inline;
     }
     
     .mobile-header-quote {
