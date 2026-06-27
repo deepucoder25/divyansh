@@ -1,123 +1,93 @@
 <?php if (!defined('BASEPATH')) exit('No direct script access allowed'); 
 
-// Fetch site-wide dynamic company settings (loaded from MX_Controller or system context)
-$companyName = isset($company3) ? $company3 : 'MyCompany';
-$companyPhone = isset($phone) ? $phone : '+91 ';
-$companyPhoneHtml = isset($phonehtml) ? $phonehtml : 'tel:+';
-$companyEmail = isset($mail) ? $mail : '';
-$companyEmailHtml = isset($mailhtml) ? $mailhtml : '';
-$companyExperience = isset($experience) ? $experience : '';
-$companyLocation = isset($addressRegion) ? $addressRegion : '';
-$companyState = isset($companystate) ? $companystate : '';
 ?>
 
 <section class="about-section py-5">
-    <!-- Background Decor Grid Patterns -->
-    <div class="about-decor decor-top-right"></div>
-    <div class="about-decor decor-bottom-left"></div>
-
+    <div class="glow-bg-blob-1"></div>
+    <div class="glow-bg-blob-2"></div>
+    <div class="process-dot-pattern about-dot-pattern"></div>
     <div class="container position-relative about-z2">
-        <div class="row align-items-center g-4 g-lg-5">
+        <div class="row align-items-center g-5">
             
-            <!-- Left Side: Image Showcase -->
-            <div class="col-lg-6 col-12">
-                <div class="about-image-wrap position-relative">
-                    <div class="about-img-bg-shape"></div>
-                    <img src="<?= base_url('assets/images/about/about-showcase.webp') ?>" 
-                         alt="Reliable Packers and Movers Service - <?= htmlspecialchars($companyName) ?>" 
-                         class="about-img img-fluid rounded-4 shadow-lg position-relative about-z2" 
-                         loading="lazy">
-                    
-                    <!-- Floating Experience Badge -->
-                    <div class="about-experience-badge d-flex align-items-center shadow-lg">
-                        <div class="exp-number"><?= htmlspecialchars($companyExperience) ?></div>
-                        <div class="exp-text">
-                            <span class="d-block text-uppercase font-weight-bold">Years of</span>
-                            <span class="d-block text-uppercase">Trusted service</span>
+            <!-- Left Side: Content & Features -->
+            <div class="col-lg-6 col-12 order-2 order-lg-1">
+                <div class="about-content">
+                    <!-- Heading Area (reusing service section header classes) -->
+                    <div class="mb-4 text-start">
+                        <span class="section-subtitle">— ABOUT US —</span>
+                        <h2 class="section-title">We Make Every Move Safe, Easy & Comfortable</h2>
+                        <div class="header-divider" style="margin: 0 0 25px 0;"></div>
+                    </div>
+
+                    <!-- SEO-optimized Description -->
+                    <p class="about-desc mb-3">
+                        Welcome to <strong><?= isset($company3) ? htmlspecialchars($company3) : 'Divyansh Packers and Movers' ?></strong>, 
+                        your premier destination for top-tier shifting and logistics services. We specialize in providing safe, 
+                        dependable, and cost-effective relocation solutions tailored for household shifting, corporate office transfers, 
+                        and secure vehicle transportation.
+                    </p>
+                    <p class="about-desc mb-4">
+                        With a highly dedicated team of packing professionals, modern equipment, and a robust transit fleet, 
+                        we ensure your precious belongings are packed securely, handled with care, and delivered strictly on time. 
+                        Our primary goal is to turn a stressful relocation process into a completely smooth, pleasant, and seamless journey.
+                    </p>
+
+                    <!-- Simple Horizontal Features -->
+                    <div class="about-simple-features mb-4">
+                        <div class="simple-feature-item">
+                            <i class="bi bi-check-circle-fill orange-check"></i>
+                            <span>100% Safe Shifting</span>
                         </div>
+                        <div class="simple-feature-item">
+                            <i class="bi bi-check-circle-fill blue-check"></i>
+                            <span>GPS Transit Fleet</span>
+                        </div>
+                        <div class="simple-feature-item">
+                            <i class="bi bi-check-circle-fill orange-check"></i>
+                            <span>Affordable Pricing</span>
+                        </div>
+                    </div>
+
+                    <!-- Call To Action Actions Row -->
+                    <div class="about-actions-row">
+                        <a href="<?= site_url('about-us') ?>" class="btn btn-about-cta">
+                            About Us <i class="bi bi-arrow-right"></i>
+                        </a>
+                        <a href="tel:+919876543210" class="btn btn-about-secondary">
+                            <i class="bi bi-telephone-fill"></i> Call Now
+                        </a>
                     </div>
                 </div>
             </div>
 
-            <!-- Right Side: Content Details -->
-            <div class="col-lg-6 col-12">
-                <div class="about-content">
-                    
-                    <!-- Subheading Badge -->
-                    <div class="about-badge-wrap d-flex align-items-center mb-3">
-                        <span class="about-badge-line"></span>
-                        <span class="about-pill-badge text-uppercase">Who We Are</span>
-                    </div>
-
-                    <!-- SEO-Friendly Heading -->
-                    <h2 class="about-title mb-3">
-                        Reliable Shifting &amp; Relocation Services by <span class="text-primary-blue"><?= htmlspecialchars($companyName) ?></span>
-                    </h2>
-
-                    <!-- Descriptive Paragraphs -->
-                    <p class="about-desc-lead mb-3">
-                        Moving to a new home, office, or transporting vehicles can feel overwhelming. At <strong><?= htmlspecialchars($companyName) ?></strong>, we are committed to making your relocation journey smooth, secure, and stress-free. Whether shifting locally within <?= htmlspecialchars($companyLocation) ?> or relocating across <?= htmlspecialchars($companyState) ?> and all over India, our team handles every aspect of your move with extreme care and precision.
-                    </p>
-                    
-                    <p class="about-desc mb-4">
-                        With over <strong><?= htmlspecialchars($companyExperience) ?> years</strong> of professional experience, we have established ourselves as one of India's most trusted packing and moving brands. We use industry-standard packaging materials, modern cargo carriers, and structured loading systems to ensure all your precious goods and vehicles reach their destination safely, on time, and damage-free.
-                    </p>
-
-                    <!-- Features List Grid -->
-                    <div class="row g-3 mb-4">
-                        <div class="col-md-6 col-12">
-                            <div class="about-feature-item d-flex align-items-center">
-                                <div class="feature-icon-circle mr-3">
-                                    <i class="bi bi-shield-check"></i>
-                                </div>
-                                <span class="feature-text">Fully Insured Shifting</span>
+            <!-- Right Side: Slanted Image Showcase -->
+            <div class="col-lg-6 col-12 order-1 order-lg-2">
+                <div class="about-image-showcase">
+                    <div class="about-image-wrap">
+                        <!-- Floating Circular Experience Badge -->
+                        <div class="about-floating-badge">
+                            <div class="badge-inner">
+                                <span class="badge-num"><?= $yearsExperience?></span>
+                                <span class="badge-lbl">Years Trust</span>
                             </div>
                         </div>
-                        <div class="col-md-6 col-12">
-                            <div class="about-feature-item d-flex align-items-center">
-                                <div class="feature-icon-circle mr-3">
-                                    <i class="bi bi-truck"></i>
-                                </div>
-                                <span class="feature-text">Modern GPS Fleet</span>
+
+                        <img src="<?= base_url('assets/images/home/about-showcase.jpg') ?>" 
+                             alt="Professional Packers and Movers Crew - <?= isset($company3) ? htmlspecialchars($company3) : 'Divyansh Packers and Movers' ?>" 
+                             class="about-img" 
+                             loading="lazy">
+
+                        <!-- Floating Mission Box with Slanted Design -->
+                        <div class="about-mission-box">
+                            <div class="mission-icon">
+                                <i class="bi bi-people-fill"></i>
                             </div>
-                        </div>
-                        <div class="col-md-6 col-12">
-                            <div class="about-feature-item d-flex align-items-center">
-                                <div class="feature-icon-circle mr-3">
-                                    <i class="bi bi-person-check"></i>
-                                </div>
-                                <span class="feature-text">Trained Packing Crew</span>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-12">
-                            <div class="about-feature-item d-flex align-items-center">
-                                <div class="feature-icon-circle mr-3">
-                                    <i class="bi bi-clock-history"></i>
-                                </div>
-                                <span class="feature-text">On-Time Safe Delivery</span>
+                            <div class="mission-text">
+                                <h4 class="mission-title">Our Mission</h4>
+                                <p class="mission-desc">To provide reliable, efficient, and affordable moving services with utmost care and customer satisfaction.</p>
                             </div>
                         </div>
                     </div>
-
-                    <!-- Call To Actions -->
-                    <div class="d-flex flex-wrap align-items-center gap-3">
-                        <a href="<?= site_url('about-us') ?>" class="btn btn-primary-blue shadow-sm d-flex align-items-center">
-                            Read More About Us
-                            <i class="bi bi-arrow-right-short ml-2 font-weight-bold about-cta-icon"></i>
-                        </a>
-                        <div class="about-contact-wrap d-flex align-items-center ml-md-4 mt-2 mt-md-0">
-                            <div class="about-contact-icon d-flex align-items-center justify-content-center">
-                                <i class="bi bi-telephone-fill"></i>
-                            </div>
-                            <div class="about-contact-details ml-2">
-                                <span class="d-block contact-label text-muted">Talk to an Expert</span>
-                                <a href="<?= htmlspecialchars($companyPhoneHtml) ?>" class="contact-number font-weight-bold text-decoration-none">
-                                    <?= htmlspecialchars($companyPhone) ?>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
                 </div>
             </div>
 
