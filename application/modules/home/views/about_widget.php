@@ -7,10 +7,10 @@
     <div class="glow-bg-blob-2"></div>
     <div class="process-dot-pattern about-dot-pattern"></div>
     <div class="container position-relative about-z2">
-        <div class="row align-items-center g-5">
+        <div class="row align-items-center">
             
             <!-- Left Side: Content & Features -->
-            <div class="col-lg-6 col-12 order-2 order-lg-1">
+            <div class="col-lg-6 col-12 order-lg-1">
                 <div class="about-content">
                     <!-- Heading Area (reusing service section header classes) -->
                     <div class="mb-4 text-start">
@@ -61,21 +61,23 @@
             </div>
 
             <!-- Right Side: Slanted Image Showcase -->
-            <div class="col-lg-6 col-12 order-1 order-lg-2">
+            <div class="col-lg-6 col-12 order-lg-2">
                 <div class="about-image-showcase">
                     <div class="about-image-wrap">
-                        <!-- Floating Circular Experience Badge -->
-                        <div class="about-floating-badge">
-                            <div class="badge-inner">
-                                <span class="badge-num"><?= $yearsExperience?></span>
-                                <span class="badge-lbl">Years Trust</span>
+                        <div class="about-img-inner-wrap">
+                            <!-- Floating Circular Experience Badge -->
+                            <div class="about-floating-badge">
+                                <div class="badge-inner">
+                                    <span class="badge-num"><?= $yearsExperience?></span>
+                                    <span class="badge-lbl">Years Trust</span>
+                                </div>
                             </div>
-                        </div>
 
-                        <img src="<?= base_url('assets/images/home/about-showcase.jpg') ?>" 
-                             alt="Professional Packers and Movers Crew - <?= isset($company3) ? htmlspecialchars($company3) : 'Divyansh Packers and Movers' ?>" 
-                             class="about-img" 
-                             loading="lazy">
+                            <img src="<?= base_url('assets/images/home/about-showcase.jpg') ?>" 
+                                 alt="Professional Packers and Movers Crew - <?= isset($company3) ? htmlspecialchars($company3) : 'Divyansh Packers and Movers' ?>" 
+                                 class="about-img" 
+                                 loading="lazy">
+                        </div>
 
                         <!-- Floating Mission Box with Slanted Design -->
                         <div class="about-mission-box">

@@ -196,7 +196,12 @@
     margin-left: auto;
 }
 
-.about-image-wrap::before {
+.about-img-inner-wrap {
+    position: relative;
+    width: 100%;
+}
+
+.about-img-inner-wrap::before {
     content: "";
     position: absolute;
     top: -10px;
@@ -210,7 +215,7 @@
     pointer-events: none;
 }
 
-.about-image-wrap::after {
+.about-img-inner-wrap::after {
     content: "";
     position: absolute;
     top: 10px;
@@ -437,12 +442,42 @@
 }
 
 @media (max-width: 575px) {
-    .about-image-wrap::before {
+    .about-image-showcase {
+        margin-top: 40px;
+    }
+
+    .about-image-wrap {
+        padding: 0 15px;
+        margin-bottom: 20px;
+    }
+
+    .about-floating-badge {
+        top: 10px;
+        left: 25px; /* sit slightly inside the padded image wrap left corner */
+        width: 74px;
+        height: 74px;
+        border-width: 1.5px;
+        box-shadow: 0 6px 15px rgba(255, 106, 0, 0.25);
+    }
+
+    .about-floating-badge .badge-num {
+        font-size: 16px;
+    }
+
+    .about-floating-badge .badge-lbl {
+        font-size: 8px;
+    }
+
+    .about-img-inner-wrap::before {
         clip-path: none;
         border-radius: 12px;
         border-width: 2.5px;
         top: -6px;
         left: -6px;
+    }
+
+    .about-img-inner-wrap::after {
+        display: none; /* Hide complex solid backdrop on mobile */
     }
 
     .about-img {
@@ -454,9 +489,12 @@
         position: relative;
         left: 0;
         bottom: 0;
-        margin-top: 15px;
+        margin-top: 20px;
         max-width: 100%;
         width: 100%;
+        clip-path: none; /* Remove diagonal clip so text isn't cut off on mobile */
+        border-radius: 12px;
+        padding: 16px 20px;
         box-shadow: 0 6px 20px rgba(0, 58, 106, 0.15);
     }
 
