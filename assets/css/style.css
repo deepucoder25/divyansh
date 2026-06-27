@@ -1,4 +1,4 @@
-﻿@import "footer.css";
+@import "footer.css";
 @import "slider.css";
 @import "navigation.css";
 @import "home_modules.css";
@@ -14,3 +14,4 @@
 @import "packers_movers_modules.css";
 @import "reviews_modules.css";
 @import "template_modules.css";
+@import "process_widget.css";
