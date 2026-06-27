@@ -2,134 +2,139 @@
 
 $services = [
     [
-        'title_part1' => 'Home',
-        'title_part2' => 'Shifting',
-        'image' => 'home-shifting-services.webp',
-        'desc' => 'Professional home shifting services to carefully transport all your household belongings with care and precision.',
-        'link' => 'home-shifting'
+        'title' => 'Home Relocation',
+        'slug' => 'home-shifting',
+        'image' => 'home-relocation.jpg',
+        'desc' => 'Safe and hassle-free shifting of your household items with utmost care and timely delivery.',
+        'icon' => 'bi bi-house-door-fill'
     ],
     [
-        'title_part1' => 'Office',
-        'title_part2' => 'Relocation',
-        'image' => 'office-relocation-services.webp',
-        'desc' => 'Seamless office relocation services designed to minimize disruption and ensure a smooth business transition.',
-        'link' => 'office-relocation'
+        'title' => 'Office Relocation',
+        'slug' => 'office-relocation',
+        'image' => 'office-relocation.jpg',
+        'desc' => 'Efficient office shifting services to ensure minimal downtime and a smooth transition.',
+        'icon' => 'bi bi-building'
     ],
     [
-        'title_part1' => 'Car',
-        'title_part2' => 'Transportation',
-        'image' => 'car-transportation-services.webp',
-        'desc' => 'Safe and reliable car transportation services to ensure your vehicle reaches its destination without hassle.',
-        'link' => 'car-transportation'
+        'title' => 'Packing & Moving',
+        'slug' => 'home-shifting', 
+        'image' => 'packing_moving.jpg', 
+        'desc' => 'High-quality packing materials and expert handling to ensure complete safety of your belongings.',
+        'icon' => 'bi bi-box-seam'
     ],
     [
-        'title_part1' => 'Bike',
-        'title_part2' => 'Transportation',
-        'image' => 'bike-transportation-services.webp',
-        'desc' => 'Efficient bike transportation services tailored to ensure your bike reaches its destination safely and on time.',
-        'link' => 'bike-transportation'
+        'title' => 'Transportation',
+        'slug' => 'domestic-relocation',
+        'image' => 'transport-service.jpg',
+        'desc' => 'Well-maintained vehicles and timely delivery services across local and long-distance locations.',
+        'icon' => 'bi bi-truck'
     ],
     [
-        'title_part1' => 'Warehouse',
-        'title_part2' => '& Storage',
-        'image' => 'warehouse-storage-services.webp',
-        'desc' => 'Safe and spacious warehouse and storage solutions to store your goods for short or long-term durations.',
-        'link' => 'warehouse-and-storage'
+        'title' => 'Warehousing & Storage',
+        'slug' => 'warehouse-and-storage',
+        'image' => 'warehouse-and-storage.jpg',
+        'desc' => 'Secure and spacious storage solutions for short-term and long-term needs with 24/7 security.',
+        'icon' => 'bi bi-boxes'
     ],
     [
-        'title_part1' => 'Domestic',
-        'title_part2' => 'Relocation',
-        'image' => 'domestic-relocation-services.webp',
-        'desc' => 'Comprehensive domestic relocation services to make moving within the country seamless and stress-free.',
-        'link' => 'domestic-relocation'
-    ],
-    [
-        'title_part1' => 'International',
-        'title_part2' => 'Shifting',
-        'image' => 'international-shifting-services.webp',
-        'desc' => 'Expert international shifting services for smooth and stress-free cross-border relocations worldwide.',
-        'link' => 'international-shifting'
-    ],
-    [
-        'title_part1' => 'Corporate',
-        'title_part2' => 'Shifting',
-        'image' => 'corporate-shifting-services.webp',
-        'desc' => 'Efficient corporate shifting solutions designed to minimize downtime and ensure smooth business transitions.',
-        'link' => 'corporate-shifting'
-    ],
-    [
-        'title_part1' => 'Intercity',
-        'title_part2' => 'Shifting',
-        'image' => 'intercity-shifting-services.webp',
-        'desc' => 'Reliable intercity shifting services to move your goods securely between different cities with ease.',
-        'link' => 'intercity-shifting'
-    ],
-    [
-        'title_part1' => 'Local',
-        'title_part2' => 'Shifting',
-        'image' => 'local-shifting-services.webp',
-        'desc' => 'Quick and efficient local shifting services to transport your belongings within the city, hassle-free.',
-        'link' => 'local-shifting'
-    ],
-    [
-        'title_part1' => 'Logistic',
-        'title_part2' => 'Services',
-        'image' => 'logistic-services.webp',
-        'desc' => 'Comprehensive logistic services to handle all your transportation and supply chain needs with efficiency.',
-        'link' => 'logistic-services'
-    ],
-    [
-        'title_part1' => 'Pet',
-        'title_part2' => 'Relocation',
-        'image' => 'pet-relocation-services.webp',
-        'desc' => 'Caring and secure pet relocation services to ensure your pets travel comfortably and safely to any destination.',
-        'link' => 'pet-relocation'
-    ],
+        'title' => 'Bike Transportation',
+        'slug' => 'bike-transportation',
+        'image' => 'bike-transport.jpg',
+        'desc' => 'Safe and secure bike carrier services to relocate two-wheelers to any destination in India.',
+        'icon' => 'bi bi-motorcycle'
+    ]
 ];
 ?>
 
 <section class="services-section py-5">
-    <!-- Background Decor Elements -->
-    <div class="services-decor decor-top-left"></div>
-    <div class="services-decor decor-top-right"></div>
-    <div class="services-decor decor-bottom-right"></div>
-
-    <div class="container position-relative home-service-widget-container">
+    <div class="glow-bg-blob-1"></div>
+    <div class="glow-bg-blob-2"></div>
+    <div class="container">
         <!-- Section Header -->
-        <div class="section-header text-center mb-5">
-            <div class="header-title-wrap d-flex align-items-center justify-content-center">
-                <span class="header-line left-line"></span>
-                <span class="header-dot left-dot"></span>
-                <h2 class="section-title mx-3">OUR SERVICES</h2>
-                <span class="header-dot right-dot"></span>
-                <span class="header-line right-line"></span>
-            </div>
-            <div class="header-truck-wrap">
-                <div class="truck-icon-container">
-                    <span class="speed-line line-1"></span>
-                    <span class="speed-line line-2"></span>
-                    <span class="speed-line line-3"></span>
-                    <i class="bi bi-truck truck-icon"></i>
-                </div>
-            </div>
+        <div class="text-center mb-5">
+            <span class="section-subtitle">— OUR SERVICES —</span>
+            <h2 class="section-title">Reliable Moving Solutions for Every Need</h2>
+            <p class="section-desc">At <?= htmlspecialchars($company3) ?>, we provide comprehensive moving services tailored to meet your unique requirements with safety, care and professionalism.</p>
+            <div class="header-divider"></div>
         </div>
 
         <!-- Grid of Services -->
-        <div class="row g-4 mt-2">
+        <div class="row g-4 justify-content-center services-grid-row">
             <?php foreach ($services as $service): ?>
-                <div class="col-lg-3 col-md-6 col-12 d-flex">
-                    <div class="srv-card w-100 d-flex flex-column">
-                        <div class="srv-icon-wrap">
-                            <img src="<?= base_url('assets/images/services_modules/' . $service['image']) ?>" alt="<?= $service['title_part1'] . ' ' . $service['title_part2'] ?>" class="img-fluid" onerror="this.src='<?= base_url('assets/images/about/packers_movers.jpg') ?>'">
+                <div class="col-lg-4 col-md-6 col-6 d-flex">
+                    <div class="service-card w-100">
+                        <!-- Top Image -->
+                        <div class="service-card-image-wrap">
+                            <img src="<?= base_url('assets/images/home_service/' . $service['image']) ?>" alt="<?= htmlspecialchars($service['title']) ?> Packers and Movers" class="service-card-img" loading="lazy">
                         </div>
-                        <div class="srv-title"><?= htmlspecialchars($service['title_part1']) ?> <?= htmlspecialchars($service['title_part2']) ?></div>
-                        <div class="srv-desc flex-grow-1"><?= htmlspecialchars($service['desc']) ?></div>
-                        <a href="<?= site_url($service['link']) ?>" class="srv-link">Read more <?= strtolower($service['title_part1']) ?>..</a>
+                        <!-- Overlapping Circle Icon -->
+                        <div class="service-icon-circle-overlap">
+                            <i class="<?= $service['icon'] ?>"></i>
+                        </div>
+                        <!-- Bottom Body Content -->
+                        <div class="service-card-body">
+                            <h3 class="service-card-title"><?= htmlspecialchars($service['title']) ?></h3>
+                            <div class="service-title-line-center"></div>
+                            <p class="service-card-desc"><?= htmlspecialchars($service['desc']) ?></p>
+                            <a href="<?= site_url($service['slug']) ?>" class="service-know-more-btn-center">
+                                <span>Know More</span> <i class="bi bi-arrow-right-short"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
             <?php endforeach; ?>
         </div>
+
+        <!-- Bottom Info Bar -->
+        <div class="services-info-bar mt-5">
+            <div class="info-bar-inner">
+                <!-- Help Item -->
+                <div class="info-item">
+                    <div class="info-icon-circle orange">
+                        <i class="bi bi-headset"></i>
+                    </div>
+                    <div class="info-text-wrap">
+                        <span class="info-title">Need Help?</span>
+                        <span class="info-title muted">We're here to assist you!</span>
+                    </div>
+                </div>
+
+                <div class="info-divider d-none d-lg-block"></div>
+
+                <!-- Call Item -->
+                <div class="info-item">
+                    <div class="info-icon-circle blue">
+                        <i class="bi bi-telephone-fill"></i>
+                    </div>
+                    <div class="info-text-wrap">
+                        <span class="info-title muted">Call Us Now</span>
+                        <span class="info-value orange">
+                            <a href="<?= $phonehtml ?>"><?= htmlspecialchars($phone) ?></a>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="info-divider d-none d-lg-block"></div>
+
+                <!-- Timings Item -->
+                <div class="info-item">
+                    <div class="info-icon-circle blue">
+                        <i class="bi bi-clock-fill"></i>
+                    </div>
+                    <div class="info-text-wrap">
+                        <span class="info-title">Mon - Sun</span>
+                        <span class="info-value orange">24/7 Service</span>
+                    </div>
+                </div>
+
+                <div class="info-divider d-none d-lg-block"></div>
+
+                <!-- Action Button -->
+                <a href="javascript:void(0)" class="btn-quote-pill-large" data-bs-toggle="modal" data-bs-target="#qteModal">
+                    <span>Get a Free Quote</span>
+                    <span class="btn-quote-circle-icon"><i class="bi bi-arrow-right-short"></i></span>
+                </a>
+            </div>
+        </div>
     </div>
 </section>
-
-
