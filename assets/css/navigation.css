@@ -123,8 +123,8 @@ html, body {
 }
 
 .brand-logo {
-    max-height: 52px;
-    max-width: 165px;
+    max-height: 95px;
+    max-width: 230px;
     width: 100%;
     display: block;
     object-fit: contain;
@@ -487,8 +487,8 @@ body.menu-open {
 }
 
 .drawer-logo {
-    max-height: 40px;
-    max-width: 150px;
+    max-height: 90px;
+    max-width: 200px;
     width: auto;
     display: block;
     object-fit: contain;
@@ -616,7 +616,7 @@ body.menu-open {
 /* --- Responsive Rules --- */
 @media (max-width: 991px) {
     .brand-logo {
-        max-height: 50px;
+        max-height: 100px;
     }
     
     .brand-wrap {
@@ -667,7 +667,7 @@ body.menu-open {
     }
     
     .brand-logo {
-        max-height: 42px;
+        max-height: 100px;
     }
 }
 
