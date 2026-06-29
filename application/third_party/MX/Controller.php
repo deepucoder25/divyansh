@@ -51,10 +51,10 @@ class MX_Controller
         $this->load = clone load_class('Loader');
         $this->load->initialize($this);
 
-        $this->comp['phone'] = '+91 0000000000';
-        $this->comp['phonehtml'] = 'tel:+910000000000';
-        $this->comp['phone1'] = '+91 0000000000';
-        $this->comp['phonehtml1'] = 'tel:+910000000000';
+        $this->comp['phone'] = '+91 7001562266';
+        $this->comp['phonehtml'] = 'tel:+917001562266';
+        $this->comp['phone1'] = '+91 7384881872';
+        $this->comp['phonehtml1'] = 'tel:+917384881872';
         $this->comp['supportmail'] = 'support@mycompany.com';
         $this->comp['replyToMail'] = 'support@mycompany.com';
         $this->comp['mail'] = 'support@mycompany.com';    
@@ -67,14 +67,14 @@ class MX_Controller
         $this->comp['instagramhtml'] = "";
         $this->comp['twitterhtml'] = "";
         $this->comp['linkedinhtml'] = "";
-        $this->comp['whatsapphtml'] = "https://wa.me/910000000000";
+        $this->comp['whatsapphtml'] = "https://wa.me/917001562266";
 
-        $this->comp['address'] = "Shop No.17, Building No.2, Deeplaxmi Rajaram Residency, Kalher, Bhiwandi, Mumbai, Pin Code- 421302";
-        $this->comp['address1'] = "Shop No.17, Building No.2, Deeplaxmi Rajaram Residency";
-        $this->comp['address2'] = "Kalher, Bhiwandi, Mumbai, Pin Code- 421302";
-        $this->comp['addressRegion'] = "Mumbai";
-        $this->comp['postalCode'] = "421302";
-        $this->comp['companystate'] = "Maharashtra";
+        $this->comp['address'] = "Chourangi more, patiram jote Siliguri - 734010";
+        $this->comp['address1'] = "Chourangi more, patiram jote Siliguri";
+        $this->comp['address2'] = "Siliguri - 734010";
+        $this->comp['addressRegion'] = "Siliguri";
+        $this->comp['postalCode'] = "734010";
+        $this->comp['companystate'] = "West Bengal";
         $this->comp['themeColor'] = "#04152d";
 
         $this->comp['experience'] = "20+";
