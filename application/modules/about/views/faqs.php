@@ -6,7 +6,7 @@
         <div class="bc-text-area">
             <h5 class="bc-eyebrow">SAFE. FAST. RELIABLE</h5>
             <div class="bc-sub-row">
-                <h1 class="bc-subtitle">FAQ Section</h1>
+                <h1 class="bc-subtitle">Frequently Asked Questions</h1>
                 <span class="bc-title-line"></span>
             </div>
         </div>
@@ -22,7 +22,7 @@
                 <div class="bc-links">
                     <a href="<?= site_url() ?>">Home</a>
                     <span class="bc-chevron"><i class="bi bi-chevron-right"></i></span>
-                    <span class="bc-current-page">FAQ Section</span>
+                    <span class="bc-current-page">FAQs</span>
                 </div>
             </div>
         </div>

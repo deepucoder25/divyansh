@@ -83,3 +83,216 @@
 .contact-tracking-success { color: green; }
 .contact-tracking-link { background-color: #28a745; padding: 4px; color: #fff; }
 .contact-tracking-underline { text-decoration: underline; }
+
+/* Premium Contacts Page Redesign */
+.contact-details-section {
+    background-color: #fafbfc;
+}
+
+.contact-card-wrap {
+    background-color: var(--white);
+    border-radius: 20px;
+    overflow: hidden;
+    max-width: 1100px;
+    margin: 30px auto;
+}
+
+.contact-left-column {
+    min-height: 580px;
+    padding: 60px 120px 60px 45px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contact-left-bg-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: cover;
+    background-position: center;
+    filter: grayscale(100%);
+    z-index: 1;
+}
+
+.contact-left-bg-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--primary-blue);
+    opacity: 0.93;
+    z-index: 2;
+}
+
+.contact-left-inner {
+    position: relative;
+    z-index: 4;
+    color: var(--white);
+}
+
+.contact-left-title {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.contact-left-line {
+    width: 50px;
+    height: 3px;
+    background-color: var(--accent-orange);
+    border-radius: 2px;
+    margin-bottom: 25px;
+}
+
+.contact-left-desc {
+    font-size: 15px;
+    opacity: 0.85;
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+
+.contact-info-list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.contact-info-item-custom {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.icon-square-red {
+    background-color: var(--accent-orange);
+    color: var(--white);
+    width: 50px;
+    height: 50px;
+    min-width: 50px;
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    box-shadow: 0 4px 15px rgba(255, 106, 0, 0.25);
+}
+
+.info-content-text h6 {
+    font-weight: 700;
+    font-size: 16px;
+    margin: 0 0 6px 0;
+}
+
+.info-content-text p {
+    margin: 0;
+    font-size: 14px;
+    opacity: 0.9;
+    line-height: 1.5;
+}
+
+.contact-curve-overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: -1px;
+    width: 140px;
+    z-index: 3;
+    pointer-events: none;
+}
+
+.contact-right-column {
+    padding: 60px 50px;
+    display: flex;
+    align-items: center;
+}
+
+.contact-form-inner {
+    width: 100%;
+}
+
+.dot-grid-decor {
+    position: absolute;
+    top: -20px;
+    right: -10px;
+    width: 90px;
+    height: 90px;
+    background-image: radial-gradient(var(--border-color) 1.5px, transparent 1.5px);
+    background-size: 10px 10px;
+    opacity: 0.7;
+    z-index: 1;
+}
+
+.contact-form-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--accent-orange);
+    margin-bottom: 25px;
+    position: relative;
+    z-index: 2;
+}
+
+.form-label-custom {
+    display: block;
+    font-size: 13.5px;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 8px;
+}
+
+.form-input-custom {
+    width: 100%;
+    padding: 12px 18px;
+    font-size: 14px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background-color: #fafbfc;
+    color: var(--text-dark);
+    font-family: inherit;
+    transition: var(--transition);
+}
+
+.form-input-custom:focus {
+    outline: none;
+    border-color: var(--accent-orange);
+    background-color: var(--white);
+    box-shadow: 0 0 0 4px rgba(255, 106, 0, 0.08);
+}
+
+.btn-send-message {
+    width: 100%;
+    padding: 14px;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--white);
+    background-color: var(--accent-orange);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 6px 20px rgba(255, 106, 0, 0.15);
+}
+
+.btn-send-message:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(255, 106, 0, 0.25);
+    background-color: #e05d00;
+}
+
+/* Responsive adjustments */
+@media (max-width: 991px) {
+    .contact-left-column {
+        min-height: auto;
+        padding: 50px 30px;
+    }
+    .contact-right-column {
+        padding: 40px 30px;
+    }
+}
+

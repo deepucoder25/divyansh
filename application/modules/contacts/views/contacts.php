@@ -29,78 +29,105 @@
     </div>
 </section>
 
-<!-- Contact Details & Form Section -->
-<section class="contact-section py-5 bg-light">
+<!-- Premium Contact Section -->
+<section class="contact-details-section py-5">
     <div class="container my-4">
-        <div class="row g-5">
-            <!-- Contact Details -->
-            <div class="col-lg-5">
-                <div class="contact-details-box bg-white p-4 p-md-5 rounded-4 shadow-sm h-100">
-                    <h2 class="fw-bold mb-4 contact-title-primary">Get In Touch</h2>
-                    <p class="text-muted mb-5">Have questions or need a custom quote? Reach out to us, and our team will get back to you as soon as possible.</p>
+        <div class="contact-card-wrap shadow-lg">
+            <div class="row g-0">
+                <!-- Left Column (Dark, City Skyline, Details) -->
+                <div class="col-lg-5 col-12 position-relative overflow-hidden contact-left-column">
+                    <!-- Background image overlay -->
+                    <div class="contact-left-bg-image" style="background-image: url('<?= base_url('assets/images/home/about-showcase.jpg') ?>');"></div>
+                    <div class="contact-left-bg-overlay"></div>
                     
-                    <div class="d-flex align-items-center mb-4">
-                        <div class="contact-icon rounded-circle d-flex justify-content-center align-items-center me-3 contact-icon-box">
-                            <i class="bi bi-geo-alt-fill"></i>
-                        </div>
-                        <div>
-                            <h6 class="fw-bold mb-1">Head Office</h6>
-                            <p class="mb-0 text-muted"><?= $address ?></p>
+                    <!-- Content -->
+                    <div class="contact-left-inner">
+                        <h2 class="contact-left-title">Get In Touch</h2>
+                        <div class="contact-left-line"></div>
+                        <p class="contact-left-desc">Have questions or need a custom quote? Reach out to us, and our team will get back to you as soon as possible.</p>
+                        
+                        <div class="contact-info-list">
+                            <!-- Head Office -->
+                            <div class="contact-info-item-custom">
+                                <div class="icon-square-red">
+                                    <i class="bi bi-geo-alt-fill"></i>
+                                </div>
+                                <div class="info-content-text">
+                                    <h6>Head Office</h6>
+                                    <p><?= htmlspecialchars($address) ?></p>
+                                </div>
+                            </div>
+                            
+                            <!-- Phone -->
+                            <div class="contact-info-item-custom">
+                                <div class="icon-square-red">
+                                    <i class="bi bi-telephone-fill"></i>
+                                </div>
+                                <div class="info-content-text">
+                                    <h6>Phone Number</h6>
+                                    <p><a href="<?= $phonehtml ?>" class="text-white text-decoration-none"><?= htmlspecialchars($phone) ?></a></p>
+                                </div>
+                            </div>
+                            
+                            <!-- Email -->
+                            <div class="contact-info-item-custom">
+                                <div class="icon-square-red">
+                                    <i class="bi bi-envelope-fill"></i>
+                                </div>
+                                <div class="info-content-text">
+                                    <h6>Email Address</h6>
+                                    <p><a href="<?= $mailhtml ?>" class="text-white text-decoration-none"><?= htmlspecialchars($mail) ?></a></p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     
-                    <div class="d-flex align-items-center mb-4">
-                        <div class="contact-icon rounded-circle d-flex justify-content-center align-items-center me-3 contact-icon-box-success">
-                            <i class="bi bi-telephone-fill"></i>
-                        </div>
-                        <div>
-                            <h6 class="fw-bold mb-1">Phone Number</h6>
-                            <p class="mb-0 text-muted"><a href="<?= $phonehtml ?>" class="text-decoration-none text-muted"><?= $phone ?></a></p>
-                        </div>
-                    </div>
-                    
-                    <div class="d-flex align-items-center mb-4">
-                        <div class="contact-icon rounded-circle d-flex justify-content-center align-items-center me-3 contact-icon-box-warning">
-                            <i class="bi bi-envelope-fill"></i>
-                        </div>
-                        <div>
-                            <h6 class="fw-bold mb-1">Email Address</h6>
-                            <p class="mb-0 text-muted"><a href="<?= $mailhtml ?>" class="text-decoration-none text-muted"><?= $mail ?></a></p>
-                        </div>
+                    <!-- Decorative Curved Separator (Hidden on mobile) -->
+                    <div class="contact-curve-overlay d-none d-lg-block">
+                        <svg viewBox="0 0 100 100" preserveAspectRatio="none" style="width: 100%; height: 100%;">
+                            <!-- Curve white background overlay -->
+                            <path d="M 100,0 C 50,30 20,60 70,80 L 100,100 Z" fill="var(--white)" />
+                            <!-- Curve outline lines -->
+                            <path d="M 100,0 C 50,30 20,60 70,80 L 100,100" fill="none" stroke="var(--accent-orange)" stroke-width="2.5" />
+                            <path d="M 100,0 C 47,30 17,60 67,80 L 100,100" fill="none" stroke="var(--accent-orange)" stroke-opacity="0.15" stroke-width="6" />
+                        </svg>
                     </div>
                 </div>
-            </div>
-            
-            <!-- Contact Form -->
-            <div class="col-lg-7">
-                <div class="contact-form-box bg-white p-4 p-md-5 rounded-4 shadow-sm h-100 border-top border-4 contact-border-warning">
-                    <h2 class="fw-bold mb-4 contact-title-primary">Send Us A Message</h2>
-                    <form id="contactform" class="ajax-form" data-url="<?php echo site_url('contacts/contact') ?>" data-result="contactformresults" onsubmit="return false;">
-                        <div class="row g-3">
-                            <div class="col-md-6">
-                                <label class="form-label fw-semibold text-dark">Your Name *</label>
-                                <input type="text" name="name" class="form-control py-2 contact-input-rounded" placeholder="John Doe">
+                
+                <!-- Right Column (White, Form) -->
+                <div class="col-lg-7 col-12 bg-white contact-right-column">
+                    <div class="contact-form-inner position-relative">
+                        <!-- Dot Grid Decoration (Top right corner, subtle) -->
+                        <div class="dot-grid-decor d-none d-sm-block"></div>
+                        
+                        <h2 class="contact-form-title">Send Us A Message</h2>
+                        <form id="contactform" class="ajax-form" data-url="<?php echo site_url('contacts/contact') ?>" data-result="contactformresults" onsubmit="return false;">
+                            <div class="row g-4">
+                                <div class="col-md-6 col-12">
+                                    <label class="form-label-custom">Your Name *</label>
+                                    <input type="text" name="name" class="form-input-custom" placeholder="John Doe">
+                                </div>
+                                <div class="col-md-6 col-12">
+                                    <label class="form-label-custom">Phone Number *</label>
+                                    <input type="tel" name="phone" class="form-input-custom" placeholder="Mobile Number">
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label-custom">Email Address</label>
+                                    <input type="email" name="email" class="form-input-custom" placeholder="hello@example.com">
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label-custom">Your Message</label>
+                                    <textarea name="message" class="form-input-custom" rows="5" placeholder="How can we help you?"></textarea>
+                                </div>
+                                <div class="col-12 mt-4">
+                                    <button type="submit" class="btn-send-message">
+                                        <i class="bi bi-send-fill me-2"></i> Send Message
+                                    </button>
+                                </div>
                             </div>
-                            <div class="col-md-6">
-                                <label class="form-label fw-semibold text-dark">Phone Number *</label>
-                                <input type="tel" name="phone" class="form-control py-2 contact-input-rounded" placeholder="Mobile Number">
-                            </div>
-                            <div class="col-12">
-                                <label class="form-label fw-semibold text-dark">Email Address</label>
-                                <input type="email" name="email" class="form-control py-2 contact-input-rounded" placeholder="hello@example.com">
-                            </div>
-                            <div class="col-12">
-                                <label class="form-label fw-semibold text-dark">Your Message</label>
-                                <textarea name="message" class="form-control py-2 contact-input-rounded" rows="5" placeholder="How can we help you?"></textarea>
-                            </div>
-                            <div class="col-12 mt-4">
-                                <button type="submit" class="theme-btn w-100 py-3 contact-btn-rounded">
-                                    <i class="bi bi-send me-2"></i> Send Message
-                                </button>
-                            </div>
-                        </div>
-                        <div id="contactformresults" class="mt-3"></div>
-                    </form>
+                            <div id="contactformresults" class="mt-3"></div>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
