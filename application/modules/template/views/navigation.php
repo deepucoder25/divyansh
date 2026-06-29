@@ -11,7 +11,7 @@
       $active_tab = 'home';
   } elseif ($class === 'about' || $class === 'blog' || $class === 'reviews' || in_array($segment1, ['about-us', 'why-choose-us', 'faqs', 'testimonials', 'reviews', 'blog', 'privacy-policy', 'terms-and-conditions'])) {
       $active_tab = 'about';
-  } elseif ($class === 'services' || in_array($segment1, ['our-services', 'home-shifting', 'office-relocation', 'car-transportation', 'bike-transportation', 'warehouse-and-storage', 'domestic-relocation', 'international-shifting'])) {
+  } elseif ($class === 'services' || in_array($segment1, ['our-services', 'home-shifting', 'office-relocation', 'car-transportation', 'bike-transportation', 'warehouse-and-storage', 'domestic-relocation', 'packing-and-moving'])) {
       $active_tab = 'services';
   } elseif ($segment1 === 'photo-gallery' || $segment1 === 'video-gallery' || $class === 'gallery') {
       $active_tab = 'gallery';
@@ -29,7 +29,7 @@
       ['slug' => 'bike-transportation',   'name' => 'Bike Transportation'],
       ['slug' => 'warehouse-and-storage', 'name' => 'Warehouse & Storage'],
       ['slug' => 'domestic-relocation',   'name' => 'Domestic Relocation'],
-      ['slug' => 'international-shifting','name' => 'International Shifting']
+      ['slug' => 'packing-and-moving',    'name' => 'Packing & Moving']
   ];
   ?>
 

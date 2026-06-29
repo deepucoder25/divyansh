@@ -1,40 +1,33 @@
 <?php if (!defined('BASEPATH')) exit('No direct script access allowed'); ?>
 
-<!-- Breadcrumbs Section -->
-<section class="service-breadcrumbs">
+<section class="bc-section-new">
     <div class="container">
-        <nav class="bc-nav">
-            <a href="<?= site_url() ?>">Home</a>
-            <span class="bc-sep">›</span>
-            <a href="<?= site_url('our-branches') ?>">Branches</a>
-            <span class="bc-sep">›</span>
-            <span class="bc-current">Office Relocation in <?= $city ?></span>
-        </nav>
-        <h1><span class="bc-title-white">Office Relocation in</span> <span class="bc-title-orange"><?= $city ?></span></h1>
-        <p class="bc-desc">Minimize business disruption with our highly organized corporate office shifting services in <?= $city ?>. We handle IT equipment, files, and modular furniture with utmost security.</p>
-        <div class="bc-features">
-            <div class="bc-feature-pill">
-                <div class="pill-icon"><i class="bi bi-lightning-charge-fill"></i></div>
-                <div class="pill-text"><strong>Fast Setup</strong><small>Quick commercial restart</small></div>
-            </div>
-            <div class="bc-feature-pill">
-                <div class="pill-icon"><i class="bi bi-pc-display-horizontal"></i></div>
-                <div class="pill-text"><strong>IT Transit</strong><small>Secure server handling</small></div>
-            </div>
-            <div class="bc-feature-pill">
-                <div class="pill-icon"><i class="bi bi-moon-stars-fill"></i></div>
-                <div class="pill-text"><strong>Weekend Shift</strong><small>Zero workday loss</small></div>
-            </div>
-            <div class="bc-feature-pill">
-                <div class="pill-icon"><i class="bi bi-file-earmark-lock-fill"></i></div>
-                <div class="pill-text"><strong>Confidential</strong><small>Secure file moving</small></div>
+        <!-- Text overlay area -->
+        <div class="bc-text-area">
+            <h5 class="bc-eyebrow">SAFE. FAST. RELIABLE</h5>
+            <div class="bc-sub-row">
+                <h1 class="bc-subtitle">Office Relocation in <?= $city ?></h1>
+                <span class="bc-title-line"></span>
             </div>
         </div>
-    </div>
-    <div class="bc-wave-wrap">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 64" preserveAspectRatio="none">
-            <path d="M0,30 C480,64 960,0 1440,30 L1440,64 L0,64 Z" fill="#ffffff"/>
-        </svg>
+        
+        <!-- Breadcrumb Ribbon -->
+        <div class="bc-ribbon-wrap">
+            <div class="bc-ribbon">
+                <!-- Home Icon Red/Orange Block -->
+                <div class="bc-home-block">
+                    <a href="<?= site_url() ?>"><i class="bi bi-house-door-fill"></i></a>
+                </div>
+                <!-- Path links -->
+                <div class="bc-links">
+                    <a href="<?= site_url() ?>">Home</a>
+                    <span class="bc-chevron"><i class="bi bi-chevron-right"></i></span>
+                    <a href="<?= site_url('office-relocation') ?>">Office Relocation</a>
+                    <span class="bc-chevron"><i class="bi bi-chevron-right"></i></span>
+                    <span class="bc-current-page"><?= $city ?></span>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 

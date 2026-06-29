@@ -31,15 +31,10 @@ $route["bike-transport-in-(:any)"] = "city_services/bike_transport/$1";
 $route["our-services"] = "services/index";
 $route["bike-transportation"] = "services/bike";
 $route["car-transportation"] = "services/car";
-$route["corporate-shifting"] = "services/corporate";
 $route["domestic-relocation"] = "services/domestic";
 $route["home-shifting"] = "services/homeShifting";
-$route["intercity-shifting"] = "services/intercity";
-$route["international-shifting"] = "services/international";
-$route["local-shifting"] = "services/local";
-$route["logistic-services"] = "services/logistic";
+$route["packing-and-moving"] = "services/packingAndMoving";
 $route["office-relocation"] = "services/office";
-$route["pet-relocation"] = "services/pet";
 $route["warehouse-and-storage"] = "services/storage";
 
 // Legacy/Compatibility Routes

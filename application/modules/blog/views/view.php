@@ -1,43 +1,36 @@
 <?php if (!defined('BASEPATH')) exit('No direct script access allowed'); ?>
 
 <main class="main">
-    <!-- Breadcrumbs Section -->
-    <section class="service-breadcrumbs">
-        <div class="container">
-            <nav class="bc-nav">
-                <a href="<?= site_url() ?>">Home</a>
-                <span class="bc-sep">›</span>
-                <a href="<?= site_url('blog') ?>">Our Blog</a>
-                <span class="bc-sep">›</span>
-                <span class="bc-current"><?= htmlspecialchars(@$query[0]->title) ?></span>
-            </nav>
-            <h1><span class="bc-title-white">Blog</span> <span class="bc-title-orange">Details</span></h1>
-            <p class="bc-desc"><?= htmlspecialchars(@$query[0]->title) ?></p>
-            <div class="bc-features">
-                <div class="bc-feature-pill">
-                    <div class="pill-icon"><i class="bi bi-clock-history"></i></div>
-                    <div class="pill-text"><strong>Since <?= isset($startYear) ? $startYear : '1986' ?></strong><small><?= isset($experience) ? $experience : '40+' ?> Years Legacy</small></div>
+    <section class="bc-section-new">
+    <div class="container">
+        <!-- Text overlay area -->
+        <div class="bc-text-area">
+            <h5 class="bc-eyebrow">SAFE. FAST. RELIABLE</h5>
+            <div class="bc-sub-row">
+                <h1 class="bc-subtitle">Blog Details</h1>
+                <span class="bc-title-line"></span>
+            </div>
+        </div>
+        
+        <!-- Breadcrumb Ribbon -->
+        <div class="bc-ribbon-wrap">
+            <div class="bc-ribbon">
+                <!-- Home Icon Red/Orange Block -->
+                <div class="bc-home-block">
+                    <a href="<?= site_url() ?>"><i class="bi bi-house-door-fill"></i></a>
                 </div>
-                <div class="bc-feature-pill">
-                    <div class="pill-icon"><i class="bi bi-patch-check-fill"></i></div>
-                    <div class="pill-text"><strong>ISO Certified</strong><small>Licensed &amp; Verified</small></div>
-                </div>
-                <div class="bc-feature-pill">
-                    <div class="pill-icon"><i class="bi bi-people-fill"></i></div>
-                    <div class="pill-text"><strong>Expert Team</strong><small>CMD to Branch Staff</small></div>
-                </div>
-                <div class="bc-feature-pill">
-                    <div class="pill-icon"><i class="bi bi-geo-alt-fill"></i></div>
-                    <div class="pill-text"><strong>Pan-India</strong><small>100+ Branches</small></div>
+                <!-- Path links -->
+                <div class="bc-links">
+                    <a href="<?= site_url() ?>">Home</a>
+                    <span class="bc-chevron"><i class="bi bi-chevron-right"></i></span>
+                    <a href="<?= site_url('blog') ?>">Blog</a>
+                    <span class="bc-chevron"><i class="bi bi-chevron-right"></i></span>
+                    <span class="bc-current-page"><?= htmlspecialchars($post_title) ?></span>
                 </div>
             </div>
         </div>
-        <div class="bc-wave-wrap">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 64" preserveAspectRatio="none">
-                <path d="M0,30 C480,64 960,0 1440,30 L1440,64 L0,64 Z" fill="#ffffff"/>
-            </svg>
-        </div>
-    </section>
+    </div>
+</section>
 
     <!-- Blog Single Post -->
     <section class="blog-details-section py-5 bg-light">

@@ -58,7 +58,7 @@ $suffix = isset($form_id_suffix) ? $form_id_suffix : '';
             <option>Bike Transportation</option>
             <option>Warehouse &amp; Storage</option>
             <option>Domestic Relocation</option>
-            <option>International Shifting</option>
+            <option>Packing &amp; Moving</option>
           </select>
         </div>
       </div>

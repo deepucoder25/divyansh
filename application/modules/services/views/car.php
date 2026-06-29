@@ -1,40 +1,31 @@
 <?php if (!defined('BASEPATH')) exit('No direct script access allowed'); ?>
 
-<!-- Breadcrumbs Section -->
-<section class="service-breadcrumbs">
+<section class="bc-section-new">
     <div class="container">
-        <nav class="bc-nav">
-            <a href="<?= site_url() ?>">Home</a>
-            <span class="bc-sep">›</span>
-            <a href="<?= site_url('our-services') ?>">Services</a>
-            <span class="bc-sep">›</span>
-            <span class="bc-current">Car Transportation</span>
-        </nav>
-        <h1><span class="bc-title-white">Car</span> <span class="bc-title-orange">Transportation</span></h1>
-        <p class="bc-desc">We transport your car safely using flatbed carriers and enclosed trailers with GPS tracking. Whether it's a sedan, SUV, or luxury vehicle, every car is insured and delivered damage-free.</p>
-        <div class="bc-features">
-            <div class="bc-feature-pill">
-                <div class="pill-icon"><i class="bi bi-truck-flatbed"></i></div>
-                <div class="pill-text"><strong>Open Carrier</strong><small>Cost-effective transport</small></div>
-            </div>
-            <div class="bc-feature-pill">
-                <div class="pill-icon"><i class="bi bi-lock-fill"></i></div>
-                <div class="pill-text"><strong>Enclosed Transport</strong><small>Premium protection</small></div>
-            </div>
-            <div class="bc-feature-pill">
-                <div class="pill-icon"><i class="bi bi-house-fill"></i></div>
-                <div class="pill-text"><strong>Door-to-Door</strong><small>Pickup &amp; delivery</small></div>
-            </div>
-            <div class="bc-feature-pill">
-                <div class="pill-icon"><i class="bi bi-geo-alt-fill"></i></div>
-                <div class="pill-text"><strong>GPS Tracked</strong><small>Live location updates</small></div>
+        <!-- Text overlay area -->
+        <div class="bc-text-area">
+            <h5 class="bc-eyebrow">SAFE. FAST. RELIABLE</h5>
+            <div class="bc-sub-row">
+                <h1 class="bc-subtitle">Car Transportation</h1>
+                <span class="bc-title-line"></span>
             </div>
         </div>
-    </div>
-    <div class="bc-wave-wrap">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 64" preserveAspectRatio="none">
-            <path d="M0,30 C480,64 960,0 1440,30 L1440,64 L0,64 Z" fill="#ffffff"/>
-        </svg>
+        
+        <!-- Breadcrumb Ribbon -->
+        <div class="bc-ribbon-wrap">
+            <div class="bc-ribbon">
+                <!-- Home Icon Red/Orange Block -->
+                <div class="bc-home-block">
+                    <a href="<?= site_url() ?>"><i class="bi bi-house-door-fill"></i></a>
+                </div>
+                <!-- Path links -->
+                <div class="bc-links">
+                    <a href="<?= site_url() ?>">Home</a>
+                    <span class="bc-chevron"><i class="bi bi-chevron-right"></i></span>
+                    <span class="bc-current-page">Car Transportation</span>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 

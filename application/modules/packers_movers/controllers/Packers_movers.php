@@ -66,13 +66,13 @@ class Packers_movers extends MX_Controller
         $data = array(
             "city" => $city,
             "state" => $state,
-            'img' => base_url('assets') . "/images/state/google/$statelink.png",
+            // 'img' => base_url('assets') . "/images/state/google/$statelink.png",
             "title" => $seo['title'],
             "description" => $seo['desc'],
             "keywords" => "movers and packers in $city, Movers Packers $city, Movers near me $city, Packers and movers in $city, Moving companies near me $city, Movers $city, Packers and movers near me $city",
             "Removal companies in $city, Moving services in $city, Cheap movers in $city, Local movers in $city, Local moving companies in $city",
             "$city best moving companies, House movers $city, Packers movers $city, Moving services near $city, House removals $city, Cheap moving companies in $city",
-            "Professional movers in $city, House movers near $city, Cheap movers $city, Best packers and movers in $city, Affordable movers $city, International movers from $city, International moving companies in $city",
+            "Professional movers in $city, House movers near $city, Cheap movers $city, Best packers and movers in $city, Affordable movers $city, Packing and moving services in $city, Top movers and packers in $city",
             "module" => "packers_movers",
             "view_file" => "view_service",
         );

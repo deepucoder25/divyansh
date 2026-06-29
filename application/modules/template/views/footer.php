@@ -138,7 +138,7 @@ $floatingWhatsappLink = !empty($whatsapphtml)
               <li><a href="<?= site_url('bike-transportation') ?>"><i class="bi bi-bicycle"></i>Bike Transportation</a></li>
               <li><a href="<?= site_url('warehouse-and-storage') ?>"><i class="bi bi-box-seam-fill"></i>Warehouse & Storage</a></li>
               <li><a href="<?= site_url('domestic-relocation') ?>"><i class="bi bi-truck"></i>Domestic Relocation</a></li>
-              <li><a href="<?= site_url('international-shifting') ?>"><i class="bi bi-globe2"></i>International Shifting</a></li>
+              <li><a href="<?= site_url('packing-and-moving') ?>"><i class="bi bi-box-seam-fill"></i>Packing & Moving</a></li>
             </ul>
           </div>
         </div>

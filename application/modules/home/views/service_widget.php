@@ -23,10 +23,10 @@ $services = [
         'icon' => 'bi bi-box-seam'
     ],
     [
-        'title' => 'Transportation',
+        'title' => 'Domestic Relocation',
         'slug' => 'domestic-relocation',
         'image' => 'transport-service.jpg',
-        'desc' => 'Well-maintained vehicles and timely delivery services across local and long-distance locations.',
+        'desc' => 'Safe, secure, and reliable long-distance home and office shifting services across India.',
         'icon' => 'bi bi-truck'
     ],
     [

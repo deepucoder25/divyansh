@@ -52,12 +52,12 @@ class Services extends MX_Controller
         echo Modules::run('template/layout2', $data);
     }
 
-    function international()
+    function packingAndMoving()
     {
-        $data['title'] = "Hassle-Free International Shifting & Relocation | " . $this->comp['company3'];
-        $data['description'] = "Reliable overseas relocation and international shifting services by " . $this->comp['company3'] . ". Complete customs clearance and secure transport.";
+        $data['title'] = "Best Packing and Moving Services | " . $this->comp['company3'];
+        $data['description'] = "Get premium and secure packing and moving services from " . $this->comp['company3'] . ". Safe packing, loading, and relocation of your household items.";
         $data['module'] = "services";
-        $data['view_file'] = "international";
+        $data['view_file'] = "packing_moving";
         echo Modules::run('template/layout2', $data);
     }
 
