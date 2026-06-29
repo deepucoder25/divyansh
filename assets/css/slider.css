@@ -936,7 +936,7 @@ body {
     padding-bottom: 25px;
 }
 
-.stats-bar-inner {
+.slider-stats-bar .stats-bar-inner {
     background-color: var(--primary-blue);
     border-radius: 50px;
     padding: 16px 30px;
@@ -947,7 +947,7 @@ body {
     border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-.stat-item {
+.slider-stats-bar .stat-item {
     display: flex;
     align-items: center;
     gap: 15px;
@@ -955,15 +955,15 @@ body {
     justify-content: center;
 }
 
-.stat-item:first-child {
+.slider-stats-bar .stat-item:first-child {
     justify-content: flex-start;
 }
 
-.stat-item:last-child {
+.slider-stats-bar .stat-item:last-child {
     justify-content: flex-end;
 }
 
-.stat-icon {
+.slider-stats-bar .stat-icon {
     width: 44px;
     height: 44px;
     border-radius: 50%;
@@ -974,33 +974,33 @@ body {
     color: var(--white);
 }
 
-.stat-icon.orange-circle {
+.slider-stats-bar .stat-icon.orange-circle {
     background-color: var(--accent-orange);
 }
 
-.stat-icon.blue-circle {
+.slider-stats-bar .stat-icon.blue-circle {
     background-color: #0c3e7b;
 }
 
-.stat-text {
+.slider-stats-bar .stat-text {
     display: flex;
     flex-direction: column;
     line-height: 1.2;
 }
 
-.stat-text strong {
+.slider-stats-bar .stat-text strong {
     color: var(--white);
     font-size: 18px;
     font-weight: 800;
 }
 
-.stat-text span {
+.slider-stats-bar .stat-text span {
     color: rgba(255, 255, 255, 0.8);
     font-size: 11px;
     font-weight: 500;
 }
 
-.stat-divider {
+.slider-stats-bar .stat-divider {
     width: 1px;
     height: 35px;
     background-color: rgba(255, 255, 255, 0.12);
@@ -1014,7 +1014,7 @@ body {
         padding-bottom: 10px;
     }
 
-    .stats-bar-inner {
+    .slider-stats-bar .stats-bar-inner {
         border-radius: 16px;
         padding: 12px 8px;
         gap: 6px;
@@ -1024,36 +1024,36 @@ body {
         scrollbar-width: none; /* Firefox */
     }
 
-    .stats-bar-inner::-webkit-scrollbar {
+    .slider-stats-bar .stats-bar-inner::-webkit-scrollbar {
         display: none; /* Chrome/Safari */
     }
 
-    .stat-item {
+    .slider-stats-bar .stat-item {
         flex: 0 0 auto;
         padding: 4px 10px;
         gap: 8px;
     }
 
-    .stat-item:first-child,
-    .stat-item:last-child {
+    .slider-stats-bar .stat-item:first-child,
+    .slider-stats-bar .stat-item:last-child {
         justify-content: center;
     }
 
-    .stat-icon {
+    .slider-stats-bar .stat-icon {
         width: 32px;
         height: 32px;
         font-size: 14px;
     }
 
-    .stat-text strong {
+    .slider-stats-bar .stat-text strong {
         font-size: 13.5px;
     }
 
-    .stat-text span {
+    .slider-stats-bar .stat-text span {
         font-size: 9.5px;
     }
 
-    .stat-divider {
+    .slider-stats-bar .stat-divider {
         height: 24px;
         margin: 0 2px;
         flex: 0 0 auto;

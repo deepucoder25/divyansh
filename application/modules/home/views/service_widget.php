@@ -77,7 +77,7 @@ $services = [
                             <div class="service-title-line-center"></div>
                             <p class="service-card-desc"><?= htmlspecialchars($service['desc']) ?></p>
                             <a href="<?= site_url($service['slug']) ?>" class="service-know-more-btn-center">
-                                <span>Know More</span> <i class="bi bi-arrow-right-short"></i>
+                                <span>Know About <?= htmlspecialchars($service['title']) ?></span> <i class="bi bi-arrow-right-short"></i>
                             </a>
                         </div>
                     </div>

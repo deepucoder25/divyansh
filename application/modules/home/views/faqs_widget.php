@@ -52,7 +52,7 @@ $faqs = [
     <div class="container position-relative about-z2">
         
         <!-- FAQ Badge & Header -->
-        <div class="faq-header-wrap text-center mb-4">
+        <div class="faq-header-wrap text-center mb-5">
             <div class="faq-badge-container d-flex align-items-center justify-content-center mb-3">
                 <span class="badge-line line-left"></span>
                 <span class="faq-pill-badge">FAQ</span>
@@ -70,11 +70,26 @@ $faqs = [
             <p class="faq-section-subtitle mt-3">Find answers to common questions about our moving and transportation services.</p>
         </div>
 
+        <?php
+        // Separate FAQs into left and right columns
+        $leftFaqs = [];
+        $rightFaqs = [];
+        foreach ($faqs as $index => $faq) {
+            if ($index % 2 === 0) {
+                $leftFaqs[] = ['index' => $index, 'faq' => $faq];
+            } else {
+                $rightFaqs[] = ['index' => $index, 'faq' => $faq];
+            }
+        }
+        ?>
+
         <!-- Accordion Grid -->
-        <div class="row g-2">
-            <?php foreach ($faqs as $index => $faq): ?>
-                <div class="col-lg-6 col-12 d-flex">
-                    <div class="faq-card flex-fill">
+        <div class="row">
+            <!-- Left Accordion Column -->
+            <div class="col-lg-6 col-12">
+                <?php foreach ($leftFaqs as $item): ?>
+                    <?php $index = $item['index']; $faq = $item['faq']; ?>
+                    <div class="faq-card">
                         <div class="faq-card-header d-flex align-items-center collapsed" 
                              data-bs-toggle="collapse" 
                              data-bs-target="#faq-collapse-<?= $index ?>" 
@@ -90,7 +105,7 @@ $faqs = [
                             </div>
                             
                             <div class="faq-toggle-btn d-flex align-items-center justify-content-center">
-                                <i class="bi bi-plus faq-toggle-icon"></i>
+                                <i class="bi bi-chevron-down faq-toggle-icon"></i>
                             </div>
                         </div>
                         
@@ -102,43 +117,43 @@ $faqs = [
                             </div>
                         </div>
                     </div>
-                </div>
-            <?php endforeach; ?>
-        </div>
-
-        <!-- Still have questions / help banner -->
-        <div class="faq-footer-banner-wrap mt-3 pt-1 position-relative">
-            
-            <!-- Curved Dotted Arrows -->
-            <div class="faq-arrow-wrap faq-arrow-left d-none d-lg-block">
-                <svg width="120" height="60" viewBox="0 0 120 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M10 10 C 20 45, 75 45, 105 15" stroke="#0a4ebd" stroke-width="2" stroke-dasharray="4, 4" stroke-linecap="round"/>
-                    <path d="M96 22 L 105 15 L 105 26" stroke="#0a4ebd" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-            </div>
-            
-            <div class="faq-arrow-wrap faq-arrow-right d-none d-lg-block">
-                <svg width="120" height="60" viewBox="0 0 120 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M110 10 C 100 45, 45 45, 15 15" stroke="#0a4ebd" stroke-width="2" stroke-dasharray="4, 4" stroke-linecap="round"/>
-                    <path d="M24 22 L 15 15 L 15 26" stroke="#0a4ebd" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
+                <?php endforeach; ?>
             </div>
 
-            <!-- Help Banner Box -->
-            <div class="faq-help-banner mx-auto">
-                <div class="d-flex flex-column flex-md-row align-items-center justify-content-center text-center text-md-start">
-                    <div class="help-icon-wrap d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-4">
-                        <i class="bi bi-headset help-icon"></i>
+            <!-- Right Accordion Column -->
+            <div class="col-lg-6 col-12">
+                <?php foreach ($rightFaqs as $item): ?>
+                    <?php $index = $item['index']; $faq = $item['faq']; ?>
+                    <div class="faq-card">
+                        <div class="faq-card-header d-flex align-items-center collapsed" 
+                             data-bs-toggle="collapse" 
+                             data-bs-target="#faq-collapse-<?= $index ?>" 
+                             aria-expanded="false" 
+                             role="button">
+                            
+                            <div class="faq-icon-wrap d-flex align-items-center justify-content-center">
+                                <i class="bi <?= $faq['icon'] ?> faq-card-icon"></i>
+                            </div>
+                            
+                            <div class="faq-question-wrap flex-grow-1">
+                                <h3 class="faq-question m-0"><?= htmlspecialchars($faq['question']) ?></h3>
+                            </div>
+                            
+                            <div class="faq-toggle-btn d-flex align-items-center justify-content-center">
+                                <i class="bi bi-chevron-down faq-toggle-icon"></i>
+                            </div>
+                        </div>
+                        
+                        <div id="faq-collapse-<?= $index ?>" class="collapse" data-bs-parent="">
+                            <div class="faq-card-body">
+                                <p class="faq-answer m-0">
+                                    <?= htmlspecialchars($faq['answer']) ?>
+                                </p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="help-text-wrap text-white">
-                        <h4 class="help-title mb-1">Still have questions? We're here to help!</h4>
-                        <p class="help-desc mb-0">
-                            Call us at <a href="<?= $phonehtml ?>" class="help-link"><?= $phone ?></a> or email us at <a href="mailto:<?= $mail ?>" class="help-link"><?= $mail ?></a>
-                        </p>
-                    </div>
-                </div>
+                <?php endforeach; ?>
             </div>
         </div>
-
     </div>
 </section>
