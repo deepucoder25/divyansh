@@ -37,82 +37,70 @@
             <div class="col-lg-8">
                 <div class="service-main-content">
                     
-                    <h2 class="service-section-title">Our Relocation Operations in Action</h2>
-                    <div class="about-service-text mb-4">
-                        <p>
-                            Take a look at our on-field photos demonstrating our dedication to safety, careful packaging, and organized logistics. Our photo gallery highlights our packing standards, secure warehouse storage, and specialized fleets.
-                        </p>
-                    </div>
+                    <h2 class="gallery-section-title">Our Relocation Operations in Action</h2>
+                    <p class="gallery-section-desc">
+                        Take a look at our on-field photos demonstrating our dedication to safety, careful packaging, and organized logistics. Our photo gallery highlights our packing standards, secure warehouse storage, and specialized fleets.
+                    </p>
+
+                    <?php
+                    $gallery_dir = './assets/images/gallery/';
+                    $images = [];
+
+                    if (is_dir($gallery_dir)) {
+                        $files = glob($gallery_dir . '*.{jpg,jpeg,png,webp}', GLOB_BRACE);
+                        if (!empty($files)) {
+                            natsort($files);
+                            foreach ($files as $file) {
+                                $images[] = [
+                                    'src' => base_url('assets/images/gallery/' . basename($file)),
+                                    'alt' => str_replace(['-', '_'], ' ', pathinfo($file, PATHINFO_FILENAME)) . " Shifting Operations"
+                                ];
+                            }
+                        }
+                    }
+
+                    // Fallback mock items if no images found in directory
+                    if (empty($images)) {
+                        $fallbacks = [
+                            ['img' => 'assets/images/home_service/home-relocation.jpg', 'alt' => 'Household relocation and packing shifting'],
+                            ['img' => 'assets/images/home_service/office-relocation.jpg', 'alt' => 'Office shifting and cargo handling services'],
+                            ['img' => 'assets/images/home_service/bike-transport.jpg', 'alt' => 'Bike and car carrier shifting operations'],
+                            ['img' => 'assets/images/home_service/warehouse-and-storage.jpg', 'alt' => 'Secure warehouse goods storage facilities'],
+                            ['img' => 'assets/images/home_service/packing_moving.jpg', 'alt' => 'Relocation packing and transport stacking services'],
+                            ['img' => 'assets/images/home_service/transport-service.jpg', 'alt' => 'Logistics carrier fleet loading operations'],
+                        ];
+                        // Loop to build 12 items for demo purposes
+                        for ($i = 0; $i < 12; $i++) {
+                            $fb = $fallbacks[$i % count($fallbacks)];
+                            $images[] = [
+                                'src' => base_url($fb['img']),
+                                'alt' => $fb['alt'] . ' - Image ' . ($i + 1)
+                            ];
+                        }
+                    }
+                    ?>
 
                     <!-- Photo Gallery Grid -->
                     <div class="row">
-                        <!-- Photo 1 -->
-                        <div class="col-md-6 mb-4">
-                            <div class="card border-0 shadow-sm rounded-3 overflow-hidden gallery-photo-card h-100">
-                                <div class="gallery-img-wrapper position-relative">
-                                    <img loading="lazy" src="<?= base_url('assets/images/services_modules/home-shifting-services.webp') ?>" class="w-100 img-fluid gallery-img" alt="Household Packing and Shifting Services">
-                                    <div class="gallery-hover-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center opacity-0 gallery-bg-dark-50 gallery-transition-all">
-                                        <i class="bi bi-zoom-in text-white gallery-icon-lg"></i>
+                        <?php foreach ($images as $i => $img): ?>
+                        <div class="col-md-6 col-sm-6 col-12 mb-4 gallery-grid-item">
+                            <div class="gallery-photo-box" onclick="openGalleryLightbox('<?= $img['src'] ?>', '<?= htmlspecialchars($img['alt']) ?>')">
+                                <img loading="lazy" src="<?= $img['src'] ?>" alt="<?= htmlspecialchars($img['alt']) ?>">
+                                <div class="gallery-photo-overlay">
+                                    <div class="gallery-zoom-icon">
+                                        <i class="bi bi-zoom-in"></i>
                                     </div>
-                                </div>
-                                <div class="card-body p-3">
-                                    <span class="badge gallery-bg-success-soft text-success mb-2 gallery-badge-sm">Household Packing</span>
-                                    <h5 class="fw-bold mb-1 gallery-title-sm">Multi-Layer Furniture Protection</h5>
-                                    <p class="small text-muted mb-0">Careful packing of household furniture using bubble wrap and edge guards to prevent transit scratches.</p>
                                 </div>
                             </div>
                         </div>
+                        <?php endforeach; ?>
+                    </div>
 
-                        <!-- Photo 2 -->
-                        <div class="col-md-6 mb-4">
-                            <div class="card border-0 shadow-sm rounded-3 overflow-hidden gallery-photo-card h-100">
-                                <div class="gallery-img-wrapper position-relative">
-                                    <img loading="lazy" src="<?= base_url('assets/images/services_modules/car-transportation-services.webp') ?>" class="w-100 img-fluid gallery-img" alt="Car Transportation Carriers">
-                                    <div class="gallery-hover-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center opacity-0 gallery-bg-dark-50 gallery-transition-all">
-                                        <i class="bi bi-zoom-in text-white gallery-icon-lg"></i>
-                                    </div>
-                                </div>
-                                <div class="card-body p-3">
-                                    <span class="badge gallery-bg-success-soft text-success mb-2 gallery-badge-sm">Car Carrier</span>
-                                    <h5 class="fw-bold mb-1 gallery-title-sm">Enclosed Double-Deck Car Transport</h5>
-                                    <p class="small text-muted mb-0">Loading passenger cars inside fully enclosed containers to protect them from weather and road debris.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Photo 3 -->
-                        <div class="col-md-6 mb-4">
-                            <div class="card border-0 shadow-sm rounded-3 overflow-hidden gallery-photo-card h-100">
-                                <div class="gallery-img-wrapper position-relative">
-                                    <img loading="lazy" src="<?= base_url('assets/images/services_modules/bike-transportation-services.webp') ?>" class="w-100 img-fluid gallery-img" alt="Two-Wheeler Bike Shifting">
-                                    <div class="gallery-hover-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center opacity-0 gallery-bg-dark-50 gallery-transition-all">
-                                        <i class="bi bi-zoom-in text-white gallery-icon-lg"></i>
-                                    </div>
-                                </div>
-                                <div class="card-body p-3">
-                                    <span class="badge gallery-bg-success-soft text-success mb-2 gallery-badge-sm">Bike Shifting</span>
-                                    <h5 class="fw-bold mb-1 gallery-title-sm">Scratch-Free Two-Wheeler Packing</h5>
-                                    <p class="small text-muted mb-0">Secure wheel lock straps and heavy foam sheeting applied to bikes before long-distance transport.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Photo 4 -->
-                        <div class="col-md-6 mb-4">
-                            <div class="card border-0 shadow-sm rounded-3 overflow-hidden gallery-photo-card h-100">
-                                <div class="gallery-img-wrapper position-relative">
-                                    <img loading="lazy" src="<?= base_url('assets/images/services_modules/loading.webp') ?>" class="w-100 img-fluid gallery-img" alt="Cargo Loading Operations">
-                                    <div class="gallery-hover-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center opacity-0 gallery-bg-dark-50 gallery-transition-all">
-                                        <i class="bi bi-zoom-in text-white gallery-icon-lg"></i>
-                                    </div>
-                                </div>
-                                <div class="card-body p-3">
-                                    <span class="badge gallery-bg-success-soft text-success mb-2 gallery-badge-sm">Cargo Loading</span>
-                                    <h5 class="fw-bold mb-1 gallery-title-sm">Organized Goods Stacking &amp; Loading</h5>
-                                    <p class="small text-muted mb-0">Professional loaders stacking boxes systematically inside our trucks to ensure stability during transit.</p>
-                                </div>
-                            </div>
-                        </div>
+                    <!-- Load More Button -->
+                    <div class="text-center gallery-load-more-wrap">
+                        <button id="galleryLoadMoreBtn" class="gallery-load-more-btn">
+                            Load More Operations <i class="bi bi-arrow-down ms-1"></i>
+                        </button>
                     </div>
 
                 </div>
@@ -126,3 +114,55 @@
     </div>
 </section>
 
+<!-- Gallery Lightbox Modal -->
+<div class="modal fade gallery-lightbox-modal" id="galleryLightbox" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            <div class="modal-body">
+                <button type="button" class="gallery-lightbox-close" data-bs-dismiss="modal" aria-label="Close">
+                    <i class="bi bi-x"></i>
+                </button>
+                <img src="" id="lightboxImage" class="img-fluid" alt="Zoomed Shifting Photo">
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+function openGalleryLightbox(src, alt) {
+    document.getElementById('lightboxImage').src = src;
+    document.getElementById('lightboxImage').alt = alt;
+    var myModal = new bootstrap.Modal(document.getElementById('galleryLightbox'));
+    myModal.show();
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    const itemsPerLoad = 6;
+    let currentVisible = 6;
+    const items = document.querySelectorAll('.gallery-grid-item');
+    const loadMoreBtn = document.getElementById('galleryLoadMoreBtn');
+    
+    // Hide items beyond currentVisible
+    for (let i = currentVisible; i < items.length; i++) {
+        items[i].style.display = 'none';
+    }
+    
+    // Hide button if total items are less than or equal to currentVisible
+    if (items.length <= currentVisible) {
+        if (loadMoreBtn) loadMoreBtn.style.display = 'none';
+    }
+    
+    if (loadMoreBtn) {
+        loadMoreBtn.addEventListener('click', function() {
+            let nextVisible = currentVisible + itemsPerLoad;
+            for (let i = currentVisible; i < Math.min(nextVisible, items.length); i++) {
+                items[i].style.display = 'block';
+            }
+            currentVisible = nextVisible;
+            if (currentVisible >= items.length) {
+                loadMoreBtn.style.display = 'none';
+            }
+        });
+    }
+});
+</script>

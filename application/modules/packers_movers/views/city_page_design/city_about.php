@@ -56,7 +56,7 @@ include 'city_content.php';
                 <div class="carousel-inner">
                   <!-- Slide 1 -->
                   <div class="carousel-item active">
-                    <img src="<?= base_url('assets/images/gallery/img-1.jpg') ?>" 
+                    <img src="<?= base_url('assets/images/gallery/img1.jpg') ?>" 
                          alt="Packers and Movers Services in <?= htmlspecialchars($city) ?> - <?= htmlspecialchars($company3) ?>" 
                          class="city-about-image"
                          loading="lazy">
