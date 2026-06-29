@@ -39,7 +39,6 @@ $state = [
         "category" => "Bangalore",
         "link" => "bangalore"
     ],
-
     [
         "image" => "west-bengal.jpg",
         "category" => "West Bengal",
@@ -54,7 +53,7 @@ $state = [
 ?>
 
 <!-- Branch Section -->
-<section class="portfolio-area py-5 bg-light">
+<section class="portfolio-area py-5 bg-light pm-states-section">
     <div class="container">
 
         <!-- Section Heading -->
@@ -72,36 +71,36 @@ $state = [
             <?php foreach ($state as $item): ?>
                 
                 <!-- 4 Columns in One Row on Desktop -->
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-
-                    <div class="pm-states-card bg-white rounded-4 overflow-hidden shadow-sm h-100">
-
-                        <!-- Image -->
-                        <div class="pm-states-img position-relative overflow-hidden">
-                            <img class="img-fluid w-100"
-                                src="<?= base_url() ?>/assets/images/state/<?= $item['image'] ?>"
-                                alt="<?= $item['category'] ?>">
-
-                            <div class="pm-states-overlay">
-                                <a href="<?= site_url($item['link']) ?>" class="btn btn-warning btn-sm rounded-pill px-3">
-                                    View
-                                </a>
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                    <div class="pm-states-card-new">
+                        <!-- Image Wrap -->
+                        <div class="pm-states-img-wrap">
+                            <!-- Badge -->
+                            <div class="pm-states-badge">
+                                <i class="bi bi-shield-fill-check me-1"></i> ISO Certified
                             </div>
+                            
+                            <img src="<?= base_url() ?>/assets/images/state/<?= $item['image'] ?>"
+                                 alt="<?= $item['category'] ?>">
                         </div>
 
-                        <!-- Content -->
-                        <div class="p-3 text-start d-flex align-items-center gap-2">
-                            <span class="pm-states-yellow-dash"></span>
-                            <h6 class="fw-semibold mb-0">
-                                <a href="<?= site_url($item['link']) ?>"
-                                    class="text-dark text-decoration-none">
-                                    <?= htmlspecialchars($item['category']) ?>
-                                </a>
-                            </h6>
+                        <!-- Card Body -->
+                        <div class="pm-states-body">
+                            <div class="d-flex align-items-center gap-2">
+                                <div class="pm-states-icon-circle">
+                                    <i class="bi bi-geo-alt-fill"></i>
+                                </div>
+                                <h5 class="mb-0">
+                                    <a href="<?= site_url($item['link']) ?>" class="pm-states-title-link">
+                                        <?= htmlspecialchars($item['category']) ?>
+                                    </a>
+                                </h5>
+                            </div>
+                            <a href="<?= site_url($item['link']) ?>" class="pm-states-btn-explore">
+                                Explore Cities <i class="bi bi-arrow-right"></i>
+                            </a>
                         </div>
-
                     </div>
-
                 </div>
 
             <?php endforeach; ?>
@@ -109,6 +108,3 @@ $state = [
         </div>
     </div>
 </section>
-
-
-

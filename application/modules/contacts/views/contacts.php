@@ -84,7 +84,7 @@
                     
                     <!-- Decorative Curved Separator (Hidden on mobile) -->
                     <div class="contact-curve-overlay d-none d-lg-block">
-                        <svg viewBox="0 0 100 100" preserveAspectRatio="none" style="width: 100%; height: 100%;">
+                        <svg viewBox="0 0 100 100" preserveAspectRatio="none">
                             <!-- Curve white background overlay -->
                             <path d="M 100,0 C 50,30 20,60 70,80 L 100,100 Z" fill="var(--white)" />
                             <!-- Curve outline lines -->
