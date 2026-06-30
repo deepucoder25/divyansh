@@ -108,8 +108,9 @@ $services = [
                     </div>
                     <div class="info-text-wrap">
                         <span class="info-title muted">Call Us Now</span>
-                        <span class="info-value orange">
+                        <span class="info-value orange d-flex flex-column gap-1">
                             <a href="<?= $phonehtml ?>"><?= htmlspecialchars($phone) ?></a>
+                            <a href="<?= $phonehtml1 ?>"><?= htmlspecialchars($phone1) ?></a>
                         </span>
                     </div>
                 </div>
