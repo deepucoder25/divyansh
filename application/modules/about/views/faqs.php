@@ -35,98 +35,96 @@
         <div class="row">
             <!-- Left Side Content -->
             <div class="col-lg-8">
-                <div class="service-main-content">
+                <div class="about-premium-card">
+                    <h2 class="about-section-heading">Answers to Shifting Queries</h2>
                     
-                    <h2 class="service-section-title">Answers to Common Shifting Queries</h2>
-                    <div class="about-service-text mb-4">
-                        <p>
-                            Shifting your home or vehicle can feel overwhelming, and it's completely normal to have questions about safety, packaging, timelines, and insurance. Here are answers to the questions we are asked most frequently by our clients.
-                        </p>
-                    </div>
+                    <p class="about-lead-text">
+                        Planning a move can trigger many questions. Below are the most frequently asked questions and answers to help you prepare for a stress-free relocation with us.
+                    </p>
 
-                    <!-- Bootstrap Accordion for FAQs -->
-                    <div class="accordion accordion-flush about-custom-faq-accordion" id="faqAccordion">
+                    <!-- Bootstrap Accordion for FAQs with premium styling classes -->
+                    <div class="accordion accordion-flush faq-premium-accordion mt-4" id="faqAccordion">
                         
                         <!-- Question 1 -->
-                        <div class="accordion-item border-0 mb-3 shadow-sm rounded-3 overflow-hidden">
+                        <div class="accordion-item">
                             <h2 class="accordion-header" id="faq-heading-1">
-                                <button class="accordion-button fw-bold text-dark bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse-1" aria-expanded="true" aria-controls="faq-collapse-1">
-                                    1. What services does <?= $company3 ?> provide?
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse-1" aria-expanded="true" aria-controls="faq-collapse-1">
+                                    What types of shifting services does <?= $company3 ?> offer?
                                 </button>
                             </h2>
                             <div id="faq-collapse-1" class="accordion-collapse collapse show" aria-labelledby="faq-heading-1" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body bg-white text-muted small pt-0">
-                                    We offer complete, end-to-end relocation services across India including household shifting, office relocation, vehicle (car/bike) carrier transport, warehouse storage, domestic shifting, corporate movements, international relocations, and pet relocations.
+                                <div class="accordion-body">
+                                    We provide complete, end-to-end relocation services across India, including household shifting, corporate office relocation, vehicle (car &amp; bike) shipping, secure warehousing/storage, local shifting, packing-only services, and comprehensive transit insurance options.
                                 </div>
                             </div>
                         </div>
-
+ 
                         <!-- Question 2 -->
-                        <div class="accordion-item border-0 mb-3 shadow-sm rounded-3 overflow-hidden">
+                        <div class="accordion-item">
                             <h2 class="accordion-header" id="faq-heading-2">
-                                <button class="accordion-button collapsed fw-bold text-dark bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse-2" aria-expanded="false" aria-controls="faq-collapse-2">
-                                    2. How are the packing and moving charges calculated?
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse-2" aria-expanded="false" aria-controls="faq-collapse-2">
+                                    How are the packing and moving costs calculated?
                                 </button>
                             </h2>
                             <div id="faq-collapse-2" class="accordion-collapse collapse" aria-labelledby="faq-heading-2" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body bg-white text-muted small pt-0">
-                                    Relocation costs depend on several key factors: the total volume of goods, the amount of packing material needed (e.g. bubble wraps, boxes, custom wooden crates), travel distance, the floor levels of the locations, access to lifts, and additional options like warehousing or transit insurance.
+                                <div class="accordion-body">
+                                    Shifting costs are calculated based on several factors: the volume and weight of your belongings, the distance between the source and destination cities, the quality of packing materials required (e.g. bubble wrap, wooden crates), floor levels at both properties, presence of lifts, and opt-in services like storage or insurance.
                                 </div>
                             </div>
                         </div>
 
                         <!-- Question 3 -->
-                        <div class="accordion-item border-0 mb-3 shadow-sm rounded-3 overflow-hidden">
+                        <div class="accordion-item">
                             <h2 class="accordion-header" id="faq-heading-3">
-                                <button class="accordion-button collapsed fw-bold text-dark bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse-3" aria-expanded="false" aria-controls="faq-collapse-3">
-                                    3. Do you provide insurance for my household goods during transit?
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse-3" aria-expanded="false" aria-controls="faq-collapse-3">
+                                    Why do I need transit insurance for my relocation?
                                 </button>
                             </h2>
                             <div id="faq-collapse-3" class="accordion-collapse collapse" aria-labelledby="faq-heading-3" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body bg-white text-muted small pt-0">
-                                    Yes, we provide full transit insurance options. We strongly advise taking transit insurance as it covers financial liability for any damage arising due to unexpected road conditions, weather events, or traffic accidents. Our customer service team handles claims smoothly and quickly.
+                                <div class="accordion-body">
+                                    Even with the best packing and secure transportation, road conditions and accidents are beyond human control. Transit insurance provides safety against unforeseen accidents, fire, road collisions, or natural disasters, ensuring financial coverage and quick compensation.
                                 </div>
                             </div>
                         </div>
 
                         <!-- Question 4 -->
-                        <div class="accordion-item border-0 mb-3 shadow-sm rounded-3 overflow-hidden">
+                        <div class="accordion-item">
                             <h2 class="accordion-header" id="faq-heading-4">
-                                <button class="accordion-button collapsed fw-bold text-dark bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse-4" aria-expanded="false" aria-controls="faq-collapse-4">
-                                    4. How much time will it take to relocate my goods?
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse-4" aria-expanded="false" aria-controls="faq-collapse-4">
+                                    What items are restricted and cannot be loaded?
                                 </button>
                             </h2>
                             <div id="faq-collapse-4" class="accordion-collapse collapse" aria-labelledby="faq-heading-4" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body bg-white text-muted small pt-0">
-                                    Local shifting within a city is usually completed in a single day (typically taking 4 to 8 hours depending on size). For intercity shifting, transit times depend on the distance, route conditions, and checkpoint regulations, usually ranging between 2 to 7 business days.
+                                <div class="accordion-body">
+                                    For safety reasons, we do not transport hazardous or explosive substances, gas cylinders, liquid fuel, chemicals, perishable food items, and live plants. We also strongly advise clients to carry extremely valuable belongings (like cash, jewelry, gold, and key original papers) personally.
                                 </div>
                             </div>
                         </div>
 
                         <!-- Question 5 -->
-                        <div class="accordion-item border-0 mb-3 shadow-sm rounded-3 overflow-hidden">
+                        <div class="accordion-item">
                             <h2 class="accordion-header" id="faq-heading-5">
-                                <button class="accordion-button collapsed fw-bold text-dark bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse-5" aria-expanded="false" aria-controls="faq-collapse-5">
-                                    5. Can I track my shipment during transit?
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse-5" aria-expanded="false" aria-controls="faq-collapse-5">
+                                    How long does intercity home shifting take?
                                 </button>
                             </h2>
                             <div id="faq-collapse-5" class="accordion-collapse collapse" aria-labelledby="faq-heading-5" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body bg-white text-muted small pt-0">
-                                    Yes. We supply tracking options and maintain a dedicated support desk. The branch manager coordinating your shifting will remain in direct contact to provide regular status updates on where the vehicle is and its estimated arrival time.
+                                <div class="accordion-body">
+                                    While local shifting within the same city is completed within 4 to 8 hours on the same day, intercity shifting depends on the distance, transport carrier type (shared or dedicated), and state checkpoint checks. Usually, intercity transit takes between 2 to 7 business days.
                                 </div>
                             </div>
                         </div>
 
                         <!-- Question 6 -->
-                        <div class="accordion-item border-0 mb-3 shadow-sm rounded-3 overflow-hidden">
+                        <div class="accordion-item">
                             <h2 class="accordion-header" id="faq-heading-6">
-                                <button class="accordion-button collapsed fw-bold text-dark bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse-6" aria-expanded="false" aria-controls="faq-collapse-6">
-                                    6. What items are restricted or not loaded for transit?
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse-6" aria-expanded="false" aria-controls="faq-collapse-6">
+                                    Do you offer storage or warehousing services?
                                 </button>
                             </h2>
                             <div id="faq-collapse-6" class="accordion-collapse collapse" aria-labelledby="faq-heading-6" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body bg-white text-muted small pt-0">
-                                    For safety reasons, we do not transport hazardous materials, inflammable substances (gas cylinders, fuel), contraband, perishables, jewelry, cash, and highly valuable documents. We advise clients to carry jewelry, cash, and documents personally.
+                                <div class="accordion-body">
+                                    Yes, we provide safe and clean warehousing facilities. If your new home or office is not yet ready, we can store your packed goods in our dry, secure warehouse under CCTV supervision and round-the-clock guards.
                                 </div>
                             </div>
                         </div>
@@ -143,6 +141,3 @@
         </div>
     </div>
 </section>
-
-
-

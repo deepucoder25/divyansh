@@ -35,85 +35,80 @@
         <div class="row">
             <!-- Left Side Content -->
             <div class="col-lg-8">
-                <div class="service-main-content">
+                <div class="about-premium-card">
+                    <h2 class="about-section-heading">Why Shift With <?= $company3 ?>?</h2>
                     
-                    <h2 class="service-section-title">The Difference We Make</h2>
-                    <div class="about-service-text">
+                    <p class="about-lead-text">
+                        With hundreds of packers and movers in India, finding a trustworthy relocation partner can be challenging. Here is why thousands of families and corporates trust us with their valuable possessions.
+                    </p>
+                    
+                    <div class="about-body-text mb-5">
                         <p>
-                            Relocation is not just about moving boxes; it's about moving lives, memories, and valuable assets. At <strong><?= $company3 ?></strong>, we are committed to making your transition seamless, safe, and stress-free. Over our 30+ year journey, we have refined our processes to become India's most trusted name in packers and movers.
-                        </p>
-                        <p>
-                            We employ only seasoned packing professionals, utilize superior packing materials, and possess a vast fleet of specialized transport carriers. Our transparent pricing structure and pan-India presence ensure you receive high-quality service at the most reasonable prices, with no hidden surprises.
+                            Relocation is not simply about moving cartons; it is about transitioning your life, your memories, and your hard-earned assets. At <strong><?= $company3 ?></strong>, we treat your goods with the highest level of care and professionalism. From start to finish, we manage every detail of the move, ensuring a seamless experience.
                         </p>
                     </div>
 
-                    <!-- Core Strengths Grid -->
-                    <h2 class="service-section-title mt-5">Our Key Pillars of Trust</h2>
-                    <div class="row mt-4">
-                        <div class="col-md-6 mb-4">
-                            <div class="card h-100 border-0 shadow-sm rounded-3 p-4 bg-light text-center about-choose-transition-hover">
-                                <div class="icon-box text-success mb-3 about-icon-box-lg">
-                                    <i class="bi bi-shield-lock-fill"></i>
+                    <!-- Pillars of Trust Grid -->
+                    <div class="row g-4">
+                        <div class="col-md-6">
+                            <div class="choose-pillar-card">
+                                <div class="choose-pillar-icon">
+                                    <i class="bi bi-shield-check"></i>
                                 </div>
-                                <h5 class="fw-bold">100% Safe Shifting</h5>
-                                <p class="small text-muted mb-0">
-                                    We use heavy-duty multi-layered bubble wraps, customized crates, and premium carton sheets. Your belongings are guarded against impact, moisture, and dust during the entire journey.
+                                <h4 class="choose-pillar-title">100% Insured Safety</h4>
+                                <p class="about-body-text small mb-0">
+                                    We use premium multi-layered packing including bubble wraps, heavy-duty cartons, and thermocol sheets to protect your goods. Full transit insurance is available to secure your items.
                                 </p>
                             </div>
                         </div>
-                        <div class="col-md-6 mb-4">
-                            <div class="card h-100 border-0 shadow-sm rounded-3 p-4 bg-light text-center about-choose-transition-hover">
-                                <div class="icon-box text-success mb-3 about-icon-box-lg">
-                                    <i class="bi bi-truck"></i>
+                        
+                        <div class="col-md-6">
+                            <div class="choose-pillar-card">
+                                <div class="choose-pillar-icon">
+                                    <i class="bi bi-truck-flatbed"></i>
                                 </div>
-                                <h5 class="fw-bold">Specialized Vehicle Carriers</h5>
-                                <p class="small text-muted mb-0">
-                                    Our cars and bikes are moved inside covered, enclosed container carriers to ensure they are shielded from road debris, weather, and external damage, providing door-to-door delivery.
+                                <h4 class="choose-pillar-title">Dedicated Covered Fleets</h4>
+                                <p class="about-body-text small mb-0">
+                                    Your household goods, cars, and bikes are transported using customized covered container carriers, protecting them from bad weather, road debris, and dust.
                                 </p>
                             </div>
                         </div>
-                        <div class="col-md-6 mb-4">
-                            <div class="card h-100 border-0 shadow-sm rounded-3 p-4 bg-light text-center about-choose-transition-hover">
-                                <div class="icon-box text-success mb-3 about-icon-box-lg">
-                                    <i class="bi bi-tags-fill"></i>
+
+                        <div class="col-md-6">
+                            <div class="choose-pillar-card">
+                                <div class="choose-pillar-icon">
+                                    <i class="bi bi-receipt"></i>
                                 </div>
-                                <h5 class="fw-bold">Transparent Fair Pricing</h5>
-                                <p class="small text-muted mb-0">
-                                    No hidden costs. We provide a detailed itemized breakdown of expenses upfront so you know exactly what you are paying for, eliminating any post-move disputes.
+                                <h4 class="choose-pillar-title">Transparent Price Breakups</h4>
+                                <p class="about-body-text small mb-0">
+                                    Say goodbye to hidden costs. We provide a detailed, itemized quote upfront so you know exactly what you are paying for, eliminating any post-move surprises.
                                 </p>
                             </div>
                         </div>
-                        <div class="col-md-6 mb-4">
-                            <div class="card h-100 border-0 shadow-sm rounded-3 p-4 bg-light text-center about-choose-transition-hover">
-                                <div class="icon-box text-success mb-3 about-icon-box-lg">
-                                    <i class="bi bi-clock-history"></i>
+
+                        <div class="col-md-6">
+                            <div class="choose-pillar-card">
+                                <div class="choose-pillar-icon">
+                                    <i class="bi bi-alarm"></i>
                                 </div>
-                                <h5 class="fw-bold">Punctual &amp; Prompt Delivery</h5>
-                                <p class="small text-muted mb-0">
-                                    Time is crucial. We carefully map logistics routes, utilize advanced tracking systems, and plan departures to guarantee your items arrive precisely when expected.
+                                <h4 class="choose-pillar-title">On-Time Shifting Guarantee</h4>
+                                <p class="about-body-text small mb-0">
+                                    We understand the importance of your time. Our advanced route mapping and logistics team guarantee that your belongings reach their destination on schedule.
                                 </p>
                             </div>
                         </div>
                     </div>
 
-                    <h2 class="service-section-title mt-4">Industry Credentials</h2>
-                    <div class="about-service-text">
+                    <div class="about-body-text mt-5">
+                        <h3 class="fw-bold text-dark mb-3">Industry Certifications &amp; Approvals</h3>
                         <p>
-                            <strong><?= $company3 ?></strong> is fully accredited with major relocation and standard certifications. Our logistics team operates on the highest standards of safety guidelines.
+                            We are not just a local moving agency; we are a registered, verified, and certified packing company committed to quality and global standards:
                         </p>
-                        <ul>
-                            <li><strong>ISO Certified Quality Systems</strong>: Complies with strict international standards of service management.</li>
-                            <li><strong>IBA Approved Transporters</strong>: Offering official, bank-approved billing and shifting options for corporate and government employee relocations.</li>
-                            <li><strong>Full Transit Insurance Options</strong>: Offering peace of mind with complete cargo valuation and swift claim settlements.</li>
+                        <ul class="document-list">
+                            <li><strong>ISO Certified Relocation Processes:</strong> Our management systems follow international standards for quality service.</li>
+                            <li><strong>IBA Approved Billing:</strong> Offers authorized bills and consignment papers for simple corporate and government relocation claims.</li>
+                            <li><strong>Verified &amp; Insured Shifting:</strong> Fully licensed operations with comprehensive transport transit insurance policies for peaceful moves.</li>
                         </ul>
-                    </div>
-
-                    <!-- Client satisfaction banner -->
-                    <div class="p-4 bg-light border-start border-5 border-success rounded-3 mt-5">
-                        <h5 class="fw-bold text-success mb-2">Our Quality Commitment</h5>
-                        <p class="mb-0 text-muted small">
-                            "We believe that a satisfied client is our greatest advertisement. Every single move receives the absolute dedication of our branch managers, supervisors, packing experts, and customer care executives."
-                        </p>
                     </div>
 
                 </div>
@@ -126,5 +121,3 @@
         </div>
     </div>
 </section>
-
-

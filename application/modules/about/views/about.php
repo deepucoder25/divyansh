@@ -35,9 +35,70 @@
         <div class="row">
             <!-- Left Side Content -->
             <div class="col-lg-8">
-                <div class="service-main-content">
+                <div class="about-premium-card">
+                    <h2 class="about-section-heading">India's Trusted Packers &amp; Movers</h2>
                     
+                    <p class="about-lead-text">
+                        Welcome to <strong><?= $company3 ?></strong>, your premium partner for secure, efficient, and seamless relocation services across India. 
+                    </p>
                     
+                    <div class="about-body-text">
+                        <p>
+                            Relocation is a significant step, and at <strong><?= $company3 ?></strong>, we ensure that your transition to a new home, office, or city is smooth and stress-free. Established with a vision to redefine the logistics and shifting sector, we have built an unmatched reputation based on integrity, safety, and client-centricity.
+                        </p>
+                        <p>
+                            As a leading packing and shifting company, we leverage advanced packaging techniques, a highly trained expert logistics team, and a specialized fleet of closed container carriers. Whether you are moving household goods locally or transporting vehicles across states, our professional crew handles your belongings with maximum care.
+                        </p>
+                    </div>
+
+                    <!-- Interactive Stats Counter Grid -->
+                    <div class="about-stats-grid">
+                        <div class="about-stat-box">
+                            <span class="about-stat-number"><?= $yearsExperience?></span>
+                            <span class="about-stat-label">Years Legacy</span>
+                        </div>
+                        <div class="about-stat-box">
+                            <span class="about-stat-number"><?= $happyClients?></span>
+                            <span class="about-stat-label">Happy Clients</span>
+                        </div>
+                        <div class="about-stat-box">
+                            <span class="about-stat-number"><?= $secureShifting ?></span>
+                            <span class="about-stat-label">Safe Shifting</span>
+                        </div>
+                        <div class="about-stat-box">
+                            <span class="about-stat-number">24/7</span>
+                            <span class="about-stat-label">Live Support</span>
+                        </div>
+                    </div>
+
+                    <div class="about-body-text mt-4">
+                        <p>
+                            What truly sets us apart is our commitment to absolute pricing transparency. We provide complete, itemized cost breakdowns upfront, eliminating hidden surprises or last-minute hassles. Additionally, our IBA-approved billing systems enable effortless claim settlement for corporate and government employees.
+                        </p>
+                    </div>
+
+                    <!-- Mission & Vision Cards -->
+                    <div class="about-features-row">
+                        <div class="about-feature-card">
+                            <div class="about-feature-icon">
+                                <i class="bi bi-compass"></i>
+                            </div>
+                            <h4 class="about-feature-title">Our Mission</h4>
+                            <p class="about-body-text small mb-0">
+                                To deliver exceptional packing and shifting solutions with complete safety, transparent pricing, and zero hassle.
+                            </p>
+                        </div>
+                        <div class="about-feature-card">
+                            <div class="about-feature-icon">
+                                <i class="bi bi-eye"></i>
+                            </div>
+                            <h4 class="about-feature-title">Our Vision</h4>
+                            <p class="about-body-text small mb-0">
+                                To build the most reliable and tech-enabled logistics network in India, setting new benchmarks in client satisfaction.
+                            </p>
+                        </div>
+                    </div>
+
                 </div>
             </div>
 
@@ -48,4 +109,3 @@
         </div>
     </div>
 </section>
-

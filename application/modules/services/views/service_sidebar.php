@@ -3,104 +3,114 @@
 <aside class="service-sidebar">
     <!-- Services Navigation Menu -->
     <div class="sidebar-widget widget-services mb-4">
-        <h3 class="widget-title">Our Services</h3>
-        <ul class="sidebar-services-list" id="sidebarServiceList">
+        <h3 class="widget-title text-center text-uppercase">Our Services</h3>
+        <p class="widget-subtitle text-center text-muted mb-4">Expert relocation solutions in <?= !empty($city) ? $city : 'India' ?>.</p>
+        
+        <div class="sidebar-services-grid">
             <?php
             $sidebar_services = [
-                ['slug' => 'home-shifting',        'name' => 'Home Shifting',        'icon' => 'bi-house-heart'],
-                ['slug' => 'office-relocation',    'name' => 'Office Relocation',    'icon' => 'bi-building-gear'],
-                ['slug' => 'car-transportation',   'name' => 'Car Transportation',   'icon' => 'bi-car-front'],
-                ['slug' => 'bike-transportation',  'name' => 'Bike Transportation',  'icon' => 'bi-bicycle'],
-                ['slug' => 'warehouse-and-storage','name' => 'Warehouse & Storage',  'icon' => 'bi-box-seam'],
-                ['slug' => 'domestic-relocation',  'name' => 'Domestic Relocation',  'icon' => 'bi-truck'],
-                ['slug' => 'packing-and-moving','name' => 'Packing & Moving','icon' => 'bi-box-seam-fill'],
-                ['slug' => 'corporate-shifting',   'name' => 'Corporate Shifting',   'icon' => 'bi-briefcase'],
-                ['slug' => 'intercity-shifting',   'name' => 'Intercity Shifting',   'icon' => 'bi-signpost-split'],
-                ['slug' => 'local-shifting',       'name' => 'Local Shifting',       'icon' => 'bi-geo-alt'],
-                ['slug' => 'logistic-services',    'name' => 'Logistic Services',    'icon' => 'bi-truck-flatbed'],
-                ['slug' => 'pet-relocation',       'name' => 'Pet Relocation',       'icon' => 'bi-heart-pulse'],
+                ['slug' => 'home-shifting',         'name' => 'Home Shifting',        'icon' => 'bi-house-fill',          'color_class' => 'service-blue'],
+                ['slug' => 'office-relocation',     'name' => 'Office Relocation',    'icon' => 'bi-building-fill-gear',  'color_class' => 'service-purple'],
+                ['slug' => 'car-transportation',    'name' => 'Car Transportation',   'icon' => 'bi-car-front-fill',      'color_class' => 'service-orange'],
+                ['slug' => 'bike-transportation',   'name' => 'Bike Transportation',  'icon' => 'bi-bicycle',             'color_class' => 'service-green'],
+                ['slug' => 'warehouse-and-storage', 'name' => 'Warehouse & Storage',  'icon' => 'bi-box-seam-fill',       'color_class' => 'service-yellow'],
+                ['slug' => 'domestic-relocation',   'name' => 'Domestic Relocation',  'icon' => 'bi-truck',               'color_class' => 'service-pink'],
+                ['slug' => 'packing-and-moving',    'name' => 'Packing & Moving',     'icon' => 'bi-box-fill',            'color_class' => 'service-cyan'],
             ];
 
-            foreach ($sidebar_services as $index => $s):
-                $is_active = ($active_service === $s['slug']) ? 'active' : '';
-                // If the current service is beyond index 5, it starts hidden (unless active)
-                $hidden_class = ($index >= 6 && !$is_active) ? 'sidebar-service-hidden' : '';
+            foreach ($sidebar_services as $s):
+                $is_active = (isset($active_service) && $active_service === $s['slug']) ? 'active' : '';
             ?>
-                <li class="<?= $hidden_class ?>">
-                    <a href="<?= site_url($s['slug']) ?>" class="d-flex align-items-center justify-content-between <?= $is_active ?>">
-                        <span class="d-flex align-items-center gap-2">
-                            <i class="bi <?= $s['icon'] ?> service-icon"></i>
-                            <span class="service-name"><?= $s['name'] ?></span>
-                        </span>
-                        <i class="bi bi-chevron-right arrow-icon"></i>
-                    </a>
-                </li>
+                <a href="<?= site_url($s['slug']) ?>" class="grid-service-item <?= $is_active ?>">
+                    <div class="icon-circle <?= $s['color_class'] ?>">
+                        <i class="bi <?= $s['icon'] ?>"></i>
+                    </div>
+                    <span class="grid-service-name"><?= $s['name'] ?></span>
+                </a>
             <?php endforeach; ?>
-        </ul>
-
-        <!-- Show All / Show Less Toggle -->
-        <a href="<?= site_url('our-services') ?>" class="sidebar-show-all-btn" id="sidebarToggleBtn">
-            <i class="bi bi-grid-3x3-gap-fill me-2"></i>
-            View All Services
-            <i class="bi bi-arrow-right ms-1"></i>
-        </a>
+        </div>
     </div>
 
-    <!-- Contact & Action CTA Widget -->
-    <div class="sidebar-widget widget-contact-cta mb-4 text-center">
-        <div class="cta-inner-card">
-            <div class="cta-icon-box">
-                <i class="bi bi-headset"></i>
+    <!-- Contact & Action CTA Widget — New Premium Design -->
+    <div class="sidebar-widget widget-talk-experts mb-4">
+        <div class="talk-experts-card">
+            <!-- Telephone Image Illustration -->
+            <div class="talk-image-wrap text-center mb-3">
+                <img src="<?= base_url() ?>assets/images/home/phone.jpg" alt="Talk to Moving Experts" class="talk-phone-img">
             </div>
-            <h3 class="cta-title">Need Urgent Shifting?</h3>
-            <p class="cta-desc">Get in touch with our moving experts for a fast and free quotation.</p>
             
-            <div class="cta-buttons d-flex flex-column gap-3">
-                <a href="<?= $phonehtml ?>" class="btn-sidebar-cta btn-sidebar-call">
-                    <i class="bi bi-telephone-fill me-2"></i> <?= $phone ?>
+            <h3 class="talk-title text-center">Talk to our <br><span>Moving Experts</span></h3>
+            <p class="talk-subtitle text-center">Get instant assistance</p>
+            
+            <div class="talk-buttons d-flex flex-column gap-3 mt-4">
+                <!-- Primary Call Option -->
+                <a href="<?= $phonehtml ?>" class="talk-call-box call-primary">
+                    <div class="call-box-icon">
+                        <i class="bi bi-telephone-fill"></i>
+                    </div>
+                    <div class="call-box-text">
+                        <span class="call-box-label">Call Us Now</span>
+                        <span class="call-box-number"><?= $phone ?></span>
+                    </div>
                 </a>
                 
-                <a href="<?= $whatsapphtml ?>" target="_blank" rel="noopener" class="btn-sidebar-cta btn-sidebar-whatsapp">
-                    <i class="bi bi-whatsapp me-2"></i> WhatsApp Chat
+                <!-- Secondary Call Option -->
+                <a href="<?= $phonehtml1 ?>" class="talk-call-box call-secondary">
+                    <div class="call-box-icon">
+                        <i class="bi bi-telephone-fill"></i>
+                    </div>
+                    <div class="call-box-text">
+                        <span class="call-box-label">Another Number</span>
+                        <span class="call-box-number"><?= $phone1 ?></span>
+                    </div>
                 </a>
                 
-                <button type="button" class="btn-sidebar-cta btn-sidebar-quote" data-bs-toggle="modal" data-bs-target="#qteModal">
-                    <i class="bi bi-file-earmark-text me-2"></i> Get a Free Quote
-                </button>
+                <!-- WhatsApp Option -->
+                <a href="<?= $whatsapphtml ?>" target="_blank" rel="noopener" class="btn-talk-whatsapp mt-2">
+                    <i class="bi bi-whatsapp"></i> Chat on WhatsApp
+                </a>
             </div>
         </div>
     </div>
 
-    <!-- Trusted Badge Widget -->
+    <!-- Trusted Badge Widget — New Premium Design -->
     <div class="sidebar-widget widget-trusted-badges">
-        <h4 class="widget-sub-title mb-3">Why Choose <?= $company3 ?>?</h4>
-        <ul class="trusted-points-list">
-            <li class="d-flex align-items-start gap-2 mb-3">
-                <i class="bi bi-patch-check-fill text-success mt-1"></i>
-                <div>
+        <h4 class="widget-sub-title">Why Choose <br><span><?= $company3 ?></span>?</h4>
+        <ul class="trusted-points-list mt-4">
+            <li class="trusted-point-item">
+                <div class="trusted-point-icon">
+                    <i class="bi bi-award-fill"></i>
+                </div>
+                <div class="trusted-point-text">
                     <strong><?= $yearsExperience ?> Years Experience</strong>
-                    <p class="m-0 text-muted small">Relocating since <?= $startYear ?>.</p>
+                    <p>Relocating since <?= $startYear ?>.</p>
                 </div>
             </li>
-            <li class="d-flex align-items-start gap-2 mb-3">
-                <i class="bi bi-people-fill text-primary mt-1"></i>
-                <div>
+            <li class="trusted-point-item">
+                <div class="trusted-point-icon">
+                    <i class="bi bi-people-fill"></i>
+                </div>
+                <div class="trusted-point-text">
                     <strong><?= $happyClients ?> Happy Clients</strong>
-                    <p class="m-0 text-muted small">Trusted by families and businesses.</p>
+                    <p>Trusted by families and businesses.</p>
                 </div>
             </li>
-            <li class="d-flex align-items-start gap-2 mb-3">
-                <i class="bi bi-shield-check text-warning mt-1"></i>
-                <div>
+            <li class="trusted-point-item">
+                <div class="trusted-point-icon">
+                    <i class="bi bi-shield-fill-check"></i>
+                </div>
+                <div class="trusted-point-text">
                     <strong>Verified &amp; Licensed</strong>
-                    <p class="m-0 text-muted small">ISO certified packers and movers.</p>
+                    <p>ISO certified packers and movers.</p>
                 </div>
             </li>
-            <li class="d-flex align-items-start gap-2">
-                <i class="bi bi-file-earmark-lock-fill text-danger mt-1"></i>
-                <div>
+            <li class="trusted-point-item">
+                <div class="trusted-point-icon">
+                    <i class="bi bi-lock-fill"></i>
+                </div>
+                <div class="trusted-point-text">
                     <strong><?= $secureShifting ?> Secure Shifting</strong>
-                    <p class="m-0 text-muted small">Complete transit insurance options.</p>
+                    <p>Complete transit insurance options.</p>
                 </div>
             </li>
         </ul>

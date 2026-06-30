@@ -1,5 +1,6 @@
-<main class="main">
-    <section class="bc-section-new">
+<?php if (!defined('BASEPATH')) exit('No direct script access allowed'); ?>
+
+<section class="bc-section-new">
     <div class="container">
         <!-- Text overlay area -->
         <div class="bc-text-area">
@@ -28,76 +29,52 @@
     </div>
 </section>
 
-    <div class="reviews-service-page reviews-feature-content-section">
-        <div ng-app="reviewsApp" ng-controller="reviewsctrl">
-            <br />
-            <div class="container">
-                <div class="d-flex justify-content-between align-items-center flex-wrap gap-3 pb-2 mb-3" class="reviews-header-wrap">
-                    <h3 class="m-0" class="reviews-header-title">
-                        <i class="bi bi-chat-left-quote me-2"></i>Customer Experiences
-                    </h3>
-                    <button class="btn btn-primary rounded-pill px-4 shadow-sm" class="reviews-write-btn" data-bs-toggle="modal" data-bs-target="#reviewModal">
-                        <i class="bi bi-pencil-square me-1"></i> Write a Review
-                    </button>
-                    <div class="reviews-header-line"></div>
-                </div>
-                
-                <div class="reviews-single-reviewr mt-4 pb-4">
-                    <?php
-                    if ($reviews->num_rows() == 0) {
-                        echo "<p class='no-reviews-text'>No reviews yet...</p>";
-                    } else {
-                        foreach ($reviews->result() as $r) {
-                            $pdate = explode(" ", $r->posted_date)[0];
-                            $size = strlen(explode("@", $r->email)[0]) - 4;
-                            $lem = substr($r->email, -12);
-                            $fem = substr($r->email, 0, 4);
-                            $st = str_repeat("*", $size);
-                            $em = $fem . $st . $lem;
-                    ?>
-                            <div class="reviews-single-review">
-                                <div class="reviews-review-content" itemprop="review" itemscope itemtype="https://schema.org/Review">
-                                    <meta itemprop="name" content="<?= $r->r_title ?>" />
-                                    <div itemprop="itemReviewed" itemscope itemtype="https://schema.org/LocalBusiness">
-                                        <meta itemprop="name" content="<?= $company3 ?>" />
-                                    </div>
-                                    
-                                    <div class="reviews-review-rating">
-                                        <?php for ($i = 0; $i < $r->stars; $i++) { ?>
-                                            <i class="bi bi-star-fill"></i>
-                                        <?php } ?>
-                                        <span class="d-none reviews-rating-value" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
-                                            <span itemprop="ratingValue"><?= $r->stars ?></span> stars
-                                        </span>
-                                    </div>
-                                    
-                                    <p itemprop="reviewBody">"<?=$r->r_desc?>"</p>
-                                    
-                                    <div class="reviews-review-author">
-                                        <div class="reviews-review-avatar"><?= strtoupper(substr($r->name, 0, 1)) ?></div>
-                                        <div>
-                                            <strong itemprop="author" itemscope itemtype="https://schema.org/Person">
-                                                <span itemprop="name"><?= $r->name ?></span>
-                                            </strong>
-                                            <small><?= $em ?></small>
-                                            <meta itemprop="datePublished" content="<?= $pdate ?>">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                    <?php }
-                    } ?>
-                    <div class="mt-4 w-100 d-flex justify-content-center">
-                        <div class="pagination">
-                            <?php echo $this->pagination->create_links() ?>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <br>
+<div class="container mb-5 pb-5">
+    <?php if($this->session->flashdata('success')): ?>
+        <div class="alert alert-success alert-dismissible fade show rounded-4 mb-4 text-center" role="alert">
+            <i class="bi bi-check-circle-fill me-2"></i> <?= $this->session->flashdata('success') ?>
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        </div>
+    <?php endif; ?>
+
+    <div class="row justify-content-center mb-5">
+        <div class="col-lg-8 text-center">
+            <button class="about-btn-submit about-btn-submit-inline d-inline-block shadow" data-bs-toggle="modal" data-bs-target="#reviewModal">
+                <i class="bi bi-pencil-square me-2"></i> Write a Review
+            </button>
         </div>
     </div>
 
-</main>
-
-
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <?php if (!empty($reviews)): ?>
+                <?php foreach (array_reverse($reviews) as $r): ?>
+                    <div class="about-review-card">
+                        <div class="about-review-rating">
+                            <?php for($i=1; $i<=5; $i++): ?>
+                                <i class="bi bi-star<?= $i <= ($r['rating'] ?? 5) ? '-fill' : '' ?>"></i>
+                            <?php endfor; ?>
+                        </div>
+                        <div class="about-review-text">
+                            "<?= htmlspecialchars($r['review']) ?>"
+                        </div>
+                        <div class="about-review-author">
+                            <div class="about-author-avatar">
+                                <?= strtoupper(substr($r['name'], 0, 1)) ?>
+                            </div>
+                            <div class="about-author-info">
+                                <h6><?= htmlspecialchars($r['name']) ?></h6>
+                                <span><?= htmlspecialchars($r['city']) ?> • <?= date('M d, Y', strtotime($r['created_at'])) ?></span>
+                            </div>
+                        </div>
+                    </div>
+                <?php endforeach; ?>
+            <?php else: ?>
+                <div class="text-center p-5 bg-light rounded-4">
+                    <i class="bi bi-chat-left-dots display-1 text-muted mb-3 d-block"></i>
+                    <p class="text-muted fs-5">No reviews yet. Be the first to share your experience!</p>
+                </div>
+            <?php endif; ?>
+        </div>
+    </div>
+</div>

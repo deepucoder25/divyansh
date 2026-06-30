@@ -3,90 +3,115 @@
 <aside class="service-sidebar">
     <!-- Company Navigation Menu -->
     <div class="sidebar-widget widget-services mb-4">
-        <h3 class="widget-title">About Company</h3>
-        <ul class="sidebar-services-list">
+        <h3 class="widget-title text-center text-uppercase">About Company</h3>
+        <p class="widget-subtitle text-center text-muted mb-4">Quick access to our company details.</p>
+        
+        <div class="sidebar-services-grid">
             <?php
             $sidebar_links = [
-                ['slug' => 'about-us',          'name' => 'About Us',          'icon' => 'bi-info-circle'],
-                ['slug' => 'why-choose-us',     'name' => 'Why Choose Us',     'icon' => 'bi-patch-question'],
-                ['slug' => 'faqs',              'name' => 'FAQ',               'icon' => 'bi-chat-left-text'],
-                ['slug' => 'testimonials',      'name' => 'Testimonial',       'icon' => 'bi-chat-quote'],
-                ['slug' => 'reviews',           'name' => 'Customer Reviews',  'icon' => 'bi-star-half'],
-                ['slug' => 'photo-gallery',     'name' => 'Photo Gallery',     'icon' => 'bi-images'],
-                ['slug' => 'video-gallery',     'name' => 'Video Gallery',     'icon' => 'bi-play-circle'],
+                ['slug' => 'about-us',          'name' => 'About Us',          'icon' => 'bi-info-circle-fill', 'color_class' => 'service-blue'],
+                ['slug' => 'why-choose-us',     'name' => 'Why Choose Us',     'icon' => 'bi-patch-question-fill', 'color_class' => 'service-purple'],
+                ['slug' => 'faqs',              'name' => 'FAQ',               'icon' => 'bi-chat-left-text-fill', 'color_class' => 'service-orange'],
+                ['slug' => 'testimonials',      'name' => 'Testimonial',       'icon' => 'bi-chat-quote-fill', 'color_class' => 'service-green'],
+                ['slug' => 'privacy-policy',    'name' => 'Privacy Policy',    'icon' => 'bi-shield-lock-fill', 'color_class' => 'service-cyan'],
+                ['slug' => 'terms-and-conditions','name' => 'Terms & Conditions','icon' => 'bi-file-earmark-ruled-fill', 'color_class' => 'service-indigo'],
+                ['slug' => 'reviews',           'name' => 'Customer Reviews',  'icon' => 'bi-star-fill', 'color_class' => 'service-yellow'],
+                ['slug' => 'blog',              'name' => 'Blog',              'icon' => 'bi-journal-text', 'color_class' => 'service-pink'],
             ];
 
             foreach ($sidebar_links as $link):
-                $is_active = ($active_link === $link['slug']) ? 'active' : '';
+                $is_active = (isset($active_link) && $active_link === $link['slug']) ? 'active' : '';
             ?>
-                <li>
-                    <a href="<?= site_url($link['slug']) ?>" class="d-flex align-items-center justify-content-between <?= $is_active ?>">
-                        <span class="d-flex align-items-center gap-2">
-                            <i class="bi <?= $link['icon'] ?> service-icon"></i>
-                            <span class="service-name"><?= $link['name'] ?></span>
-                        </span>
-                        <i class="bi bi-chevron-right arrow-icon"></i>
-                    </a>
-                </li>
+                <a href="<?= site_url($link['slug']) ?>" class="grid-service-item <?= $is_active ?>">
+                    <div class="icon-circle <?= $link['color_class'] ?>">
+                        <i class="bi <?= $link['icon'] ?>"></i>
+                    </div>
+                    <span class="grid-service-name"><?= $link['name'] ?></span>
+                </a>
             <?php endforeach; ?>
-        </ul>
+        </div>
     </div>
 
-    <!-- Contact & Action CTA Widget -->
-    <div class="sidebar-widget widget-contact-cta mb-4 text-center">
-        <div class="cta-inner-card">
-            <div class="cta-icon-box">
-                <i class="bi bi-headset"></i>
+    <!-- Contact & Action CTA Widget — New Premium Design -->
+    <div class="sidebar-widget widget-talk-experts mb-4">
+        <div class="talk-experts-card">
+            <!-- Telephone Image Illustration -->
+            <div class="talk-image-wrap text-center mb-3">
+                <img src="<?= base_url() ?>assets/images/home/phone.jpg" alt="Talk to Moving Experts" class="talk-phone-img">
             </div>
-            <h3 class="cta-title">Need Urgent Shifting?</h3>
-            <p class="cta-desc">Get in touch with our moving experts for a fast and free quotation.</p>
             
-            <div class="cta-buttons d-flex flex-column gap-3">
-                <a href="<?= $phonehtml ?>" class="btn-sidebar-cta btn-sidebar-call">
-                    <i class="bi bi-telephone-fill me-2"></i> <?= $phone ?>
+            <h3 class="talk-title text-center">Talk to our <br><span>Moving Experts</span></h3>
+            <p class="talk-subtitle text-center">Get instant assistance</p>
+            
+            <div class="talk-buttons d-flex flex-column gap-3 mt-4">
+                <!-- Primary Call Option -->
+                <a href="<?= $phonehtml ?>" class="talk-call-box call-primary">
+                    <div class="call-box-icon">
+                        <i class="bi bi-telephone-fill"></i>
+                    </div>
+                    <div class="call-box-text">
+                        <span class="call-box-label">Call Us Now</span>
+                        <span class="call-box-number"><?= $phone ?></span>
+                    </div>
                 </a>
                 
-                <a href="<?= $whatsapphtml ?>" target="_blank" rel="noopener" class="btn-sidebar-cta btn-sidebar-whatsapp">
-                    <i class="bi bi-whatsapp me-2"></i> WhatsApp Chat
+                <!-- Secondary Call Option -->
+                <a href="<?= $phonehtml1 ?>" class="talk-call-box call-secondary">
+                    <div class="call-box-icon">
+                        <i class="bi bi-telephone-fill"></i>
+                    </div>
+                    <div class="call-box-text">
+                        <span class="call-box-label">Another Number</span>
+                        <span class="call-box-number"><?= $phone1 ?></span>
+                    </div>
                 </a>
                 
-                <button type="button" class="btn-sidebar-cta btn-sidebar-quote" data-bs-toggle="modal" data-bs-target="#qteModal">
-                    <i class="bi bi-file-earmark-text me-2"></i> Get a Free Quote
-                </button>
+                <!-- WhatsApp Option -->
+                <a href="<?= $whatsapphtml ?>" target="_blank" rel="noopener" class="btn-talk-whatsapp mt-2">
+                    <i class="bi bi-whatsapp"></i> Chat on WhatsApp
+                </a>
             </div>
         </div>
     </div>
 
-    <!-- Trusted Badge Widget -->
+    <!-- Trusted Badge Widget — New Premium Design -->
     <div class="sidebar-widget widget-trusted-badges">
-        <h4 class="widget-sub-title mb-3">Why Choose <?= $company3 ?>?</h4>
-        <ul class="trusted-points-list">
-            <li class="d-flex align-items-start gap-2 mb-3">
-                <i class="bi bi-patch-check-fill text-success mt-1"></i>
-                <div>
+        <h4 class="widget-sub-title">Why Choose <br><span><?= $company3 ?></span>?</h4>
+        <ul class="trusted-points-list mt-4">
+            <li class="trusted-point-item">
+                <div class="trusted-point-icon">
+                    <i class="bi bi-award-fill"></i>
+                </div>
+                <div class="trusted-point-text">
                     <strong><?= $yearsExperience ?> Years Experience</strong>
-                    <p class="m-0 text-muted small">Relocating since <?= $startYear ?>.</p>
+                    <p>Relocating since <?= $startYear ?>.</p>
                 </div>
             </li>
-            <li class="d-flex align-items-start gap-2 mb-3">
-                <i class="bi bi-people-fill text-primary mt-1"></i>
-                <div>
+            <li class="trusted-point-item">
+                <div class="trusted-point-icon">
+                    <i class="bi bi-people-fill"></i>
+                </div>
+                <div class="trusted-point-text">
                     <strong><?= $happyClients ?> Happy Clients</strong>
-                    <p class="m-0 text-muted small">Trusted by families and businesses.</p>
+                    <p>Trusted by families and businesses.</p>
                 </div>
             </li>
-            <li class="d-flex align-items-start gap-2 mb-3">
-                <i class="bi bi-shield-check text-warning mt-1"></i>
-                <div>
+            <li class="trusted-point-item">
+                <div class="trusted-point-icon">
+                    <i class="bi bi-shield-fill-check"></i>
+                </div>
+                <div class="trusted-point-text">
                     <strong>Verified &amp; Licensed</strong>
-                    <p class="m-0 text-muted small">ISO certified packers and movers.</p>
+                    <p>ISO certified packers and movers.</p>
                 </div>
             </li>
-            <li class="d-flex align-items-start gap-2">
-                <i class="bi bi-file-earmark-lock-fill text-danger mt-1"></i>
-                <div>
+            <li class="trusted-point-item">
+                <div class="trusted-point-icon">
+                    <i class="bi bi-lock-fill"></i>
+                </div>
+                <div class="trusted-point-text">
                     <strong><?= $secureShifting ?> Secure Shifting</strong>
-                    <p class="m-0 text-muted small">Complete transit insurance options.</p>
+                    <p>Complete transit insurance options.</p>
                 </div>
             </li>
         </ul>

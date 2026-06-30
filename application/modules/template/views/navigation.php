@@ -98,7 +98,7 @@
           
           <!-- About Us Dropdown Menu -->
           <div class="nav-item">
-            <a href="<?= site_url('about-us') ?>" class="nav-link<?= $active_tab === 'about' ? ' active' : '' ?>">About Us <i class="bi bi-chevron-down ms-1"></i></a>
+            <a href="#" class="nav-link<?= $active_tab === 'about' ? ' active' : '' ?>">About Us <i class="bi bi-chevron-down ms-1"></i></a>
             <ul class="dropdown-menu">
               <li><a class="dropdown-item<?= $segment1 === 'about-us' ? ' active' : '' ?>" href="<?= site_url('about-us') ?>">About Us</a></li>
               <li><a class="dropdown-item<?= $segment1 === 'reviews' ? ' active' : '' ?>" href="<?= site_url('reviews') ?>">Reviews</a></li>
@@ -113,7 +113,7 @@
 
           <!-- Services Dropdown (restricted to active services) -->
           <div class="nav-item">
-            <a href="<?= site_url('our-services') ?>" class="nav-link dropdown-toggle<?= $active_tab === 'services' ? ' active' : '' ?>">Services <i class="bi bi-chevron-down ms-1"></i></a>
+            <a href="#" class="nav-link dropdown-toggle<?= $active_tab === 'services' ? ' active' : '' ?>">Services <i class="bi bi-chevron-down ms-1"></i></a>
             <ul class="dropdown-menu">
               <?php foreach ($active_services as $s): ?>
                 <li>
