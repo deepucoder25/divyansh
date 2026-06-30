@@ -596,10 +596,10 @@
 @media (max-width: 991px) {
     .contact-left-column {
         min-height: auto;
-        padding: 50px 30px;
+        padding: 40px 24px !important;
     }
 
     .contact-right-column {
-        padding: 40px 30px;
+        padding: 40px 24px !important;
     }
 }

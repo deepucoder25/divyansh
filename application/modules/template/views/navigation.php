@@ -235,9 +235,6 @@
         <a href="<?= $phonehtml ?>" class="mobile-drawer-btn call">
           <i class="bi bi-telephone-fill"></i> Call: <?= $phone ?>
         </a>
-        <button type="button" class="mobile-drawer-btn btn-get-quote" data-bs-toggle="modal" data-bs-target="#qteModal">
-          <i class="bi bi-box-seam-fill"></i> Get a Free Quote
-        </button>
       </div>
     </div>
   </nav>
