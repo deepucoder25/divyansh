@@ -67,14 +67,6 @@ $floatingWhatsappLink = !empty($whatsapphtml)
         <div class="col-xl-3 col-lg-4 col-md-6 col-12">
           <div class="footer-brand-widget">
             <div class="footer-logo-custom">
-              <div class="logo-icon-box">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M12 2L2 12H5V21H19V12H22L12 2Z" fill="var(--accent-orange)"/>
-                  <path d="M7 16H9V18H7V16ZM15 16H17V18H15V16Z" fill="white"/>
-                  <path d="M8 12H16V20H8V12Z" fill="white" opacity="0.3"/>
-                  <path d="M10 14H14V17H10V14ZM8 9L12 5L16 9" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-              </div>
               <div class="logo-text-box">
                 <h4 class="logo-title-main">Divyansh</h4>
                 <p class="logo-subtitle-sub">Packers and Movers</p>

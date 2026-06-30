@@ -59,23 +59,27 @@ document.addEventListener("DOMContentLoaded", function () {
             // Helper to show field error
             function showError(inputEl, message) {
                 if (!inputEl) return;
-                inputEl.classList.add("input-error-highlight");
+                
+                // Highlight the input wrapper (.input-wrap-custom)
+                const inputWrap = inputEl.closest(".input-wrap-custom") || inputEl.parentElement;
+                if (inputWrap) {
+                    inputWrap.classList.add("input-error-highlight");
+                } else {
+                    inputEl.classList.add("input-error-highlight");
+                }
                 
                 const errorDiv = document.createElement("div");
                 errorDiv.className = "field-error-msg";
                 errorDiv.innerHTML = `<i class="bi bi-exclamation-circle-fill"></i> ${message}`;
                 
-                // Find the wrapper (either .field-wrap, .form-group, or parent)
-                const wrapper = inputEl.closest(".field-wrap") || inputEl.closest(".form-group") || inputEl.parentElement;
+                // Find the group container (.form-group-custom or fallback wrapper)
+                const container = inputEl.closest(".form-group-custom") || 
+                                  inputEl.closest(".field-wrap") || 
+                                  inputEl.closest(".form-group") || 
+                                  (inputWrap ? inputWrap.parentElement : inputEl.parentElement);
                 
-                // Force wrap if wrapper is a flex container
-                const computedStyle = window.getComputedStyle(wrapper);
-                if (computedStyle.display === "flex") {
-                    wrapper.style.flexWrap = "wrap";
-                }
-                
-                // Append inside the wrapper
-                wrapper.appendChild(errorDiv);
+                // Append inside the group container below the input wrapper
+                container.appendChild(errorDiv);
             }
 
             // Validate Name

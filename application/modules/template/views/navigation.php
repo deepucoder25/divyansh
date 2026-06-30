@@ -115,7 +115,7 @@
 
           <!-- Services Dropdown (restricted to active services) -->
           <div class="nav-item">
-            <a href="#" class="nav-link dropdown-toggle<?= $active_tab === 'services' ? ' active' : '' ?>">Services <i class="bi bi-chevron-down ms-1"></i></a>
+            <a href="#" class="nav-link<?= $active_tab === 'services' ? ' active' : '' ?>">Services <i class="bi bi-chevron-down ms-1"></i></a>
             <ul class="dropdown-menu">
               <?php foreach ($active_services as $s): ?>
                 <li>
