@@ -47,7 +47,7 @@
                         <p>
                             We provide our services at affordable prices but this does not in any way mean that we compromise on quality. We also have experienced staff who can handle all matters relating to the relocation including packing, loading, transportation, and safe unloading.
                         </p>
-                        <img loading="lazy" src="<?= base_url('assets/images/home_service/packing_moving.jpg') ?>" alt="packing and moving services" class="img-fluid rounded my-3 w-100">
+                        <img loading="lazy" src="<?= base_url('assets/images/home_service/packing_moving.jpg') ?>" alt="Professional Packing and Moving Services by <?= $company3 ?>" class="service-main-image my-3 w-100">
                         <p>
                             Therefore, you don’t have to worry when hiring services from <strong><?= $company3 ?></strong> because they have the best services in managing home and office moves.
                         </p>

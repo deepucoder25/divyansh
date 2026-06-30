@@ -4,7 +4,11 @@ class Services extends MX_Controller
 {
     function index()
     {
-        redirect('', 'location', 301);
+        $data['title'] = "Professional Packers & Movers Services | " . $this->comp['company3'];
+        $data['description'] = "Explore the complete range of shifting and relocation services offered by " . $this->comp['company3'] . ". From home and office shifting to vehicle transport and warehousing.";
+        $data['module'] = "services";
+        $data['view_file'] = "services";
+        echo Modules::run('template/layout2', $data);
     }
 
     function homeShifting()

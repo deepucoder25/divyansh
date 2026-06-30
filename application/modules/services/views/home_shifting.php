@@ -50,7 +50,7 @@
                         <p>
                             Having years of experience in the field makes us a reliable and reputed company in the field of home shifting. This concept incorporates the customers’ perspective since it will help us determine your unique needs and expectations.
                         </p>
-                        <img loading="lazy" src="<?= base_url('assets/images/services_modules/home.jpg') ?>" alt="home shifting" class="img-fluid rounded my-3 w-100">
+                        <img loading="lazy" src="<?= base_url('assets/images/home_service/home-relocation.jpg') ?>" alt="Professional Home Shifting Services by <?= $company3 ?>" class="service-main-image my-3 w-100">
                         <p>
                             In addition, we provide tracking of your possessions and their condition in real-time, so that you always know everything. Hire the best home shifting company in Ghaziabad and avail of the best service at <strong><?= $company3 ?></strong>
                         </p>

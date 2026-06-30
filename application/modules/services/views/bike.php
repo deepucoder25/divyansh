@@ -47,7 +47,7 @@
                         <p>
                             In addition, our service is the most affordable one, as we are the cheapest and the best service that transports bikes. Time is one of the essential factors that customers have to consider and we excel in delivering bikes at the right time. The case is we are one of the most credible packers movers companies in the industry; which is proved by the years of experience and many happy customers.
                         </p>
-                        <img loading="lazy" src="<?= base_url('assets/images/services_modules/bike.jpg') ?>" alt="bike shifting" class="img-fluid rounded my-3 w-100">
+                        <img loading="lazy" src="<?= base_url('assets/images/home_service/bike-transport.jpg') ?>" alt="Reliable Bike Transportation and Shifting Services by <?= $company3 ?>" class="service-main-image my-3 w-100">
                         <p>
                             We offer transport services in which we organize everything, right from when we pick up your bike and when we drop it back to you, thus providing you with an experience that is so stress-free. With our service you can count on, whether you are relocating within the city or even across the country, bike transportation services are unique to your needs.
                         </p>

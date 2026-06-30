@@ -45,7 +45,7 @@
                         <p>
                             We guarantee continuity of service and make arrangements so that your office can get on fully and as soon as possible. Our corporate office moving services are reliable as well as affordable at the same time. Rest assured that when we move your office equipment and documents to your new office, all items are packed with only the best packing materials and methods.
                         </p>
-                        <img loading="lazy" src="<?= base_url('assets/images/services_modules/office.jpg') ?>" alt="office relocation" class="img-fluid rounded my-3 w-100">
+                        <img loading="lazy" src="<?= base_url('assets/images/home_service/office-relocation.jpg') ?>" alt="Professional Office Relocation Services by <?= $company3 ?>" class="service-main-image my-3 w-100">
                         <p>
                             Hiring us means that you get to enjoy our fair prices and even better services in the course of the move. Hire the experts of <strong><?= $company3 ?></strong> for office moving services and enjoy the best-shifting services.
                         </p>

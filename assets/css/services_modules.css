@@ -169,42 +169,46 @@
 
 /* 2. Main Layout Grid */
 .service-main-content {
-    background-color: #ffffff;
+    background-color: var(--white);
     border-radius: 20px;
-    padding: 35px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
-    border: 1px solid #f1f5f9;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+    border: 1px solid var(--border-color);
     margin-bottom: 40px;
 }
 .service-section-title {
     font-weight: 800;
-    color: #001846;
+    color: var(--text-dark);
     margin-bottom: 25px;
     position: relative;
-    padding-bottom: 10px;
+    padding-bottom: 12px;
+    font-size: 1.65rem;
 }
 .service-section-title::after {
     content: '';
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 50px;
-    height: 3px;
-    background-color: #ff6600;
+    width: 60px;
+    height: 4px;
+    background-color: var(--accent-orange);
+    border-radius: 10px;
 }
 
 /* About Service Image & Copy */
 .service-main-image {
     width: 100%;
-    max-height: 400px;
-    object-fit: contain;
+    max-height: 420px;
+    object-fit: cover;
     margin-bottom: 30px;
-    filter: drop-shadow(0 15px 25px rgba(10, 78, 189, 0.15));
+    border-radius: 16px;
+    box-shadow: 0 15px 30px rgba(0, 58, 106, 0.08);
+    border: 1px solid var(--border-color);
 }
 .about-service-text {
-    font-size: 16px;
-    color: #475569;
-    line-height: 1.8;
+    font-size: 15.5px;
+    color: var(--text-muted);
+    line-height: 1.85;
 }
 
 /* 3. Reusable Sidebar Widget */
@@ -692,17 +696,17 @@
 /* 4. Process Timeline Shifting */
 .process-timeline {
     position: relative;
-    padding-left: 30px;
+    padding-left: 35px;
     margin-top: 30px;
 }
 .process-timeline::before {
     content: '';
     position: absolute;
     top: 5px;
-    left: 10px;
+    left: 11px;
     width: 2px;
     height: calc(100% - 20px);
-    background-color: #e2e8f0;
+    background-color: var(--border-color);
 }
 .process-step {
     position: relative;
@@ -713,30 +717,31 @@
 }
 .step-number {
     position: absolute;
-    left: -30px;
+    left: -35px;
     top: 2px;
-    width: 22px;
-    height: 22px;
-    background-color: #ff6600;
-    color: #ffffff;
+    width: 24px;
+    height: 24px;
+    background-color: var(--accent-orange);
+    color: var(--white);
     border-radius: 50%;
     font-weight: 700;
     font-size: 11px;
     display: grid;
     place-items: center;
-    border: 3px solid #ffffff;
-    box-shadow: 0 0 0 2px #ff6600;
+    border: 3px solid var(--white);
+    box-shadow: 0 0 0 2px var(--accent-orange);
 }
 .process-step h4 {
     font-size: 1.1rem;
     font-weight: 700;
-    color: #001846;
+    color: var(--text-dark);
     margin-bottom: 6px;
 }
 .process-step p {
     font-size: 14px;
-    color: #64748b;
+    color: var(--text-muted);
     margin: 0;
+    line-height: 1.6;
 }
 
 /* 5. Why Choose Us Checklist */
@@ -747,37 +752,38 @@
     margin-top: 30px;
 }
 .choose-item-card {
-    background-color: #f8fafc;
-    border: 1px solid #f1f5f9;
-    border-radius: 12px;
+    background-color: #f7faff;
+    border: 1px solid var(--border-color);
+    border-radius: 14px;
     padding: 20px;
     display: flex;
     align-items: flex-start;
-    gap: 12px;
-    transition: all 0.3s;
+    gap: 16px;
+    transition: var(--transition);
+    height: 100%;
 }
 .choose-item-card:hover {
-    background-color: #ffffff;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.04);
-    border-color: #ff6600;
-    transform: translateY(-2px);
+    background-color: var(--white);
+    box-shadow: 0 10px 25px rgba(0, 58, 106, 0.05);
+    border-color: var(--accent-orange);
+    transform: translateY(-3px);
 }
 .choose-icon-wrap {
-    font-size: 1.4rem;
-    color: #ff6600;
+    font-size: 1.5rem;
+    color: var(--accent-orange);
     margin-top: 2px;
 }
 .choose-content h5 {
     font-size: 14px;
     font-weight: 700;
-    color: #001846;
+    color: var(--text-dark);
     margin-bottom: 4px;
 }
 .choose-content p {
     font-size: 12px;
-    color: #64748b;
+    color: var(--text-muted);
     margin: 0;
-    line-height: 1.5;
+    line-height: 1.55;
 }
 
 /* 6. FAQ Accordion for Service page */
@@ -785,69 +791,72 @@
     margin-top: 35px;
 }
 .service-faq-container .faq-card {
-    background: #f8fafc;
+    background: var(--white);
     border-radius: 12px;
-    border: 1px solid #e2e8f0;
+    border: 1px solid var(--border-color);
     margin-bottom: 12px;
-    transition: all 0.3s;
+    transition: var(--transition);
+}
+.service-faq-container .faq-card:hover {
+    border-color: var(--primary-blue);
 }
 .service-faq-container .faq-card-header {
     padding: 18px 20px;
     font-weight: 700;
-    color: #001846;
+    color: var(--text-dark);
     font-size: 15px;
-    transition: all 0.3s;
+    transition: var(--transition);
 }
 .service-faq-container .faq-card-header:not(.collapsed) {
-    color: #0a4ebd;
-    background-color: #ffffff;
-    border-bottom: 1px solid #e2e8f0;
+    color: var(--accent-orange);
+    background-color: #f7faff;
+    border-bottom: 1px solid var(--border-color);
     border-top-left-radius: 12px;
     border-top-right-radius: 12px;
 }
 .service-faq-container .faq-card-icon {
-    color: #ff6600;
+    color: var(--accent-orange);
     font-size: 18px;
     margin-right: 12px;
 }
 .service-faq-container .faq-toggle-icon {
     font-size: 18px;
-    color: #94a3b8;
+    color: var(--text-muted);
     transition: transform 0.3s;
 }
 .service-faq-container .faq-card-header:not(.collapsed) .faq-toggle-icon {
     transform: rotate(45deg);
-    color: #ff6600;
+    color: var(--accent-orange);
 }
 .service-faq-container .faq-card-body {
     padding: 18px 20px;
-    background-color: #ffffff;
+    background-color: var(--white);
     border-bottom-left-radius: 12px;
     border-bottom-right-radius: 12px;
-    color: #475569;
+    color: var(--text-muted);
     font-size: 14px;
     line-height: 1.7;
 }
 
 /* 7. Reviews Card Widget */
 .service-reviews-slice {
-    background-color: #f8fafc;
-    border: 1px solid #e2e8f0;
-    border-radius: 15px;
-    padding: 25px;
+    background-color: #f7faff;
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 30px;
     margin: 35px 0;
 }
 .service-reviews-slice .rating-row {
     color: #f59e0b;
     font-size: 1.1rem;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 .service-reviews-slice .review-text {
-    font-size: 15px;
-    color: #475569;
-    line-height: 1.7;
+    font-size: 14.5px;
+    color: var(--text-muted);
+    line-height: 1.75;
     font-style: italic;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 .service-reviews-slice .review-user {
     display: flex;
@@ -855,10 +864,10 @@
     gap: 12px;
 }
 .service-reviews-slice .user-avatar {
-    width: 40px;
-    height: 40px;
-    background-color: #e2e8f0;
-    color: #64748b;
+    width: 42px;
+    height: 42px;
+    background-color: var(--primary-blue);
+    color: var(--white);
     font-weight: 700;
     border-radius: 50%;
     display: grid;
@@ -868,12 +877,92 @@
 .service-reviews-slice .user-name h6 {
     margin: 0;
     font-weight: 700;
-    color: #001846;
+    color: var(--text-dark);
     font-size: 14px;
 }
 .service-reviews-slice .user-name span {
     font-size: 12px;
-    color: #94a3b8;
+    color: var(--text-muted);
+}
+
+/* Service Landing Page Cards */
+.services-grid-new {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+    margin-top: 30px;
+}
+
+.service-card-new {
+    background-color: var(--white);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: var(--transition);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.service-card-new:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(0, 58, 106, 0.06);
+    border-color: var(--primary-blue);
+}
+
+.service-card-img-wrap {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 16 / 10;
+}
+
+.service-card-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.service-card-new:hover .service-card-img-wrap img {
+    transform: scale(1.05);
+}
+
+.service-card-body-new {
+    padding: 24px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.service-card-title-new {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 12px;
+}
+
+.service-card-text-new {
+    font-size: 14px;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+.service-card-btn-new {
+    color: var(--primary-blue);
+    font-weight: 700;
+    font-size: 13.5px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: auto;
+    transition: var(--transition);
+}
+
+.service-card-btn-new:hover {
+    color: var(--accent-orange);
 }
 
 /* Mobile View adjustments */

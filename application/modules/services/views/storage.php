@@ -48,7 +48,7 @@
                         <p>
                             Our transportation and storage solutions are cheap and reliable for your storage needs hence be assured of value for your money. The security systems and facilities we employ are sophisticated as well as the best to protect your property and make it easy for you to access them. With these flexible prices, and enhancing services we guarantee you the best storage solution ever.
                         </p>
-                        <img loading="lazy" src="<?= base_url('assets/images/services_modules/warehousing.webp') ?>" alt="warehousing and storage" class="img-fluid rounded my-3 w-100">
+                        <img loading="lazy" src="<?= base_url('assets/images/home_service/warehouse-and-storage.jpg') ?>" alt="Secure Warehousing and Storage Solutions by <?= $company3 ?>" class="service-main-image my-3 w-100">
                         <p>
                             So for having that ultimate relaxed and easygoing feeling when it comes to the warehouse and storage of your property go for the <strong><?= $company3 ?></strong>.
                         </p>

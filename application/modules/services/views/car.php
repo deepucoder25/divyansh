@@ -47,7 +47,7 @@
                         <p>
                             Our competent drivers provide services from pick up to delivery to guarantee you an excellent experience. We provide home pickup and drop-off car transportation services hence you do not have to bother about anything.
                         </p>
-                        <img loading="lazy" src="<?= base_url('assets/images/services_modules/car.jpg') ?>" alt="car shifting" class="img-fluid rounded my-3 w-100">
+                        <img loading="lazy" src="<?= base_url('assets/images/home_service/transport-service.jpg') ?>" alt="Safe Car Transportation and Carrier Services by <?= $company3 ?>" class="service-main-image my-3 w-100">
                         <p>
                             We pride ourselves in the timely delivery of the cars so that one gets the car at the agreed time. Through experience, customer relations and specializing ourselves in auto transportation we have gained credibility and respect in the industry.
                         </p>

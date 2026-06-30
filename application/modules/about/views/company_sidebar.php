@@ -37,7 +37,7 @@
         <div class="talk-experts-card">
             <!-- Telephone Image Illustration -->
             <div class="talk-image-wrap text-center mb-3">
-                <img src="<?= base_url() ?>assets/images/home/phone.jpg" alt="Talk to Moving Experts" class="talk-phone-img">
+                <img src="<?= base_url() ?>assets/images/home/phone.jpg" alt="Talk to Moving Experts" class="talk-phone-img" loading="lazy">
             </div>
             
             <h3 class="talk-title text-center">Talk to our <br><span>Moving Experts</span></h3>

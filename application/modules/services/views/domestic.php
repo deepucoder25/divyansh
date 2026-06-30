@@ -47,7 +47,7 @@
                         <p>
                             They are cost-effective, professional and created to meet your needs in one way or the other. We deliver all the services that are involved in moving from packing your items to actual moving and even unpacking the items as well. Thus, we guarantee timely delivery so that your items are delivered to your new home as soon as possible.
                         </p>
-                        <img loading="lazy" src="<?= base_url('assets/images/services_modules/domestic.webp') ?>" alt="domestic relocation" class="img-fluid rounded my-3 w-100">
+                        <img loading="lazy" src="<?= base_url('assets/images/home_service/transport-service.jpg') ?>" alt="Trusted Domestic Relocation Services by <?= $company3 ?>" class="service-main-image my-3 w-100">
                         <p>
                             We have gained experience in the company for several years and we have proven the company to be trusted for domestic moving services. This principle makes sure that we take all the time to understand you, and your needs and provide you with a solution that best suits you. We alert you in real time on the whereabouts and condition of your property, thus giving you a much-needed update on its status.
                         </p>
