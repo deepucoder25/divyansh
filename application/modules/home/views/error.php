@@ -30,7 +30,7 @@
   <section class="error_section text-center mouse_move mt-3">
     <div class="container">
       <div class="error_image decoration_wrap text-center">
-        <img src="<?= base_url("assets/img/error/404.png") ?>" alt="404 Error">
+        <img src="<?= base_url("assets/img/error/404.png") ?>" alt="404 Error Page Not Found - <?= $company3 ?>" loading="lazy">
       </div>
       <div class="error_content">
         <h2>Page not found</h2>

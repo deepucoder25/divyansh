@@ -64,8 +64,11 @@
                                     <i class="bi bi-telephone-fill"></i>
                                 </div>
                                 <div class="info-content-text">
-                                    <h6>Phone Number</h6>
-                                    <p><a href="<?= $phonehtml ?>" class="text-white text-decoration-none"><?= htmlspecialchars($phone) ?></a></p>
+                                    <h6>Phone Numbers</h6>
+                                    <p>
+                                        <a href="<?= $phonehtml ?>" class="text-white text-decoration-none"><?= htmlspecialchars($phone) ?></a><br>
+                                        <a href="<?= $phonehtml1 ?>" class="text-white text-decoration-none"><?= htmlspecialchars($phone1) ?></a>
+                                    </p>
                                 </div>
                             </div>
                             

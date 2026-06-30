@@ -30,7 +30,10 @@ $floatingWhatsappLink = !empty($whatsapphtml)
               </div>
               <div class="cta-info-content">
                 <span class="cta-info-label">Call Us Now</span>
-                <a href="<?= $phonehtml ?>" class="cta-info-value"><?= $phone ?></a>
+                <div class="d-flex flex-column gap-1">
+                    <a href="<?= $phonehtml ?>" class="cta-info-value"><?= $phone ?></a>
+                    <a href="<?= $phonehtml1 ?>" class="cta-info-value"><?= $phone1 ?></a>
+                </div>
               </div>
             </div>
             <div class="cta-info-item">

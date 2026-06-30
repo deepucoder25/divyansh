@@ -64,14 +64,14 @@ include 'city_content.php';
                   <!-- Slide 2 -->
                   <div class="carousel-item">
                     <img src="<?= base_url('assets/images/gallery/img2.jpg') ?>" 
-                         alt="Reliable Relocation Services in <?= htmlspecialchars($city) ?>" 
+                         alt="Reliable Relocation Services in <?= htmlspecialchars($city) ?> by <?= htmlspecialchars($company3) ?>" 
                          class="city-about-image"
                          loading="lazy">
                   </div>
                   <!-- Slide 3 -->
                   <div class="carousel-item">
                     <img src="<?= base_url('assets/images/gallery/img3.jpg') ?>" 
-                         alt="Safe and Secure Shifting in <?= htmlspecialchars($city) ?>" 
+                         alt="Safe and Secure Shifting in <?= htmlspecialchars($city) ?> by <?= htmlspecialchars($company3) ?>" 
                          class="city-about-image"
                          loading="lazy">
                   </div>

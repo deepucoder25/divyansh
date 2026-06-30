@@ -135,9 +135,10 @@
 }
 
 .footer-cta-banner .cta-info-value {
-  font-size: 14.5px;
+  font-size: 13px;
   font-weight: 700;
   color: var(--primary-blue);
+  line-height: 1.25;
   text-decoration: none;
   transition: var(--transition);
 }

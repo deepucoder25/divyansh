@@ -111,7 +111,7 @@
                             <strong><?= $company3 ?></strong><br>
                             Address: <?= $address ?><br>
                             Email: <a href="<?= $mailhtml ?>" class="text-decoration-none fw-bold text-dark"><?= $mail ?></a><br>
-                            Phone: <a href="<?= $phonehtml ?>" class="text-decoration-none fw-bold text-dark"><?= $phone ?></a>
+                            Phone: <a href="<?= $phonehtml ?>" class="text-decoration-none fw-bold text-dark"><?= $phone ?></a> / <a href="<?= $phonehtml1 ?>" class="text-decoration-none fw-bold text-dark"><?= $phone1 ?></a>
                         </p>
                     </div>
 

@@ -81,7 +81,8 @@ $state = [
                             </div>
                             
                             <img src="<?= base_url() ?>/assets/images/state/<?= $item['image'] ?>"
-                                 alt="<?= $item['category'] ?>">
+                                 alt="<?= htmlspecialchars($item['category']) ?> Packers and Movers Services by <?= $company3 ?>"
+                                 loading="lazy">
                         </div>
 
                         <!-- Card Body -->

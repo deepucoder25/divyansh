@@ -45,7 +45,7 @@
                         <!-- Service 1: Home Shifting -->
                         <div class="service-card-new">
                             <div class="service-card-img-wrap">
-                                <img loading="lazy" src="<?= base_url('assets/images/home_service/home-relocation.jpg') ?>" alt="Home Shifting and Household Relocation Services" class="img-fluid">
+                                <img loading="lazy" src="<?= base_url('assets/images/home_service/home-relocation.jpg') ?>" alt="Home Shifting and Household Relocation Services by <?= $company3 ?>" class="img-fluid">
                             </div>
                             <div class="service-card-body-new">
                                 <h3 class="service-card-title-new">Home Shifting</h3>
@@ -61,7 +61,7 @@
                         <!-- Service 2: Office Relocation -->
                         <div class="service-card-new">
                             <div class="service-card-img-wrap">
-                                <img loading="lazy" src="<?= base_url('assets/images/home_service/office-relocation.jpg') ?>" alt="Corporate and Office Relocation Services" class="img-fluid">
+                                <img loading="lazy" src="<?= base_url('assets/images/home_service/office-relocation.jpg') ?>" alt="Corporate and Office Relocation Services by <?= $company3 ?>" class="img-fluid">
                             </div>
                             <div class="service-card-body-new">
                                 <h3 class="service-card-title-new">Office Relocation</h3>
@@ -77,7 +77,7 @@
                         <!-- Service 3: Car Transportation -->
                         <div class="service-card-new">
                             <div class="service-card-img-wrap">
-                                <img loading="lazy" src="<?= base_url('assets/images/home_service/transport-service.jpg') ?>" alt="Safe Car Transportation and Carrier Services" class="img-fluid">
+                                <img loading="lazy" src="<?= base_url('assets/images/home_service/transport-service.jpg') ?>" alt="Safe Car Transportation and Carrier Services by <?= $company3 ?>" class="img-fluid">
                             </div>
                             <div class="service-card-body-new">
                                 <h3 class="service-card-title-new">Car Transportation</h3>
@@ -93,7 +93,7 @@
                         <!-- Service 4: Bike Transportation -->
                         <div class="service-card-new">
                             <div class="service-card-img-wrap">
-                                <img loading="lazy" src="<?= base_url('assets/images/home_service/bike-transport.jpg') ?>" alt="Reliable Bike Transportation and Shifting Services" class="img-fluid">
+                                <img loading="lazy" src="<?= base_url('assets/images/home_service/bike-transport.jpg') ?>" alt="Reliable Bike Transportation and Shifting Services by <?= $company3 ?>" class="img-fluid">
                             </div>
                             <div class="service-card-body-new">
                                 <h3 class="service-card-title-new">Bike Transportation</h3>
@@ -109,7 +109,7 @@
                         <!-- Service 5: Warehouse & Storage -->
                         <div class="service-card-new">
                             <div class="service-card-img-wrap">
-                                <img loading="lazy" src="<?= base_url('assets/images/home_service/warehouse-and-storage.jpg') ?>" alt="Secure Warehousing and Storage Solutions" class="img-fluid">
+                                <img loading="lazy" src="<?= base_url('assets/images/home_service/warehouse-and-storage.jpg') ?>" alt="Secure Warehousing and Storage Solutions by <?= $company3 ?>" class="img-fluid">
                             </div>
                             <div class="service-card-body-new">
                                 <h3 class="service-card-title-new">Warehouse &amp; Storage</h3>
@@ -125,7 +125,7 @@
                         <!-- Service 6: Domestic Relocation -->
                         <div class="service-card-new">
                             <div class="service-card-img-wrap">
-                                <img loading="lazy" src="<?= base_url('assets/images/home_service/transport-service.jpg') ?>" alt="Domestic Shifting and Interstate Moving Services" class="img-fluid">
+                                <img loading="lazy" src="<?= base_url('assets/images/home_service/transport-service.jpg') ?>" alt="Domestic Shifting and Interstate Moving Services by <?= $company3 ?>" class="img-fluid">
                             </div>
                             <div class="service-card-body-new">
                                 <h3 class="service-card-title-new">Domestic Relocation</h3>
@@ -141,7 +141,7 @@
                         <!-- Service 7: Packing & Moving -->
                         <div class="service-card-new">
                             <div class="service-card-img-wrap">
-                                <img loading="lazy" src="<?= base_url('assets/images/home_service/packing_moving.jpg') ?>" alt="Professional Packing and Moving Services" class="img-fluid">
+                                <img loading="lazy" src="<?= base_url('assets/images/home_service/packing_moving.jpg') ?>" alt="Professional Packing and Moving Services by <?= $company3 ?>" class="img-fluid">
                             </div>
                             <div class="service-card-body-new">
                                 <h3 class="service-card-title-new">Packing &amp; Moving</h3>

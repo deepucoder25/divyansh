@@ -132,10 +132,14 @@
 
                             <div class="mt-4">
                                 <p class="text-muted">For more details, Please call <a
-                                        class="contact-tracking-link"
-                                        href="<?= $primaryPhonehtml ?> ">
-                                        <?= $phone ?>
-                                    </a> or leave
+                                         class="contact-tracking-link"
+                                         href="<?= $phonehtml ?>">
+                                         <?= $phone ?>
+                                     </a> / <a
+                                         class="contact-tracking-link"
+                                         href="<?= $phonehtml1 ?>">
+                                         <?= $phone1 ?>
+                                     </a> or leave
                                     your
                                     <a class="contact-tracking-underline" href="<?= site_url('contacts') ?>">contact
                                         number / email

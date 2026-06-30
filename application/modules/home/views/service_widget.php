@@ -41,7 +41,7 @@ $services = [
         'slug' => 'bike-transportation',
         'image' => 'bike-transport.jpg',
         'desc' => 'Safe and secure bike carrier services to relocate two-wheelers to any destination in India.',
-        'icon' => 'bi bi-motorcycle'
+        'icon' => 'bi bi-bicycle'
     ]
 ];
 ?>
@@ -65,7 +65,7 @@ $services = [
                     <div class="service-card w-100">
                         <!-- Top Image -->
                         <div class="service-card-image-wrap">
-                            <img src="<?= base_url('assets/images/home_service/' . $service['image']) ?>" alt="<?= htmlspecialchars($service['title']) ?> Packers and Movers" class="service-card-img" loading="lazy">
+                            <img src="<?= base_url('assets/images/home_service/' . $service['image']) ?>" alt="<?= htmlspecialchars($service['title']) ?> Packers and Movers by <?= $company3 ?>" class="service-card-img" loading="lazy">
                         </div>
                         <!-- Overlapping Circle Icon -->
                         <div class="service-icon-circle-overlap">

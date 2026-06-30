@@ -70,15 +70,17 @@
         </div>
       </div>
 
-      <!-- Mobile Top Bar Content (shows only phone number and email) -->
-      <div class="top-bar-mobile d-flex d-lg-none justify-content-center align-items-center gap-3">
-        <a href="<?= $phonehtml ?>" class="mobile-phone-pill d-flex align-items-center gap-1">
-          <i class="bi bi-telephone-fill"></i> <span><?= $phone ?></span>
-        </a>
-        <span class="top-bar-divider">|</span>
-        <a href="<?= $mailhtml ?>" class="d-flex align-items-center gap-1">
-          <i class="bi bi-envelope-fill"></i> <span><?= $mail ?></span>
-        </a>
+      <!-- Mobile Top Bar Content (shows both phone numbers with animation in two columns) -->
+      <div class="top-bar-mobile d-flex d-lg-none justify-content-center align-items-center py-2">
+        <div class="d-flex justify-content-center align-items-center gap-2 mobile-phones-row">
+          <a href="<?= $phonehtml ?>" class="mobile-phone-pill animate-phone-1 d-flex align-items-center gap-1">
+            <i class="bi bi-telephone-fill"></i> <span><?= $phone ?></span>
+          </a>
+          <span class="top-bar-divider">|</span>
+          <a href="<?= $phonehtml1 ?>" class="mobile-phone-pill animate-phone-2 d-flex align-items-center gap-1">
+            <i class="bi bi-telephone-fill"></i> <span><?= $phone1 ?></span>
+          </a>
+        </div>
       </div>
     </div>
   </div>

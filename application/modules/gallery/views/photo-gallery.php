@@ -53,7 +53,7 @@
                             foreach ($files as $file) {
                                 $images[] = [
                                     'src' => base_url('assets/images/gallery/' . basename($file)),
-                                    'alt' => str_replace(['-', '_'], ' ', pathinfo($file, PATHINFO_FILENAME)) . " Shifting Operations"
+                                    'alt' => str_replace(['-', '_'], ' ', pathinfo($file, PATHINFO_FILENAME)) . " Shifting Operations by " . $company3
                                 ];
                             }
                         }
@@ -74,7 +74,7 @@
                             $fb = $fallbacks[$i % count($fallbacks)];
                             $images[] = [
                                 'src' => base_url($fb['img']),
-                                'alt' => $fb['alt'] . ' - Image ' . ($i + 1)
+                                'alt' => $fb['alt'] . ' - Image ' . ($i + 1) . ' by ' . (isset($company3) ? $company3 : 'Divyansh Packers and Movers')
                             ];
                         }
                     }
@@ -122,7 +122,7 @@
                 <button type="button" class="gallery-lightbox-close" data-bs-dismiss="modal" aria-label="Close">
                     <i class="bi bi-x"></i>
                 </button>
-                <img src="" id="lightboxImage" class="img-fluid" alt="Zoomed Shifting Photo">
+                <img src="" id="lightboxImage" class="img-fluid" alt="Zoomed Shifting Photo by <?= $company3 ?>">
             </div>
         </div>
     </div>
