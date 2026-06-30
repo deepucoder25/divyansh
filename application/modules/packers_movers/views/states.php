@@ -30,24 +30,9 @@
 <?php
 $state = [
     [
-        "image" => "maharashtra.jpg",
-        "category" => "Maharashtra",
-        "link" => "maharashtra"
-    ],
-    [
-        "image" => "bangalore.jpg",
-        "category" => "Bangalore",
-        "link" => "bangalore"
-    ],
-    [
         "image" => "west-bengal.jpg",
         "category" => "West Bengal",
         "link" => "west-bengal"
-    ],
-    [
-        "image" => "uttar-pradesh.jpg",
-        "category" => "Uttar Pradesh",
-        "link" => "uttar-pradesh"
     ],
 ];
 ?>

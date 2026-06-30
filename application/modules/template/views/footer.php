@@ -77,28 +77,19 @@ $floatingWhatsappLink = !empty($whatsapphtml)
               We provide reliable and affordable moving solutions with a focus on safety, care and customer satisfaction.
             </p>
 
-            <div class="footer-brand-contacts">
-              <a href="<?= $mailhtml ?>" class="footer-brand-contact-item">
-                <i class="bi bi-envelope-fill"></i>
-                <span><?= $mail ?></span>
-              </a>
-              <div class="footer-brand-contact-item">
-                <i class="bi bi-geo-alt-fill"></i>
-                <span><?= $address ?></span>
-              </div>
-            </div>
+
 
             <div class="footer-social-links-circle">
-              <a href="<?= !empty($facebookhtml) ? $facebookhtml : '#' ?>" target="_blank" rel="noopener" aria-label="Facebook">
+              <a href="<?= !empty($facebookhtml) ? $facebookhtml : '#' ?>" target="_blank" rel="noopener" aria-label="Facebook" class="facebook">
                 <i class="bi bi-facebook"></i>
               </a>
-              <a href="<?= !empty($instagramhtml) ? $instagramhtml : '#' ?>" target="_blank" rel="noopener" aria-label="Instagram">
+              <a href="<?= !empty($instagramhtml) ? $instagramhtml : '#' ?>" target="_blank" rel="noopener" aria-label="Instagram" class="instagram">
                 <i class="bi bi-instagram"></i>
               </a>
-              <a href="<?= !empty($twitterhtml) ? $twitterhtml : '#' ?>" target="_blank" rel="noopener" aria-label="Twitter">
+              <a href="<?= !empty($twitterhtml) ? $twitterhtml : '#' ?>" target="_blank" rel="noopener" aria-label="Twitter" class="twitter">
                 <i class="bi bi-twitter"></i>
               </a>
-              <a href="<?= !empty($linkedinhtml) ? $linkedinhtml : '#' ?>" target="_blank" rel="noopener" aria-label="LinkedIn">
+              <a href="<?= !empty($linkedinhtml) ? $linkedinhtml : '#' ?>" target="_blank" rel="noopener" aria-label="LinkedIn" class="linkedin">
                 <i class="bi bi-linkedin"></i>
               </a>
             </div>
@@ -143,48 +134,54 @@ $floatingWhatsappLink = !empty($whatsapphtml)
           <div class="footer-nav-widget">
             <h5 class="footer-widget-heading">Our Locations</h5>
             <ul class="footer-links-list location-links">
-              <li><a href="<?= site_url('our-branches') ?>"><i class="bi bi-geo-alt-fill"></i>Bangalore</a></li>
-              <li><a href="<?= site_url('maharashtra') ?>"><i class="bi bi-geo-alt-fill"></i>Mumbai</a></li>
-              <li><a href="<?= site_url('maharashtra') ?>"><i class="bi bi-geo-alt-fill"></i>Pune</a></li>
-              <li><a href="<?= site_url('our-branches') ?>"><i class="bi bi-geo-alt-fill"></i>Hyderabad</a></li>
-              <li><a href="<?= site_url('tamil-nadu') ?>"><i class="bi bi-geo-alt-fill"></i>Chennai</a></li>
-              <li><a href="<?= site_url('delhi') ?>"><i class="bi bi-geo-alt-fill"></i>Delhi</a></li>
-              <li><a href="<?= site_url('west-bengal') ?>"><i class="bi bi-geo-alt-fill"></i>Kolkata</a></li>
+              <li><a href="<?= site_url('kolkata-packers-movers-west-bengal') ?>"><i class="bi bi-geo-alt-fill"></i>Kolkata</a></li>
+              <li><a href="<?= site_url('asansol-packers-movers-west-bengal') ?>"><i class="bi bi-geo-alt-fill"></i>Asansol</a></li>
+              <li><a href="<?= site_url('siliguri-packers-movers-west-bengal') ?>"><i class="bi bi-geo-alt-fill"></i>Siliguri</a></li>
+              <li><a href="<?= site_url('durgapur-packers-movers-west-bengal') ?>"><i class="bi bi-geo-alt-fill"></i>Durgapur</a></li>
+              <li><a href="<?= site_url('bardhaman-packers-movers-west-bengal') ?>"><i class="bi bi-geo-alt-fill"></i>Bardhaman</a></li>
+              <li><a href="<?= site_url('habra-packers-movers-west-bengal') ?>"><i class="bi bi-geo-alt-fill"></i>Habra</a></li>
+              <li><a href="<?= site_url('kharagpur-packers-movers-west-bengal') ?>"><i class="bi bi-geo-alt-fill"></i>Kharagpur</a></li>
             </ul>
           </div>
         </div>
 
-        <!-- Column 5: Trust & Safety -->
-        <div class="col-xl-3 col-lg-4 col-md-6 col-6">
-          <div class="footer-newsletter-widget">
-            <h5 class="footer-widget-heading">Trust &amp; Safety</h5>
+        <!-- Column 5: Contact Us -->
+        <div class="col-xl-3 col-lg-4 col-md-6 col-12">
+          <div class="footer-contact-glass-card">
+            <h5 class="footer-widget-heading">Contact Us</h5>
 
-            <div class="footer-trust-badges">
-              <div class="trust-badge-item">
-                <div class="trust-icon-box">
-                  <i class="bi bi-shield-fill-check"></i>
+            <div class="glass-contact-list">
+              <!-- Phone Numbers -->
+              <div class="glass-contact-item">
+                <div class="glass-icon-box">
+                  <i class="bi bi-telephone-fill"></i>
                 </div>
-                <div class="trust-text-box">
-                  <span class="trust-title">Safe & Secure</span>
-                  <span class="trust-desc">Your belongings are 100% safe.</span>
-                </div>
-              </div>
-              <div class="trust-badge-item">
-                <div class="trust-icon-box">
-                  <i class="bi bi-headset"></i>
-                </div>
-                <div class="trust-text-box">
-                  <span class="trust-title">24/7 Support</span>
-                  <span class="trust-desc">We're always here to help you.</span>
+                <div class="glass-text-box">
+                  <span class="glass-label">Call Us</span>
+                  <a href="<?= $phonehtml ?>" class="glass-link"><?= $phone ?></a>
+                  <a href="<?= $phonehtml1 ?>" class="glass-link"><?= $phone1 ?></a>
                 </div>
               </div>
-              <div class="trust-badge-item">
-                <div class="trust-icon-box">
-                  <i class="bi bi-award-fill"></i>
+
+              <!-- Email -->
+              <div class="glass-contact-item">
+                <div class="glass-icon-box">
+                  <i class="bi bi-envelope-fill"></i>
                 </div>
-                <div class="trust-text-box">
-                  <span class="trust-title">Best Price Guarantee</span>
-                  <span class="trust-desc">Quality service at best prices.</span>
+                <div class="glass-text-box">
+                  <span class="glass-label">Email Us</span>
+                  <a href="<?= $mailhtml ?>" class="glass-link"><?= $mail ?></a>
+                </div>
+              </div>
+
+              <!-- Address -->
+              <div class="glass-contact-item">
+                <div class="glass-icon-box">
+                  <i class="bi bi-geo-alt-fill"></i>
+                </div>
+                <div class="glass-text-box">
+                  <span class="glass-label">Our Office</span>
+                  <span class="glass-address-text"><?= $address ?></span>
                 </div>
               </div>
             </div>
