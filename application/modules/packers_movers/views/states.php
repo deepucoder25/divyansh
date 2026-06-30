@@ -34,6 +34,21 @@ $state = [
         "category" => "West Bengal",
         "link" => "west-bengal"
     ],
+    [
+        "image" => "bihar.jpg",
+        "category" => "Bihar",
+        "link" => "bihar"
+    ],
+    [
+        "image" => "assam.jpg",
+        "category" => "Assam",
+        "link" => "assam"
+    ],
+    [
+        "image" => "sikkim.jpg",
+        "category" => "Sikkim",
+        "link" => "sikkim"
+    ],
 ];
 ?>
 
