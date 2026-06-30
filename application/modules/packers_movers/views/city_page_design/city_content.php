@@ -16,7 +16,7 @@ if (strtolower($city) == "") {
 } else {
    $htmlcontent = "
             <h2 class='city-about-title'>
-              Best Packers and Movers in <span class='city-about-accent'>$city</span>
+              Reliable Relocation Services in <span class='city-about-accent'>$city</span>
             </h2>
             <div class='city-about-desc'>
             <p>

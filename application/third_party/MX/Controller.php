@@ -57,8 +57,8 @@ class MX_Controller
         $this->comp['phonehtml1'] = 'tel:+917384881872';
         $this->comp['supportmail'] = 'support@mycompany.com';
         $this->comp['replyToMail'] = 'support@mycompany.com';
-        $this->comp['mail'] = 'support@mycompany.com';    
-        $this->comp['mailhtml'] = "mailto:support@mycompany.com";
+        $this->comp['mail'] = 'info@divyanshpackers.com';    
+        $this->comp['mailhtml'] = "mailto:info@divyanshpackers.com";
         $this->comp['company3'] = 'Divyansh Packers and Movers';
         $this->comp['companydomain'] = 'divyanshpackersandmovers.com';
 
