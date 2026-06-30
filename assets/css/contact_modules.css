@@ -20,10 +20,10 @@
 }
 
 .contact-modal-title {
-    color: #0a4ebd;
-    font-family: 'Times New Roman', serif;
-    font-size: 42px;
-    font-weight: normal;
+    color: var(--primary-blue);
+    font-family: 'Outfit', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
 }
 
 .contact-modal-input {
@@ -34,18 +34,18 @@
 }
 
 .contact-modal-btn {
-    background-color: #0a4ebd;
+    background-color: var(--primary-blue);
     color: white;
     border-radius: 4px;
     padding: 12px;
     font-size: 18px;
     font-weight: 500;
     border: none;
-    transition: background-color 0.3s;
+    transition: var(--transition);
 }
 
 .contact-modal-btn:hover {
-    background-color: #083c93;
+    background-color: var(--accent-orange);
 }
 
 .contact-modal-result {
@@ -54,15 +54,15 @@
 
 /* Contacts page */
 .contact-title-primary {
-    color: #073c91;
+    color: var(--primary-blue);
 }
 
 .contact-icon-box {
     width: 60px;
     height: 60px;
     font-size: 1.5rem;
-    background: rgba(7, 60, 145, 0.1);
-    color: #073c91;
+    background: rgba(0, 58, 106, 0.1);
+    color: var(--primary-blue);
 }
 
 .contact-icon-box-success {
@@ -112,36 +112,37 @@
 }
 
 .contact-form-header {
-    background: linear-gradient(135deg, #06283d, #1363df);
-    color: #fff;
-    padding: 15px 20px;
+    background: linear-gradient(135deg, var(--topbar-bg), var(--primary-blue));
+    color: var(--white);
+    padding: 18px 24px;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
 .contact-form-header span {
-    font-size: 20px;
+    font-size: 19px;
     font-weight: 700;
     letter-spacing: .3px;
 }
 
 .contact-form-header .close {
-    width: 30px;
-    height: 30px;
+    width: 32px;
+    height: 32px;
     border: 0;
     border-radius: 50%;
-    background: rgba(255, 255, 255, .18);
-    color: #fff;
+    background: rgba(255, 255, 255, .15);
+    color: var(--white);
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: .3s;
+    transition: var(--transition);
 }
 
 .contact-form-header .close:hover {
-    background: #fff;
-    color: #1363df;
+    background: var(--white);
+    color: var(--primary-blue);
+    transform: rotate(90deg);
 }
 
 #quotemodal {
@@ -161,7 +162,7 @@
     left: 14px;
     top: 50%;
     transform: translateY(-50%);
-    color: #1363df;
+    color: var(--primary-blue);
     font-size: 16px;
     z-index: 2;
 }
@@ -173,54 +174,56 @@
 }
 
 #quotemodal .form-control {
-    height: 42px;
-    border-radius: 10px;
-    border: 1px solid #e1e7ef;
+    height: 46px;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
     background: #f8fbff;
     padding-left: 40px;
     font-size: 14px;
-    color: #222;
+    color: var(--text-dark);
     box-shadow: none;
-    transition: .25s ease;
+    transition: var(--transition);
 }
 
 #quotemodal textarea.form-control {
-    min-height: 90px;
-    padding-top: 12px;
+    min-height: 100px;
+    padding-top: 14px;
     resize: none;
 }
 
 #quotemodal .form-control:focus {
-    background: #fff;
-    border-color: #1363df;
-    box-shadow: 0 0 0 4px rgba(19, 99, 223, .12);
+    background: var(--white);
+    border-color: var(--primary-blue);
+    box-shadow: 0 0 0 4px rgba(0, 58, 106, .1);
 }
 
 #quotemodal .theme-btn {
     border: 0;
     border-radius: 50px;
-    padding: 10px 24px;
+    padding: 12px 28px;
     font-size: 14px;
-    font-weight: 600;
-    background: linear-gradient(135deg, #1363df, #47b5ff);
-    color: #fff;
-    transition: .3s ease;
-    box-shadow: 0 10px 25px rgba(19, 99, 223, .25);
+    font-weight: 700;
+    background: var(--primary-blue);
+    color: var(--white);
+    transition: var(--transition);
+    box-shadow: 0 8px 20px rgba(0, 58, 106, .2);
 }
 
 #quotemodal .theme-btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 14px 30px rgba(19, 99, 223, .35);
+    background: var(--accent-orange);
+    box-shadow: 0 10px 25px rgba(255, 106, 0, .3);
 }
 
 #quotemodal button[type="reset"] {
-    background: #eef4fb;
-    color: #1363df;
+    background: #f0f6ff;
+    color: var(--primary-blue);
     box-shadow: none;
 }
 
 #quotemodal button[type="reset"]:hover {
-    background: #dcecff;
+    background: var(--border-color);
+    color: var(--primary-blue);
 }
 
 #resultquotemodal {

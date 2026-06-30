@@ -14,13 +14,15 @@ $suffix = isset($form_id_suffix) ? $form_id_suffix : '';
       <div class="col-6">
         <div class="input-group-custom">
           <span class="input-icon"><i class="bi bi-person"></i></span>
-          <input type="text" name="name" class="form-control-custom" placeholder="Full Name">
+          <label for="name<?= $suffix ?>" class="visually-hidden">Full Name</label>
+          <input type="text" id="name<?= $suffix ?>" name="name" class="form-control-custom" placeholder="Full Name">
         </div>
       </div>
       <div class="col-6">
         <div class="input-group-custom">
           <span class="input-icon"><i class="bi bi-telephone"></i></span>
-          <input type="tel" name="phone" class="form-control-custom" placeholder="Phone Number">
+          <label for="phone<?= $suffix ?>" class="visually-hidden">Phone Number</label>
+          <input type="tel" id="phone<?= $suffix ?>" name="phone" class="form-control-custom" placeholder="Phone Number">
         </div>
       </div>
       
@@ -28,13 +30,15 @@ $suffix = isset($form_id_suffix) ? $form_id_suffix : '';
       <div class="col-6">
         <div class="input-group-custom">
           <span class="input-icon"><i class="bi bi-geo-alt"></i></span>
-          <input type="text" name="mfrom" class="form-control-custom" value="<?php echo @$city ?>" placeholder="Moving From">
+          <label for="mfrom<?= $suffix ?>" class="visually-hidden">Moving From</label>
+          <input type="text" id="mfrom<?= $suffix ?>" name="mfrom" class="form-control-custom" value="<?php echo @$city ?>" placeholder="Moving From">
         </div>
       </div>
       <div class="col-6">
         <div class="input-group-custom">
           <span class="input-icon"><i class="bi bi-geo-alt"></i></span>
-          <input type="text" name="mto" class="form-control-custom" placeholder="Moving To">
+          <label for="mto<?= $suffix ?>" class="visually-hidden">Moving To</label>
+          <input type="text" id="mto<?= $suffix ?>" name="mto" class="form-control-custom" placeholder="Moving To">
         </div>
       </div>
       
@@ -42,7 +46,8 @@ $suffix = isset($form_id_suffix) ? $form_id_suffix : '';
       <div class="col-12">
         <div class="input-group-custom">
           <span class="input-icon"><i class="bi bi-calendar"></i></span>
-          <input type="text" name="mdate" class="form-control-custom" placeholder="Moving Date" onfocus="this.type='date'; if(!this.value) { const d = new Date(); this.value = [d.getFullYear(), String(d.getMonth() + 1).padStart(2, '0'), String(d.getDate()).padStart(2, '0')].join('-'); }" onblur="if(!this.value)this.type='text'">
+          <label for="mdate<?= $suffix ?>" class="visually-hidden">Moving Date</label>
+          <input type="text" id="mdate<?= $suffix ?>" name="mdate" class="form-control-custom" placeholder="Moving Date" onfocus="this.type='date'; if(!this.value) { const d = new Date(); this.value = [d.getFullYear(), String(d.getMonth() + 1).padStart(2, '0'), String(d.getDate()).padStart(2, '0')].join('-'); }" onblur="if(!this.value)this.type='text'">
         </div>
       </div>
       
@@ -50,7 +55,8 @@ $suffix = isset($form_id_suffix) ? $form_id_suffix : '';
       <div class="col-12">
         <div class="input-group-custom select-custom">
           <span class="input-icon"><i class="bi bi-box-seam"></i></span>
-          <select name="mtype" class="form-select-custom">
+          <label for="mtype<?= $suffix ?>" class="visually-hidden">Type of Move</label>
+          <select id="mtype<?= $suffix ?>" name="mtype" class="form-select-custom">
             <option value="" disabled selected>Type of Move</option>
             <option>Home Shifting</option>
             <option>Office Relocation</option>
@@ -67,7 +73,8 @@ $suffix = isset($form_id_suffix) ? $form_id_suffix : '';
       <div class="col-12">
         <div class="input-group-custom">
           <span class="input-icon"><i class="bi bi-pencil"></i></span>
-          <input type="text" name="message" class="form-control-custom" placeholder="Additional Details (Optional)">
+          <label for="message<?= $suffix ?>" class="visually-hidden">Additional Details (Optional)</label>
+          <input type="text" id="message<?= $suffix ?>" name="message" class="form-control-custom" placeholder="Additional Details (Optional)">
         </div>
       </div>
       
