@@ -7,6 +7,12 @@ app.controller('ctrl_blog',function($scope,$http){
 			$scope.datadb=data;
 		})
 	}
+	$scope.updateStatus=function(bid, st){
+		$http.get("blog/save_status?id="+bid+"&status="+st).success(function(data){
+			console.log(data);
+			messages("success", "Success!","Blog Status Updated Successfully", 3000);
+		})
+	}
 	$('#DOB1').datepicker();
 	
 	$scope.loader();

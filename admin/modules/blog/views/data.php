@@ -32,8 +32,10 @@
 						</td>
 						
 						<td class="text-center">
-							<span class="label label-success" ng-if="y.status=='1' || y.status==1">Show</span>
-							<span class="label label-danger" ng-if="y.status=='0' || y.status==0">Hide</span>
+							<select ng-model="y.status" ng-change="updateStatus(y.b_id, y.status)" class="form-control input-sm" style="width: 80px; display: inline-block; padding: 2px 5px; height: 26px; font-weight: 600;">
+								<option value="1">Show</option>
+								<option value="0">Hide</option>
+							</select>
 						</td>
 						
 						<td class="text-center">

@@ -127,6 +127,12 @@
 .bc-current-page {
     color: var(--accent-orange);
     font-weight: 700;
+    text-decoration: none;
+    transition: var(--transition);
+}
+.bc-current-page:hover {
+    color: var(--primary-blue);
+    text-decoration: none;
 }
 
 /* Responsive Breadcrumbs Styling */

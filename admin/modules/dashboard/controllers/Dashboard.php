@@ -9,7 +9,7 @@ class Dashboard extends MX_Controller
     }
     function index()
     {
-//         $this->load->view('view');
+        // $this->load->view('view');
     }
     function admin()
     {

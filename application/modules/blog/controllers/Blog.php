@@ -4,6 +4,7 @@ class Blog extends MX_Controller {
 
     function __construct(){
         parent::__construct();
+        $this->load->database();
     }
 
     private function slugify($text) {
@@ -13,10 +14,34 @@ class Blog extends MX_Controller {
         return trim($text, '-');
     }
 
-    private function loadBlogs() {
-        $path = FCPATH . 'admin_data/blogs.json';
-        if (!file_exists($path)) return [];
-        return json_decode(file_get_contents($path), true) ?: [];
+    private function getBlogsFromDb($only_active = true) {
+        if ($only_active) {
+            $this->db->where('status', 1);
+        }
+        $this->db->order_by('b_id', 'desc');
+        $res = $this->db->get('blog')->result_array();
+        
+        $blogs = [];
+        foreach ($res as $b) {
+            $blogs[] = [
+                "id" => (int) $b['b_id'],
+                "title" => $b['title'],
+                "main_title" => $b['main_title'] ?? $b['title'],
+                "description" => $b['description'],
+                "author" => $b['author'],
+                "date" => $b['date'],
+                "time" => $b['time'],
+                "tags" => $b['tags'],
+                "meta_title" => $b['meta_title'],
+                "meta_desc" => $b['meta_desc'],
+                "slug" => $b['slug'],
+                "status" => (int) $b['status'],
+                "image" => $b['image'],
+                "views" => (int) $b['views'],
+                "created_at" => $b['timestamp']
+            ];
+        }
+        return $blogs;
     }
 
     function index() {
@@ -27,7 +52,7 @@ class Blog extends MX_Controller {
         $this->load->library('pagination');
         $this->load->helper('text'); 
 
-        $all_blogs = array_reverse($this->loadBlogs());
+        $all_blogs = $this->getBlogsFromDb(true);
         $total_rows = count($all_blogs);
         $per_page = 6;
         $offset = (int) $this->uri->segment(3);
@@ -71,10 +96,9 @@ class Blog extends MX_Controller {
     }
 
     function read($slug = '') {
-        // die("DEBUG: Slug received: " . $slug);
         $this->load->helper('text');
 
-        $all_blogs = $this->loadBlogs();
+        $all_blogs = $this->getBlogsFromDb(true);
         $selected_blog = null;
         
         foreach ($all_blogs as $b) {
@@ -102,7 +126,7 @@ class Blog extends MX_Controller {
             $data['description'] = character_limiter(strip_tags($selected_blog->description), 155);
             
             $image_file = $selected_blog->image;
-            $data['img'] = ($image_file && file_exists(FCPATH . 'uploads/blogs/' . $image_file)) ? base_url('uploads/blogs/'.$image_file) : base_url('assets/images/about/packers_movers.jpg');
+            $data['img'] = ($image_file && file_exists(FCPATH . 'assets/uploads/blog/' . $image_file)) ? base_url('assets/uploads/blog/'.$image_file) : base_url('assets/images/about/packers_movers.jpg');
             
             $data['module'] = "blog";
             $data['view_file'] = "view"; 

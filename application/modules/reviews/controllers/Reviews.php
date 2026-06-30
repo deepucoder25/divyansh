@@ -6,35 +6,34 @@ class Reviews extends MX_Controller
         parent::__construct();
         $this->load->library('session');
         $this->load->helper('url');
-    }
-
-    private function loadReviews() {
-        $path = FCPATH . 'admin_data/reviews.json';
-        if (!file_exists($path)) return [];
-        return json_decode(file_get_contents($path), true) ?: [];
-    }
-
-    private function saveReviews($reviews) {
-        $path = FCPATH . 'admin_data/reviews.json';
-        file_put_contents($path, json_encode($reviews, JSON_PRETTY_PRINT));
+        $this->load->database();
     }
 
     function index()
     {
-        $reviews = $this->loadReviews();
-        
-        // Filter by star rating if requested
+        // Load active reviews from SQLite database
         $star_filter = $this->input->get('star');
+        $this->db->where('status', 1);
         if ($star_filter) {
-            $reviews = array_filter($reviews, function($r) use ($star_filter) {
-                return ($r['rating'] ?? 5) == $star_filter;
-            });
+            $this->db->where('stars', (int)$star_filter);
+        }
+        $this->db->order_by('r_id', 'desc');
+        $db_reviews = $this->db->get('reviews')->result_array();
+        
+        $reviews = [];
+        foreach ($db_reviews as $r) {
+            $reviews[] = [
+                "id" => (int) $r['r_id'],
+                "name" => $r['name'],
+                "city" => $r['r_title'], // city is stored in r_title
+                "rating" => (int) $r['stars'],
+                "review" => $r['r_desc'],
+                "status" => ($r['status'] == 1) ? 'show' : 'hide',
+                "created_at" => $r['posted_date']
+            ];
         }
 
-        // Show only 'show' status
-        $data['reviews'] = array_filter($reviews, function($r) {
-            return ($r['status'] ?? 'show') === 'show';
-        });
+        $data['reviews'] = $reviews;
         
         $data['title'] = "Customer Reviews & Ratings | " . $this->comp['company3'];
         $data['description'] = "Detailed feedback and ratings from our satisfied clients. Read real reviews about our relocation services at " . $this->comp['company3'] . ".";
@@ -45,22 +44,22 @@ class Reviews extends MX_Controller
 
     function submit() {
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            $reviews = $this->loadReviews();
-            
-            $new_review = [
-                "id" => time(),
+            $data = [
                 "name" => $this->input->post('name'),
-                "city" => $this->input->post('city'),
-                "rating" => (int) $this->input->post('rating'),
-                "review" => $this->input->post('review'),
-                "status" => "hide", // Pending approval
-                "created_at" => date('Y-m-d H:i:s')
+                "email" => $this->input->post('email') ?: '',
+                "r_title" => $this->input->post('city') ?: '',
+                "stars" => (int) $this->input->post('rating'),
+                "r_desc" => $this->input->post('review'),
+                "status" => 1, // By default show on browser
+                "posted_date" => date('Y-m-d H:i:s'),
+                "r_img" => '',
+                "views" => 0,
+                "b_id" => 0
             ];
             
-            $reviews[] = $new_review;
-            $this->saveReviews($reviews);
+            $this->db->insert('reviews', $data);
             
-            $this->session->set_flashdata('success', 'Thank you! Your review has been submitted for approval.');
+            $this->session->set_flashdata('success', 'Thank you! Your review has been successfully posted.');
             redirect('reviews');
         }
     }

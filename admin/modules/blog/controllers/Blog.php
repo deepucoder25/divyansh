@@ -1,7 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 class Blog extends MX_Controller
 {
-    //wGtRkO8VoEyUjS
     function __construct()
     {
         parent::__construct();
@@ -30,6 +29,7 @@ class Blog extends MX_Controller
         
         if ($this->form_validation->run()==TRUE)
         {
+            $data = [];
             $data['title']=$_POST['title'];
             $data['description']=$_POST['description'];
             $data['author']=$_POST['author'];
@@ -40,24 +40,27 @@ class Blog extends MX_Controller
             $data['meta_desc']=$_POST['meta_desc'];
             $data['slug']=$_POST['slug'];
             $data['status'] = isset($_POST['status']) ? (int)$_POST['status'] : 1;
+            
             if (empty($data['slug'])) {
                 $data['slug'] = $this->slugify($data['title']);
             }
+            
             if (!isset($_POST['b_id']) || !$_POST['b_id']) {
                 $data['views'] = 0;
                 $data['main_title'] = $data['title'];
             }
-          
+            
+            // Image upload handling
             if (!empty($_FILES['image']['name'])) 
             {
                 $data['image']=$this->image_upload($data['title']);
-                if ($_POST['old_image'])
+                if (isset($_POST['old_image']) && $_POST['old_image'])
                 {
                     $this->remove_image($_POST['old_image']);
                 }
             }else if ($this->input->post('image_url')){
                 $data['image']=$this->input->post('image_url');
-                if ($_POST['old_image'])
+                if (isset($_POST['old_image']) && $_POST['old_image'])
                 {
                     $this->remove_image($_POST['old_image']);
                 }
@@ -84,41 +87,70 @@ class Blog extends MX_Controller
             echo validation_errors();
         }
     }
+
+    function save_status()
+    {
+        if (isset($_GET['id'])) {
+            $bid = (int) $_GET['id'];
+            $st_val = (int) $_GET['status']; // 0 or 1
+            $data['status'] = $st_val;
+            $where['b_id'] = $bid;
+            $res = $this->mdl_blog->update_data($where, $data);
+            echo 1;
+        } else {
+            echo "invalid Request";
+        }
+    }
     
     function view_data()
     {
         $where=null;
         if (isset($_GET['b_id']))
-	         $where['b_id']=$_GET['b_id'];
+             $where['b_id']=$_GET['b_id'];
         
         if (isset($_GET['data']))
-	        $select=$_GET['data'];
-	    else $select="*";
+            $select=$_GET['data'];
+        else $select="*";
         
-        $return=$this->mdl_blog->view_data($where,$select);
-        $this->output->set_content_type('application/json')->set_output(json_encode($return->result_array()));
+        $res=$this->mdl_blog->view_data($where,$select);
+        $formatted = [];
+        foreach ($res->result_array() as $b) {
+            $formatted[] = [
+                "b_id" => (int) $b['b_id'],
+                "title" => $b['title'] ?? '',
+                "slug" => $b['slug'] ?? '',
+                "date" => $b['date'] ?? '',
+                "time" => $b['time'] ?? '',
+                "author" => $b['author'] ?? '',
+                "image" => $b['image'] ?? '',
+                "status" => (string) ($b['status'] ?? '1'),
+                "description" => $b['description'] ?? '',
+                "tags" => $b['tags'] ?? '',
+                "meta_title" => $b['meta_title'] ?? '',
+                "meta_desc" => $b['meta_desc'] ?? '',
+                "views" => (int) ($b['views'] ?? 0),
+                "main_title" => $b['main_title'] ?? ($b['title'] ?? '')
+            ];
+        }
+        
+        $this->output->set_content_type('application/json')->set_output(json_encode($formatted));
     }
     
     function delete_data()
     {
         if (isset($_GET['id']) && $_GET['id'])
         {
-            $this->db->where('b_id', $_GET['id']);
-            foreach ($this->db->get("blog")->result() as $row)
+            $bid = (int) $_GET['id'];
+            $where['b_id']=$bid;
+            
+            $res = $this->mdl_blog->view_data($where);
+            foreach ($res->result() as $row)
             {
                 if (!empty($row->image)) {
-                    $image_delete_path1="./assets/uploads/blog/$row->image";
-                    $image_delete_path2="./assets/uploads/blog/thumb/$row->image";
-                    if (is_file($image_delete_path1) && file_exists($image_delete_path1)) {
-                        @unlink($image_delete_path1);
-                    }
-                    if (is_file($image_delete_path2) && file_exists($image_delete_path2)) {
-                        @unlink($image_delete_path2);
-                    }
+                    $this->remove_image($row->image);
                 }
             }
            
-            $where['b_id']=$_GET['id'];
             echo $this->mdl_blog->delete_data($where) ? "1" : "0";
         }else echo "Not Deleted";
     }
@@ -182,7 +214,7 @@ class Blog extends MX_Controller
             }
             else
             {
-                unlink($config['source_image']);
+                @unlink($config['source_image']);
                 return $image['file_name'];
             }
         }
